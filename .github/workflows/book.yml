@@ -16,7 +16,7 @@ jobs:
     - name: Install Spark
       run: |
         sudo apt-get update
-        #sudo apt-get install -y curl
+        sudo apt-get install -y curl
         #sudo curl -O https://www.apache.org/dyn/closer.lua/spark/spark-2.4.5/spark-2.4.5-bin-hadoop2.7.tgz
         #sudo tar xvf spark-2.4.5-bin-hadoop2.7.tgz
         #sudo mv spark-2.4.5-bin-hadoop2.7/ /opt/spark 
