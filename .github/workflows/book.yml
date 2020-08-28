@@ -16,7 +16,6 @@ jobs:
     - name: Install Spark
       env:
         SPARK_HOME: /opt/spark
-        PATH: $PATH:$SPARK_HOME/bin:$SPARK_HOME/sbin
       run: |
         sudo apt-get update
         sudo apt-get install -y curl
@@ -24,7 +23,8 @@ jobs:
         file spark-2.4.5-bin-hadoop2.7.tgz
         sudo tar xvf spark-2.4.5-bin-hadoop2.7.tgz
         sudo mv spark-2.4.5-bin-hadoop2.7/ /opt/spark
-        
+        export PATH=$PATH:$SPARK_HOME/bin:$SPARK_HOME/sbin
+
     # Install dependencies
     - name: Install Java 11
       uses: actions/setup-java@v1
