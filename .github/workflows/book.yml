@@ -12,22 +12,22 @@ jobs:
     runs-on: ubuntu-latest
     steps:
     - uses: actions/checkout@v2
-
-    # Install dependencies
-    - name: Install Java 11
-      uses: actions/setup-java@v1
-      with:
-        java-version: 11
-
+      
     - name: Install Spark
-      env: 
-        SPARK_HOME: "/opt/spark"
-        PATH: "$PATH:$SPARK_HOME/bin:$SPARK_HOME/sbin"
       run: |
         sudo apt-get update && apt-get install -y curl
         curl -O https://www.apache.org/dyn/closer.lua/spark/spark-2.4.5/spark-2.4.5-bin-hadoop2.7.tgz
         tar xvf spark-2.4.5-bin-hadoop2.7.tgz
         sudo mv spark-2.4.5-bin-hadoop2.7/ /opt/spark 
+        export SPARK_HOME=/opt/spark
+        export PATH=$PATH:$SPARK_HOME/bin:$SPARK_HOME/sbin
+        
+    # Install dependencies
+    - name: Install Java 11
+      uses: actions/setup-java@v1
+      with:
+        java-version: 11
+        
 
     - name: Set up Python 3.7
       uses: actions/setup-python@v1
