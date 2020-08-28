@@ -2,6 +2,7 @@ jupyter-book
 numpy
 pandas
 matplotlib
+matplotlib_venn
 stemgraphic
 seaborn
 plotly
