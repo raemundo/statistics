@@ -9,3 +9,4 @@ plotly
 findspark
 pyspark
 scikit-learn
+category-encoders
