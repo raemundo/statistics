@@ -1,0 +1,8 @@
+# Book settings
+title: Statstics with Python
+author: Raemundo eimooamai@outlook.com
+logo: logo.png
+
+latex:
+  latex_documents:
+    targetname: book.tex

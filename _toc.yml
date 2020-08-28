@@ -1,0 +1,434 @@
+- file: intro
+- part: 01. Categorical Data
+  chapters:
+  - file: 01. Categorical Data/01 Identifying individuals, variables and categorical
+      variables in a data set
+  - file: 01. Categorical Data/02. Creating a bar graph
+  - file: 01. Categorical Data/03 Reading bar charts - comparing two sets of data
+  - file: 01. Categorical Data/04 Two-way frequency tables and Venn diagrams
+  - file: 01. Categorical Data/05 Two-way (column or row) relative frequency tables
+  - file: 01. Categorical Data/06 Interpreting two-way tables
+  - file: 01. Categorical Data/07 Marginal and conditional distributions
+  - file: 01. Categorical Data/Categorical Data
+- part: 02. Displaying and comparing quantitative data
+  chapters:
+  - file: 02. Displaying and comparing quantitative data/01 Frequency tables & dot
+      plots
+  - file: 02. Displaying and comparing quantitative data/02 Creating a histogram
+  - file: 02. Displaying and comparing quantitative data/03 Interpreting a histogram
+  - file: 02. Displaying and comparing quantitative data/04 Stem-and-leaf plots
+  - file: 02. Displaying and comparing quantitative data/05 Reading stem and leaf
+      plots
+  - file: 02. Displaying and comparing quantitative data/06 Classifying shapes of
+      distributions
+  - file: 02. Displaying and comparing quantitative data/07 Example - Describing a
+      distribution
+  - file: 02. Displaying and comparing quantitative data/08 Example - Comparing distributions
+- part: 03 Summarizing quantitative data
+  chapters:
+  - file: 03 Summarizing quantitative data/01 Statistics intro - Mean, median, & mode
+  - file: 03 Summarizing quantitative data/02 Mean, median, & mode example
+  - file: 03 Summarizing quantitative data/03 Median in a histogram
+  - file: 03 Summarizing quantitative data/04 Missing value given the mean
+  - file: 03 Summarizing quantitative data/05 Impact on median & mean - increasing
+      an outlier
+  - file: 03 Summarizing quantitative data/06 Impact on median & mean - removing an
+      outlier
+  - file: 03 Summarizing quantitative data/07 Estimating mean and median in data displays
+  - file: 03 Summarizing quantitative data/08 Interquartile range (IQR)
+  - file: 03 Summarizing quantitative data/09 Sample variance
+  - file: 03 Summarizing quantitative data/10 Sample standard deviation and bias
+  - file: 03 Summarizing quantitative data/11 Visually assessing standard deviation
+  - file: 03 Summarizing quantitative data/12 Mean and standard deviation versus median
+      and IQR
+  - file: 03 Summarizing quantitative data/13 Review and intuition why we divide by
+      n-1 for the unbiased sample variance
+  - file: 03 Summarizing quantitative data/14 Why we divide by n - 1 in variance
+  - file: 03 Summarizing quantitative data/15 Simulation showing bias in sample variance
+  - file: 03 Summarizing quantitative data/16 Simulation providing evidence that (n-1)
+      gives us unbiased estimate
+  - file: 03 Summarizing quantitative data/17 Worked example - Creating a box plot
+      (odd number of data points)
+  - file: 03 Summarizing quantitative data/18 Worked example - Creating a box plot
+      (even number of data points)
+  - file: 03 Summarizing quantitative data/19 Reading box plots
+  - file: 03 Summarizing quantitative data/20 Interpreting box plots
+  - file: 03 Summarizing quantitative data/21 Judging outliers in a dataset
+- part: 04 Modeling data distributions
+  chapters:
+  - file: 04 Modeling data distributions/01 Calculating percentile
+  - file: 04 Modeling data distributions/02 Analyzing a cumulative relative frequency
+      graph (optional)
+  - file: 04 Modeling data distributions/02 Analyzing a cumulative relative frequency
+      graph
+  - file: 04 Modeling data distributions/03 Z-score introduction
+  - file: 04 Modeling data distributions/04 Comparing with z-scores
+  - file: 04 Modeling data distributions/05 How parameters change as data is shifted
+      and scaled
+  - file: 04 Modeling data distributions/06 Density Curves (optional)
+  - file: 04 Modeling data distributions/06 Density Curves
+  - file: 04 Modeling data distributions/07 Median, mean and skew from density curves
+  - file: 04 Modeling data distributions/08 Density curve worked example
+  - file: 04 Modeling data distributions/09 Worked example finding area under density
+      curves
+  - file: 04 Modeling data distributions/10 Qualitative sense of normal distributions
+      (from ck12.org)
+  - file: 04 Modeling data distributions/11 Normal distribution problems - Empirical
+      rule (from ck12.org)
+  - file: 04 Modeling data distributions/12 Standard normal table for proportion below
+  - file: 04 Modeling data distributions/13 Standard normal table for proportion above
+  - file: 04 Modeling data distributions/14 Standard normal table (optional)
+  - file: 04 Modeling data distributions/14 Standard normal table for proportion between
+      values
+  - file: 04 Modeling data distributions/15 Finding z-score for a percentile
+  - file: 04 Modeling data distributions/16 Threshold for low percentile
+- part: 05 Exploring bivariate numerical data
+  chapters:
+  - file: 05 Exploring bivariate numerical data/01 Constructing a scatter plot
+  - file: 05 Exploring bivariate numerical data/02 Example of direction in scatterplots
+  - file: 05 Exploring bivariate numerical data/03 Bivariate relationship linearity,
+      strength and direction
+  - file: 05 Exploring bivariate numerical data/04 Calculating correlation coefficient
+      r
+  - file: 05 Exploring bivariate numerical data/05 Example - Correlation coefficient
+      intuition
+  - file: 05 Exploring bivariate numerical data/06 Introduction to residuals and least-squares
+      regression
+  - file: 05 Exploring bivariate numerical data/07 Calculating residual example
+  - file: 05 Exploring bivariate numerical data/08 Calculating the equation of a regression
+      line
+  - file: 05 Exploring bivariate numerical data/09 Interpreting slope of regression
+      line
+  - file: 05 Exploring bivariate numerical data/10 Interpreting y-intercept in regression
+      model
+  - file: 05 Exploring bivariate numerical data/11 Using least squares regression
+      output
+  - file: 05 Exploring bivariate numerical data/12 Residual plots
+  - file: 05 Exploring bivariate numerical data/13 R-squared or coefficient of determination
+  - file: 05 Exploring bivariate numerical data/14 Standard deviation of residuals
+      or root mean square deviation (RMSD)
+  - file: 05 Exploring bivariate numerical data/15 Interpreting computer regression
+      data
+  - file: 05 Exploring bivariate numerical data/16 Impact of removing outliers on
+      regression lines
+- part: 06 Study design
+  chapters:
+  - file: 06 Study design/01 Identifying a sample and population
+  - file: 06 Study design/02 Generalizabilty of survey results example
+  - file: 06 Study design/03 Examples of bias in surveys
+  - file: 06 Study design/04 Example of undercoverage introducing bias
+  - file: 06 Study design/05 Techniques for generating a simple random sample
+  - file: 06 Study design/06 Techniques for random sampling and avoiding bias
+  - file: 06 Study design/07 Types of statistical studies
+  - file: 06 Study design/08 Worked example identifying experiment
+  - file: 06 Study design/09 Worked example identifying observational study
+  - file: 06 Study design/10 Introduction to experiment design
+  - file: 06 Study design/11 Matched pairs experiment design
+  - file: 06 Study design/12 Invalid conclusions from studies example
+  - file: 06 Study design/13 Can causality be established from this study
+- part: 07 Probability
+  chapters:
+  - file: 07 Probability/01 Intro to theoretical probability
+  - file: 07 Probability/02 Experimental versus theoretical probability simulation
+  - file: 07 Probability/03 Random number list to run experiment
+  - file: 07 Probability/04 Random numbers for experimental probability
+  - file: 07 Probability/05 Statistical significance of experiment
+  - file: 07 Probability/06 Probability with Venn diagrams
+  - file: 07 Probability/07 Addition rule for probability
+  - file: 07 Probability/08 Compound probability of independent events
+  - file: 07 Probability/09 Independent events example - test taking
+  - file: 07 Probability/10 Free-throw probability
+  - file: 07 Probability/11 Three-pointer vs free-throw probability
+  - file: 07 Probability/12 Dependent probability introduction
+  - file: 07 Probability/13 Coin flipping probability
+  - file: 07 Probability/14 Conditional probability and independence
+  - file: 07 Probability/15 Conditional probability with Bayes' Theorem
+  - file: 07 Probability/16 Conditional probability tree diagram example
+  - file: 07 Probability/Untitled
+- part: 08 Counting, permutations, and combinations
+  chapters:
+  - file: 08 Counting, permutations, and combinations/01 Count outcomes using tree
+      diagram
+  - file: 08 Counting, permutations, and combinations/02 Counting outcomes flower
+      pots
+  - file: 08 Counting, permutations, and combinations/03 Permutation formula
+  - file: 08 Counting, permutations, and combinations/04 Zero factorial or  0!
+  - file: 08 Counting, permutations, and combinations/05 Factorial and counting seat
+      arrangements
+  - file: 08 Counting, permutations, and combinations/06 Possible three letter words
+  - file: 08 Counting, permutations, and combinations/07 Ways to arrange colors
+  - file: 08 Counting, permutations, and combinations/08 Ways to pick officers
+  - file: 08 Counting, permutations, and combinations/09 Intro to combinations
+  - file: 08 Counting, permutations, and combinations/10 Combination formula
+  - file: 08 Counting, permutations, and combinations/11 Handshaking combinations
+  - file: 08 Counting, permutations, and combinations/12 Combination example 9 card
+      hands
+  - file: 08 Counting, permutations, and combinations/13 Probability using combinations
+  - file: 08 Counting, permutations, and combinations/14 Probability & combinations
+      (2 of 2)
+  - file: 08 Counting, permutations, and combinations/15 Example  Different ways to
+      pick officers
+  - file: 08 Counting, permutations, and combinations/16 Example Combinatorics and
+      probability
+  - file: 08 Counting, permutations, and combinations/17 Getting exactly two heads
+      (combinatorics)
+  - file: 08 Counting, permutations, and combinations/18 Exactly three heads in five
+      flips
+  - file: 08 Counting, permutations, and combinations/19 Generalizing with binomial
+      coefficients (bit advanced)
+  - file: 08 Counting, permutations, and combinations/20 Example  Lottery probability
+  - file: 08 Counting, permutations, and combinations/21 Conditional probability and
+      combinations
+  - file: 08 Counting, permutations, and combinations/22 Mega millions jackpot probability
+  - file: 08 Counting, permutations, and combinations/23 Birthday probability problem
+- part: 09 Random variables
+  chapters:
+  - file: 09 Random variables/01 Constructing a probability distribution for random
+      variable
+  - file: 09 Random variables/02 Valid discrete probability distribution examples
+  - file: 09 Random variables/03 Probability with discrete random variable example
+  - file: 09 Random variables/04 Mean (expected value) of a discrete random variable
+  - file: 09 Random variables/05 Variance and standard deviation of a discrete random
+      variable
+  - file: 09 Random variables/06 Probabilities from density curves
+  - file: 09 Random variables/07 Impact of transforming (scaling and shifting) random
+      variables
+  - file: 09 Random variables/08 Example - Transforming a discrete random variable
+  - file: 09 Random variables/09 Mean of sum and difference of random variables
+  - file: 09 Random variables/10 Variance of sum and difference of random variables
+  - file: 09 Random variables/11 Intuition for why independence matters for variance
+      of sum
+  - file: 09 Random variables/12 Deriving the variance of the difference of random
+      variables
+  - file: 09 Random variables/13 Example - Analyzing distribution of sum of two normally
+      distributed random variables
+  - file: 09 Random variables/14 Example - Analyzing the difference in distributions
+  - file: 09 Random variables/15 Binomial variables
+  - file: 09 Random variables/16 Recognizing binomial variables
+  - file: 09 Random variables/17 10% Rule of assuming independence between trials
+  - file: 09 Random variables/18 Binomial probability example
+  - file: 09 Random variables/19 Generalizing k scores in n attempts
+  - file: 09 Random variables/20 Free throw binomial probability distribution
+  - file: 09 Random variables/21 Graphing basketball binomial distribution
+  - file: 09 Random variables/22 Binompdf and binomcdf functions
+  - file: 09 Random variables/23 Expected value of a binomial variable
+  - file: 09 Random variables/24 Variance of a binomial variable
+  - file: 09 Random variables/25 Finding the mean and standard deviation of a binomial
+      random variable
+  - file: 09 Random variables/26 Geometric random variables introduction
+  - file: 09 Random variables/27 Probability for a geometric random variable
+  - file: 09 Random variables/28 Cumulative geometric probability (greater than a
+      value)
+  - file: 09 Random variables/29 Cumulative geometric probability (less than a value)
+  - file: 09 Random variables/30 TI-84 geometpdf and geometcdf functions
+  - file: 09 Random variables/31 Proof of expected value of geometric random variable
+- part: 10 Sampling distributions
+  chapters:
+  - file: 10 Sampling distributions/01 Introduction to sampling distributions
+  - file: 10 Sampling distributions/02 Sample statistic bias worked example
+  - file: 10 Sampling distributions/03 Sampling distribution of sample proportion
+      part 1
+  - file: 10 Sampling distributions/04 Sampling distribution of sample proportion
+      part 2
+  - file: 10 Sampling distributions/05 Normal conditions for sampling distributions
+      of sample proportions
+  - file: 10 Sampling distributions/06 Probability of sample proportions example
+  - file: 10 Sampling distributions/07 Central limit theorem
+  - file: 10 Sampling distributions/08 Sampling distribution of the sample mean
+  - file: 10 Sampling distributions/09 Sampling distribution of the sample mean 2
+  - file: 10 Sampling distributions/10 Standard error of the mean
+  - file: 10 Sampling distributions/11 Example - Probability of sample mean exceeding
+      a value
+- part: 11 Confidence intervals
+  chapters:
+  - file: 11 Confidence intervals/01 Confidence intervals and margin of error
+  - file: 11 Confidence intervals/02 Confidence interval simulation
+  - file: 11 Confidence intervals/03 Interpreting confidence level example
+  - file: 11 Confidence intervals/04 Interpreting confidence levels and confidence
+      intervals
+  - file: 11 Confidence intervals/05 Confidence interval example
+  - file: 11 Confidence intervals/06 Margin of error 1
+  - file: 11 Confidence intervals/07 Margin of error 2
+  - file: 11 Confidence intervals/08 Conditions for valid confidence intervals
+  - file: 11 Confidence intervals/09 Conditions for confidence intervals worked examples
+  - file: 11 Confidence intervals/10 Reference Conditions for inference on a proportion
+  - file: 11 Confidence intervals/11 Critical value (z) for a given confidence level
+  - file: 11 Confidence intervals/12 Example constructing and interpreting a confidence
+      interval for p
+  - file: 11 Confidence intervals/13 Interpreting a z interval for a proportion
+  - file: 11 Confidence intervals/14 Determining sample size based on confidence and
+      margin of error
+  - file: 11 Confidence intervals/15 Introduction to t statistics
+  - file: 11 Confidence intervals/16 Simulation showing value of t statistic
+  - file: 11 Confidence intervals/17 Conditions for valid t intervals
+  - file: 11 Confidence intervals/18 Reference Conditions for inference on a mean
+  - file: 11 Confidence intervals/19 Example finding critical t value
+  - file: 11 Confidence intervals/20 Example constructing a t interval for a mean
+  - file: 11 Confidence intervals/21 Confidence interval for a mean with paired data
+  - file: 11 Confidence intervals/22 Making a t interval for paired data
+  - file: 11 Confidence intervals/23 Interpreting a confidence interval for a mean
+  - file: 11 Confidence intervals/24 Sample size for a given margin of error for a
+      mean
+  - file: 11 Confidence intervals/25 T-statistic confidence interval
+  - file: 11 Confidence intervals/26 Small sample size confidence intervals
+- part: 12 Significance tests (hypothesis testing)
+  chapters:
+  - file: 12 Significance tests (hypothesis testing)/01 Simple hypothesis testing
+  - file: 12 Significance tests (hypothesis testing)/02 Idea behind hypothesis testing
+  - file: 12 Significance tests (hypothesis testing)/03 Examples of null and alternative
+      hypotheses
+  - file: 12 Significance tests (hypothesis testing)/04 P-values and significance
+      tests
+  - file: 12 Significance tests (hypothesis testing)/05 Comparing P-values to different
+      significance levels
+  - file: 12 Significance tests (hypothesis testing)/06 Estimating a P-value from
+      a simulation
+  - file: 12 Significance tests (hypothesis testing)/07 Using P-values to make conclusions
+  - file: 12 Significance tests (hypothesis testing)/08 Introduction to Type I and
+      Type II errors
+  - file: 12 Significance tests (hypothesis testing)/09 Type 1 errors
+  - file: 12 Significance tests (hypothesis testing)/10 Examples identifying Type
+      I and Type II errors
+  - file: 12 Significance tests (hypothesis testing)/11 Introduction to power in significance
+      tests
+  - file: 12 Significance tests (hypothesis testing)/12 Examples thinking about power
+      in significance tests
+  - file: 12 Significance tests (hypothesis testing)/13 Consequences of errors and
+      significance
+  - file: 12 Significance tests (hypothesis testing)/14 Constructing hypotheses for
+      a significance test about a proportion
+  - file: 12 Significance tests (hypothesis testing)/15 Conditions for a z test about
+      a proportion
+  - file: 12 Significance tests (hypothesis testing)/16 Reference Conditions for inference
+      on a proportion
+  - file: 12 Significance tests (hypothesis testing)/17 Calculating a z statistic
+      in a test about a proportion
+  - file: 12 Significance tests (hypothesis testing)/18 Calculating a P-value given
+      a z statistic
+  - file: 12 Significance tests (hypothesis testing)/19 Making conclusions in a test
+      about a proportion
+  - file: 12 Significance tests (hypothesis testing)/20 Writing hypotheses for a significance
+      test about a mean
+  - file: 12 Significance tests (hypothesis testing)/21 Conditions for a t test about
+      a mean
+  - file: 12 Significance tests (hypothesis testing)/22 Reference Conditions for inference
+      on a mean
+  - file: 12 Significance tests (hypothesis testing)/23 When to use z or t statistics
+      in significance tests
+  - file: 12 Significance tests (hypothesis testing)/24 Example calculating t statistic
+      for a test about a mean
+  - file: 12 Significance tests (hypothesis testing)/25 Using TI calculator for P-value
+      from t statistic
+  - file: 12 Significance tests (hypothesis testing)/26 Using a table to estimate
+      P-value from t statistic
+  - file: 12 Significance tests (hypothesis testing)/27 Comparing P-value from t statistic
+      to significance level
+  - file: 12 Significance tests (hypothesis testing)/28 Free response example Significance
+      test for a mean
+  - file: 12 Significance tests (hypothesis testing)/29 Hypothesis testing and p-values
+  - file: 12 Significance tests (hypothesis testing)/30 One-tailed and two-tailed
+      tests
+  - file: 12 Significance tests (hypothesis testing)/31 Z-statistics vs. T-statistics
+  - file: 12 Significance tests (hypothesis testing)/32 Small sample hypothesis test
+  - file: 12 Significance tests (hypothesis testing)/33 Large sample proportion hypothesis
+      testing
+- part: 13 Inference comparing two groups or populations (AP)
+  chapters:
+  - file: 13 Inference comparing two groups or populations (AP)/01 Confidence intervals
+      for the difference between two proportions
+  - file: 13 Inference comparing two groups or populations (AP)/02 Examples identifying
+      conditions for inference on two proportions
+  - file: 13 Inference comparing two groups or populations (AP)/03 Calculating a confidence
+      interval for the difference of proportions
+  - file: 13 Inference comparing two groups or populations (AP)/04 Hypothesis test
+      for difference in proportions
+  - file: 13 Inference comparing two groups or populations (AP)/05 Constructing hypotheses
+      for two proportions
+  - file: 13 Inference comparing two groups or populations (AP)/06 Hypothesis test
+      for difference in proportions example
+  - file: 13 Inference comparing two groups or populations (AP)/07 Comparing P value
+      to significance level for test involving difference of proportions
+  - file: 13 Inference comparing two groups or populations (AP)/08 Confidence interval
+      for hypothesis test for difference in proportions
+  - file: 13 Inference comparing two groups or populations (AP)/09 Conditions for
+      inference for difference of means
+  - file: 13 Inference comparing two groups or populations (AP)/10 Constructing t
+      interval for difference of means
+  - file: 13 Inference comparing two groups or populations (AP)/11 Calculating confidence
+      interval for difference of means
+  - file: 13 Inference comparing two groups or populations (AP)/12 Hypotheses for
+      a two-sample t test
+  - file: 13 Inference comparing two groups or populations (AP)/13 Example of hypotheses
+      for paired and two-sample t tests
+  - file: 13 Inference comparing two groups or populations (AP)/14 Two-sample t test
+      for difference of means
+  - file: 13 Inference comparing two groups or populations (AP)/15 Conclusion for
+      a two-sample t test using a P-value
+  - file: 13 Inference comparing two groups or populations (AP)/16 Conclusion for
+      a two-sample t test using a confidence interval
+  - file: 13 Inference comparing two groups or populations (AP)/Untitled
+- part: 13 Two-sample inference for the difference between groups
+  chapters:
+  - file: 13 Two-sample inference for the difference between groups/01 Comparing population
+      proportions 1
+  - file: 13 Two-sample inference for the difference between groups/02 Comparing population
+      proportions 2
+  - file: 13 Two-sample inference for the difference between groups/03 Hypothesis
+      test comparing population proportions
+  - file: 13 Two-sample inference for the difference between groups/04 Statistical
+      significance of experiment
+  - file: 13 Two-sample inference for the difference between groups/05 Statistical
+      significance on bus speeds
+  - file: 13 Two-sample inference for the difference between groups/06 Difference
+      of sample means distribution
+  - file: 13 Two-sample inference for the difference between groups/07 Confidence
+      interval of difference of means
+  - file: 13 Two-sample inference for the difference between groups/08 Clarification
+      of confidence interval of difference of means
+  - file: 13 Two-sample inference for the difference between groups/09 Hypothesis
+      test for difference of means
+- part: 14 Inference for categorical data (chi-square tests)
+  chapters:
+  - file: 14 Inference for categorical data (chi-square tests)/01 Chi-square distribution
+      introduction
+  - file: 14 Inference for categorical data (chi-square tests)/02 Pearson's chi square
+      test (goodness of fit)
+  - file: 14 Inference for categorical data (chi-square tests)/03 Chi-square statistic
+      for hypothesis testing
+  - file: 14 Inference for categorical data (chi-square tests)/04 Chi-square goodness-of-fit
+      example
+  - file: 14 Inference for categorical data (chi-square tests)/05 Filling out frequency
+      table for independent events
+  - file: 14 Inference for categorical data (chi-square tests)/06 Contingency table
+      chi-square test
+  - file: 14 Inference for categorical data (chi-square tests)/07 Introduction to
+      the chi-square test for homogeneity
+  - file: 14 Inference for categorical data (chi-square tests)/08 Chi-square test
+      for association (independence)
+- part: 15 Advanced regression (inference and transforming)
+  chapters:
+  - file: 15 Advanced regression (inference and transforming)/01 Conditions for inference
+      on slope
+  - file: 15 Advanced regression (inference and transforming)/02 Introduction to inference
+      about slope in linear regression
+  - file: 15 Advanced regression (inference and transforming)/03 Confidence interval
+      for the slope of a regression line
+  - file: 15 Advanced regression (inference and transforming)/04 Calculating t statistic
+      for slope of regression line
+  - file: 15 Advanced regression (inference and transforming)/05 Using a P-value to
+      make conclusions in a test about slope
+  - file: 15 Advanced regression (inference and transforming)/06 Using a confidence
+      interval to test slope
+  - file: 15 Advanced regression (inference and transforming)/07 Comparing models
+      to fit data example
+  - file: 15 Advanced regression (inference and transforming)/08 Transforming nonlinear
+      data
+  - file: 15 Advanced regression (inference and transforming)/09 Worked example of
+      linear regression using transformed data
+- part: 16 Analysis of variance (ANOVA)
+  chapters:
+  - file: 16 Analysis of variance (ANOVA)/01 ANOVA 1 Calculating SST (total sum of
+      squares)
+  - file: 16 Analysis of variance (ANOVA)/02 ANOVA 2 Calculating SSW and SSB (total
+      sum of squares within and between)
+  - file: 16 Analysis of variance (ANOVA)/03 ANOVA 3 Hypothesis test with F-statistic
