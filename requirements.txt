@@ -8,3 +8,4 @@ seaborn
 plotly
 findspark
 pyspark
+scikit-learn
