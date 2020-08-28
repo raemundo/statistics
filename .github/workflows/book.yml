@@ -21,9 +21,6 @@ jobs:
         file spark-2.4.5-bin-hadoop2.7.tgz
         sudo tar xvf spark-2.4.5-bin-hadoop2.7.tgz
         sudo mv spark-2.4.5-bin-hadoop2.7/ /opt/spark
-      env:
-        SPARK_HOME: "/opt/spark"
-        PATH: "$PATH:$SPARK_HOME/bin:$SPARK_HOME/sbin"
         
     # Install dependencies
     - name: Install Java 11
