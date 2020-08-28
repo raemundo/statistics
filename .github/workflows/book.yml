@@ -24,10 +24,10 @@ jobs:
         SPARK_HOME: "/opt/spark"
         PATH: "$PATH:$SPARK_HOME/bin:$SPARK_HOME/sbin"
       run: |
-        apt-get update && apt-get install -y curl
+        sudo apt-get update && apt-get install -y curl
         curl -O https://www.apache.org/dyn/closer.lua/spark/spark-2.4.5/spark-2.4.5-bin-hadoop2.7.tgz
         tar xvf spark-2.4.5-bin-hadoop2.7.tgz
-        mv spark-2.4.5-bin-hadoop2.7/ /opt/spark 
+        sudo mv spark-2.4.5-bin-hadoop2.7/ /opt/spark 
 
     - name: Set up Python 3.7
       uses: actions/setup-python@v1
