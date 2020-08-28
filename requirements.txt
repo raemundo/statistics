@@ -11,3 +11,4 @@ findspark
 pyspark
 scikit-learn
 category-encoders
+networkx
