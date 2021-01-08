@@ -1,0 +1,26 @@
+[[source]]
+url = "https://pypi.org/simple"
+verify_ssl = true
+name = "pypi"
+
+[packages]
+jupyter-book = "*"
+sympy = "*"
+numpy = "*"
+pandas = "*"
+matplotlib = "*"
+matplotlib-venn = "*"
+stemgraphic = "*"
+seaborn = "*"
+statsmodels = "*"
+plotly = "*"
+findspark = "*"
+pyspark = "*"
+scikit-learn = "*"
+category-encoders = "*"
+networkx = "*"
+
+[dev-packages]
+
+[requires]
+python_version = "3.8"
