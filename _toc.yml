@@ -1,5 +1,7 @@
-- file: intro
-- part: 01. Categorical Data
+format: jb-book
+root: intro
+parts:
+- caption: 01. Categorical Data
   chapters:
   - file: 01. Categorical Data/01 Identifying individuals, variables and categorical
       variables in a data set
@@ -12,7 +14,7 @@
   - file: 01. Categorical Data/08 Mosaic plots and segmented bar charts
   - file: 01. Categorical Data/09 Analyzing mosaic plots
   - file: 01. Categorical Data/Categorical Data
-- part: 02. Displaying and comparing quantitative data
+- caption: 02. Displaying and comparing quantitative data
   chapters:
   - file: 02. Displaying and comparing quantitative data/01 Frequency tables & dot
       plots
@@ -26,7 +28,7 @@
   - file: 02. Displaying and comparing quantitative data/07 Example - Describing a
       distribution
   - file: 02. Displaying and comparing quantitative data/08 Example - Comparing distributions
-- part: 03 Summarizing quantitative data
+- caption: 03 Summarizing quantitative data
   chapters:
   - file: 03 Summarizing quantitative data/01 Statistics intro - Mean, median, & mode
   - file: 03 Summarizing quantitative data/02 Mean, median, & mode example
@@ -56,7 +58,7 @@
   - file: 03 Summarizing quantitative data/19 Reading box plots
   - file: 03 Summarizing quantitative data/20 Interpreting box plots
   - file: 03 Summarizing quantitative data/21 Judging outliers in a dataset
-- part: 04 Modeling data distributions
+- caption: 04 Modeling data distributions
   chapters:
   - file: 04 Modeling data distributions/01 Calculating percentile
   - file: 04 Modeling data distributions/02 Analyzing a cumulative relative frequency
@@ -84,7 +86,7 @@
       values
   - file: 04 Modeling data distributions/15 Finding z-score for a percentile
   - file: 04 Modeling data distributions/16 Threshold for low percentile
-- part: 05 Exploring bivariate numerical data
+- caption: 05 Exploring bivariate numerical data
   chapters:
   - file: 05 Exploring bivariate numerical data/01 Constructing a scatter plot
   - file: 05 Exploring bivariate numerical data/02 Example of direction in scatterplots
@@ -113,7 +115,7 @@
       data
   - file: 05 Exploring bivariate numerical data/16 Impact of removing outliers on
       regression lines
-- part: 06 Study design
+- caption: 06 Study design
   chapters:
   - file: 06 Study design/01 Identifying a sample and population
   - file: 06 Study design/02 Generalizabilty of survey results example
@@ -128,7 +130,7 @@
   - file: 06 Study design/11 Matched pairs experiment design
   - file: 06 Study design/12 Invalid conclusions from studies example
   - file: 06 Study design/13 Can causality be established from this study
-- part: 07 Probability
+- caption: 07 Probability
   chapters:
   - file: 07 Probability/01 Intro to theoretical probability
   - file: 07 Probability/02 Experimental versus theoretical probability simulation
@@ -147,7 +149,7 @@
   - file: 07 Probability/15 Conditional probability with Bayes' Theorem
   - file: 07 Probability/16 Conditional probability tree diagram example
   - file: 07 Probability/Untitled
-- part: 08 Counting, permutations, and combinations
+- caption: 08 Counting, permutations, and combinations
   chapters:
   - file: 08 Counting, permutations, and combinations/01 Count outcomes using tree
       diagram
@@ -183,7 +185,7 @@
       combinations
   - file: 08 Counting, permutations, and combinations/22 Mega millions jackpot probability
   - file: 08 Counting, permutations, and combinations/23 Birthday probability problem
-- part: 09 Random variables
+- caption: 09 Random variables
   chapters:
   - file: 09 Random variables/01 Constructing a probability distribution for random
       variable
@@ -224,7 +226,7 @@
   - file: 09 Random variables/29 Cumulative geometric probability (less than a value)
   - file: 09 Random variables/30 TI-84 geometpdf and geometcdf functions
   - file: 09 Random variables/31 Proof of expected value of geometric random variable
-- part: 10 Sampling distributions
+- caption: 10 Sampling distributions
   chapters:
   - file: 10 Sampling distributions/01 Introduction to sampling distributions
   - file: 10 Sampling distributions/02 Sample statistic bias worked example
@@ -241,7 +243,7 @@
   - file: 10 Sampling distributions/10 Standard error of the mean
   - file: 10 Sampling distributions/11 Example - Probability of sample mean exceeding
       a value
-- part: 11 Confidence intervals
+- caption: 11 Confidence intervals
   chapters:
   - file: 11 Confidence intervals/01 Confidence intervals and margin of error
   - file: 11 Confidence intervals/02 Confidence interval simulation
@@ -273,7 +275,7 @@
       mean
   - file: 11 Confidence intervals/25 T-statistic confidence interval
   - file: 11 Confidence intervals/26 Small sample size confidence intervals
-- part: 12 Significance tests (hypothesis testing)
+- caption: 12 Significance tests (hypothesis testing)
   chapters:
   - file: 12 Significance tests (hypothesis testing)/01 Simple hypothesis testing
   - file: 12 Significance tests (hypothesis testing)/02 Idea behind hypothesis testing
@@ -334,7 +336,7 @@
   - file: 12 Significance tests (hypothesis testing)/32 Small sample hypothesis test
   - file: 12 Significance tests (hypothesis testing)/33 Large sample proportion hypothesis
       testing
-- part: 13 Inference comparing two groups or populations (AP)
+- caption: 13 Inference comparing two groups or populations (AP)
   chapters:
   - file: 13 Inference comparing two groups or populations (AP)/01 Confidence intervals
       for the difference between two proportions
@@ -369,7 +371,7 @@
   - file: 13 Inference comparing two groups or populations (AP)/16 Conclusion for
       a two-sample t test using a confidence interval
   - file: 13 Inference comparing two groups or populations (AP)/Untitled
-- part: 13 Two-sample inference for the difference between groups
+- caption: 13 Two-sample inference for the difference between groups
   chapters:
   - file: 13 Two-sample inference for the difference between groups/01 Comparing population
       proportions 1
@@ -389,7 +391,7 @@
       of confidence interval of difference of means
   - file: 13 Two-sample inference for the difference between groups/09 Hypothesis
       test for difference of means
-- part: 14 Inference for categorical data (chi-square tests)
+- caption: 14 Inference for categorical data (chi-square tests)
   chapters:
   - file: 14 Inference for categorical data (chi-square tests)/01 Chi-square distribution
       introduction
@@ -407,7 +409,7 @@
       the chi-square test for homogeneity
   - file: 14 Inference for categorical data (chi-square tests)/08 Chi-square test
       for association (independence)
-- part: 15 Advanced regression (inference and transforming)
+- caption: 15 Advanced regression (inference and transforming)
   chapters:
   - file: 15 Advanced regression (inference and transforming)/01 Conditions for inference
       on slope
@@ -427,7 +429,7 @@
       data
   - file: 15 Advanced regression (inference and transforming)/09 Worked example of
       linear regression using transformed data
-- part: 16 Analysis of variance (ANOVA)
+- caption: 16 Analysis of variance (ANOVA)
   chapters:
   - file: 16 Analysis of variance (ANOVA)/01 ANOVA 1 Calculating SST (total sum of
       squares)
