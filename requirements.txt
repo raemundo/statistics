@@ -13,3 +13,5 @@ pyspark
 scikit-learn
 category-encoders
 networkx
+confluent_kafka
+ksql
