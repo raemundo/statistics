@@ -30,7 +30,7 @@ jobs:
       uses: addnab/docker-run-action@v3
       with:
         image: confluentinc/cp-ksql-server:5.4.2
-        options: -v ${{ github.workspace }}:/home/mksql -e KSQL_BOOTSTRAP_SERVERS=[::1]:9092 -e KSQL_LISTENERS=http://0.0.0.0:8088/
+        options: -v ${{ github.workspace }}:/home/mksql -e KSQL_BOOTSTRAP_SERVERS=[::1]:9092 -e KSQL_LISTENERS=http:/localhost:8088/
         
     - name: Set up Python 3.9
       uses: actions/setup-python@v1
