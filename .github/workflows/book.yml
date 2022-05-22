@@ -30,17 +30,18 @@ jobs:
         sudo tar xvf spark-3.0.1-bin-hadoop2.7.tgz
         sudo mv spark-3.0.1-bin-hadoop2.7/ /opt/spark
         export PATH=$PATH:$SPARK_HOME/bin:$SPARK_HOME/sbin
-
+        
+    - name: Set up KSQL
+      uses: addnab/docker-run-action@v3
+      with:
+        image: confluentinc/cp-ksql-server:5.4.2
+        options: -v ${{ github.workspace }}:~/mksql -e KSQL_BOOTSTRAP_SERVERS=localhost:9092
+        
     - name: Set up Python 3.9
       uses: actions/setup-python@v1
       with:
         python-version: 3.9
 
-    - name: Run the build process with Docker
-    - uses: addnab/docker-run-action@v3
-      with:
-        image: confluentinc/cp-ksql-server:5.4.2
-        options: -v ${{ github.workspace }}:~/mksql -e KSQL_BOOTSTRAP_SERVERS=localhost:9092
     - name: Install dependencies
       run: |
         pip install -r requirements.txt
