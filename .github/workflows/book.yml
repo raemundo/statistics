@@ -25,10 +25,10 @@ jobs:
       run: |
         sudo apt-get update
         sudo apt-get install -y curl
-        sudo curl -O https://archive.apache.org/dist/spark/spark-3.0.1/spark-3.0.1-bin-hadoop2.7.tgz
-        file spark-3.0.1-bin-hadoop2.7.tgz
-        sudo tar xvf spark-3.0.1-bin-hadoop2.7.tgz
-        sudo mv spark-3.0.1-bin-hadoop2.7/ /opt/spark
+        sudo curl -O https://dlcdn.apache.org/spark/spark-3.1.3/spark-3.1.3-bin-hadoop3.2.tgz
+        file spark-3.1.3-bin-hadoop3.2.tgz
+        sudo tar xvf spark-3.1.3-bin-hadoop3.2.tgz
+        sudo mv spark-3.1.3-bin-hadoop3.2.tgz/ /opt/spark
         export PATH=$PATH:$SPARK_HOME/bin:$SPARK_HOME/sbin
         
     - name: Set up KSQL
