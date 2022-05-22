@@ -34,8 +34,7 @@ jobs:
 
     - name: Test KSQL connection
       run: |
-        curl -v http://localhost:8088/
-
+        curl -o - -I --ipv4 http://localhost:8088/
     - name: Set up Python 3.9
       uses: actions/setup-python@v1
       with:
