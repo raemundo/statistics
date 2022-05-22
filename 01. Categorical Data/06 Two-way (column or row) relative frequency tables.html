@@ -5,7 +5,7 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>07 Marginal and conditional distributions &#8212; Statstics with Python</title>
+    <title>05 Two-way (column or row) relative frequency tables &#8212; Statstics with Python</title>
     
   <link href="../_static/css/theme.css" rel="stylesheet">
   <link href="../_static/css/index.ff1ffe594081f20da1ef19478df9384b.css" rel="stylesheet">
@@ -53,8 +53,6 @@ const thebe_selector_output = ".output, .cell_output"
     <script async="async" src="../_static/sphinx-thebe.js"></script>
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
-    <link rel="next" title="08 Mosaic plots and segmented bar charts" href="08%20Mosaic%20plots%20and%20segmented%20bar%20charts.html" />
-    <link rel="prev" title="06 Interpreting two-way tables" href="06%20Interpreting%20two-way%20tables.html" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="docsearch:language" content="None">
     
@@ -103,7 +101,7 @@ const thebe_selector_output = ".output, .cell_output"
   01. Categorical Data
  </span>
 </p>
-<ul class="current nav bd-sidenav">
+<ul class="nav bd-sidenav">
  <li class="toctree-l1">
   <a class="reference internal" href="01%20Identifying%20individuals%2C%20variables%20and%20categorical%20variables%20in%20a%20data%20set.html">
    01 Identifying individuals, variables and categorical variables in a data set
@@ -117,36 +115,6 @@ const thebe_selector_output = ".output, .cell_output"
  <li class="toctree-l1">
   <a class="reference internal" href="03%20Reading%20bar%20charts%20-%20comparing%20two%20sets%20of%20data.html">
    03 Reading bar charts - comparing two sets of data
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="04%20Two-way%20frequency%20tables%20and%20Venn%20diagrams.html">
-   04 Two-way frequency tables and Venn diagrams
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="05%20Two-way%20%28column%20or%20row%29%20relative%20frequency%20tables.html">
-   05 Two-way (column or row) relative frequency tables
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="06%20Interpreting%20two-way%20tables.html">
-   06 Interpreting two-way tables
-  </a>
- </li>
- <li class="toctree-l1 current active">
-  <a class="current reference internal" href="#">
-   07 Marginal and conditional distributions
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="08%20Mosaic%20plots%20and%20segmented%20bar%20charts.html">
-   08 Mosaic plots and segmented bar charts
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="09%20Analyzing%20mosaic%20plots.html">
-   09 Analyzing mosaic plots
   </a>
  </li>
  <li class="toctree-l1">
@@ -1617,7 +1585,7 @@ const thebe_selector_output = ".output, .cell_output"
         <!-- ipynb file if we had a myst markdown file -->
         
         <!-- Download raw file -->
-        <a class="dropdown-buttons" href="../_sources/01. Categorical Data/07 Marginal and conditional distributions.ipynb"><button type="button"
+        <a class="dropdown-buttons" href="../_sources/01. Categorical Data/06 Two-way (column or row) relative frequency tables.ipynb"><button type="button"
                 class="btn btn-secondary topbarbtn" title="Download source file" data-toggle="tooltip"
                 data-placement="left">.ipynb</button></a>
         <!-- Download PDF via print -->
@@ -1642,7 +1610,7 @@ const thebe_selector_output = ".output, .cell_output"
         aria-label="Launch interactive content"><i class="fas fa-rocket"></i></button>
     <div class="dropdown-buttons">
         
-        <a class="binder-button" href="https://mybinder.org/v2/gh/executablebooks/jupyter-book/master?urlpath=tree/01. Categorical Data/07 Marginal and conditional distributions.ipynb"><button type="button"
+        <a class="binder-button" href="https://mybinder.org/v2/gh/executablebooks/jupyter-book/master?urlpath=tree/01. Categorical Data/06 Two-way (column or row) relative frequency tables.ipynb"><button type="button"
                 class="btn btn-secondary topbarbtn" title="Launch Binder" data-toggle="tooltip"
                 data-placement="left"><img class="binder-button-logo"
                     src="../_static/images/logo_binder.svg"
@@ -1666,7 +1634,7 @@ const thebe_selector_output = ".output, .cell_output"
         <div class="col-12 col-md-9 pl-md-3 pr-md-0">
             <!-- Table of contents that is only displayed when printing the page -->
             <div id="jb-print-docs-body" class="onlyprint">
-                <h1>07 Marginal and conditional distributions</h1>
+                <h1>05 Two-way (column or row) relative frequency tables</h1>
                 <!-- Table of contents -->
                 <div id="print-main-content">
                     <div id="jb-print-toc">
@@ -1677,8 +1645,8 @@ const thebe_selector_output = ".output, .cell_output"
             
               <div>
                 
-  <div class="tex2jax_ignore mathjax_ignore section" id="marginal-and-conditional-distributions">
-<h1>07 Marginal and conditional distributions<a class="headerlink" href="#marginal-and-conditional-distributions" title="Permalink to this headline">¶</a></h1>
+  <div class="tex2jax_ignore mathjax_ignore section" id="two-way-column-or-row-relative-frequency-tables">
+<h1>05 Two-way (column or row) relative frequency tables<a class="headerlink" href="#two-way-column-or-row-relative-frequency-tables" title="Permalink to this headline">¶</a></h1>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">matplotlib.pyplot</span> <span class="k">as</span> <span class="nn">plt</span>
@@ -1705,32 +1673,27 @@ const thebe_selector_output = ".output, .cell_output"
 </div>
 <div class="cell_output docutils container">
 <div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>WARNING: An illegal reflective access operation has occurred
-WARNING: Illegal reflective access by org.apache.spark.unsafe.Platform (file:/opt/spark/jars/spark-unsafe_2.12-3.0.1.jar) to constructor java.nio.DirectByteBuffer(long,int)
+WARNING: Illegal reflective access by org.apache.spark.unsafe.Platform (file:/home/runner/work/statistics/spark-3.1.3-bin-hadoop3.2/jars/spark-unsafe_2.12-3.1.3.jar) to constructor java.nio.DirectByteBuffer(long,int)
 WARNING: Please consider reporting this to the maintainers of org.apache.spark.unsafe.Platform
 WARNING: Use --illegal-access=warn to enable warnings of further illegal reflective access operations
 WARNING: All illegal access operations will be denied in a future release
 </pre></div>
 </div>
-<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>22/05/21 19:51:57 WARN NativeCodeLoader: Unable to load native-hadoop library for your platform... using builtin-java classes where applicable
-</pre></div>
-</div>
-<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Using Spark&#39;s default log4j profile: org/apache/spark/log4j-defaults.properties
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>22/05/22 03:45:19 WARN NativeCodeLoader: Unable to load native-hadoop library for your platform... using builtin-java classes where applicable
+Using Spark&#39;s default log4j profile: org/apache/spark/log4j-defaults.properties
 Setting default log level to &quot;WARN&quot;.
 To adjust logging level use sc.setLogLevel(newLevel). For SparkR, use setLogLevel(newLevel).
 </pre></div>
 </div>
 </div>
 </div>
-<p><a class="reference external" href="https://www.khanacademy.org/math/ap-statistics/analyzing-categorical-ap/distributions-two-way-tables/v/marginal-distribution-and-conditional-distribution?modal=1">khanacademy</a></p>
-<p><img alt="Marginal and conditional distributions fig 1" src="../_images/01-07-01.png" /></p>
+<p><a class="reference external" href="https://www.khanacademy.org/math/ap-statistics/analyzing-categorical-ap/stats-two-way-tables/v/two-way-relative-frequency-tables?modal=1">khanacademy</a></p>
+<p><img alt="Two-way (column or row) relative frequency tables fig 1" src="../_images/01-05-01.png" /></p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">dataset</span> <span class="o">=</span> <span class="p">{</span>
-    <span class="s2">&quot;#&quot;</span><span class="p">:</span> <span class="p">[</span><span class="s2">&quot;80-100&quot;</span><span class="p">,</span> <span class="s2">&quot;60-79&quot;</span><span class="p">,</span> <span class="s2">&quot;40-59&quot;</span><span class="p">,</span> <span class="s2">&quot;20-39&quot;</span><span class="p">,</span> <span class="s2">&quot;0-19&quot;</span><span class="p">],</span>
-    <span class="s2">&quot;0-20&quot;</span><span class="p">:</span> <span class="p">[</span><span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">10</span><span class="p">,</span> <span class="mi">2</span><span class="p">],</span>
-    <span class="s2">&quot;21-40&quot;</span><span class="p">:</span> <span class="p">[</span><span class="mi">4</span><span class="p">,</span> <span class="mi">20</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">0</span><span class="p">],</span>
-    <span class="s2">&quot;41-60&quot;</span><span class="p">:</span> <span class="p">[</span><span class="mi">16</span><span class="p">,</span> <span class="mi">30</span><span class="p">,</span> <span class="mi">32</span><span class="p">,</span> <span class="mi">8</span><span class="p">,</span> <span class="mi">0</span><span class="p">],</span>
-    <span class="s2">&quot;&gt;60&quot;</span><span class="p">:</span> <span class="p">[</span><span class="mi">20</span><span class="p">,</span> <span class="mi">10</span><span class="p">,</span> <span class="mi">32</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">8</span><span class="p">],</span>
+    <span class="s2">&quot;Car&quot;</span><span class="p">:</span> <span class="mi">28</span> <span class="o">*</span> <span class="p">[</span><span class="s2">&quot;SUV&quot;</span><span class="p">]</span> <span class="o">+</span> <span class="mi">35</span> <span class="o">*</span> <span class="p">[</span><span class="s2">&quot;Sport car&quot;</span><span class="p">]</span> <span class="o">+</span> <span class="mi">97</span> <span class="o">*</span> <span class="p">[</span><span class="s2">&quot;SUV&quot;</span><span class="p">]</span> <span class="o">+</span> <span class="mi">104</span> <span class="o">*</span> <span class="p">[</span><span class="s2">&quot;Sport car&quot;</span><span class="p">],</span>
+    <span class="s2">&quot;Accident&quot;</span><span class="p">:</span> <span class="mi">28</span> <span class="o">*</span> <span class="p">[</span><span class="s2">&quot;yes&quot;</span><span class="p">]</span> <span class="o">+</span> <span class="mi">35</span> <span class="o">*</span> <span class="p">[</span><span class="s2">&quot;yes&quot;</span><span class="p">]</span> <span class="o">+</span> <span class="mi">97</span> <span class="o">*</span> <span class="p">[</span><span class="s2">&quot;no&quot;</span><span class="p">]</span> <span class="o">+</span> <span class="mi">104</span> <span class="o">*</span> <span class="p">[</span><span class="s2">&quot;no&quot;</span><span class="p">],</span>
 <span class="p">}</span>
 </pre></div>
 </div>
@@ -1738,17 +1701,12 @@ To adjust logging level use sc.setLogLevel(newLevel). For SparkR, use setLogLeve
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">df</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">(</span><span class="n">dataset</span><span class="p">)</span><span class="o">.</span><span class="n">set_index</span><span class="p">(</span><span class="s2">&quot;#&quot;</span><span class="p">)</span>
-<span class="n">df</span> <span class="o">=</span> <span class="n">df</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">df</span><span class="o">.</span><span class="n">sum</span><span class="p">()</span><span class="o">.</span><span class="n">rename</span><span class="p">(</span><span class="s2">&quot;Total&quot;</span><span class="p">))</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">df</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">(</span><span class="n">dataset</span><span class="p">)</span>
 <span class="n">df</span>
 </pre></div>
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>/tmp/ipykernel_3830/167602499.py:2: FutureWarning: The frame.append method is deprecated and will be removed from pandas in a future version. Use pandas.concat instead.
-  df = df.append(df.sum().rename(&quot;Total&quot;))
-</pre></div>
-</div>
 <div class="output text_html"><div>
 <style scoped>
     .dataframe tbody tr th:only-of-type {
@@ -1767,64 +1725,69 @@ To adjust logging level use sc.setLogLevel(newLevel). For SparkR, use setLogLeve
   <thead>
     <tr style="text-align: right;">
       <th></th>
-      <th>0-20</th>
-      <th>21-40</th>
-      <th>41-60</th>
-      <th>&gt;60</th>
-    </tr>
-    <tr>
-      <th>#</th>
-      <th></th>
-      <th></th>
-      <th></th>
-      <th></th>
+      <th>Car</th>
+      <th>Accident</th>
     </tr>
   </thead>
   <tbody>
     <tr>
-      <th>80-100</th>
-      <td>0</td>
-      <td>4</td>
-      <td>16</td>
-      <td>20</td>
+      <th>0</th>
+      <td>SUV</td>
+      <td>yes</td>
     </tr>
     <tr>
-      <th>60-79</th>
-      <td>0</td>
-      <td>20</td>
-      <td>30</td>
-      <td>10</td>
+      <th>1</th>
+      <td>SUV</td>
+      <td>yes</td>
     </tr>
     <tr>
-      <th>40-59</th>
-      <td>2</td>
-      <td>4</td>
-      <td>32</td>
-      <td>32</td>
+      <th>2</th>
+      <td>SUV</td>
+      <td>yes</td>
     </tr>
     <tr>
-      <th>20-39</th>
-      <td>10</td>
-      <td>2</td>
-      <td>8</td>
-      <td>0</td>
+      <th>3</th>
+      <td>SUV</td>
+      <td>yes</td>
     </tr>
     <tr>
-      <th>0-19</th>
-      <td>2</td>
-      <td>0</td>
-      <td>0</td>
-      <td>8</td>
+      <th>4</th>
+      <td>SUV</td>
+      <td>yes</td>
     </tr>
     <tr>
-      <th>Total</th>
-      <td>14</td>
-      <td>30</td>
-      <td>86</td>
-      <td>70</td>
+      <th>...</th>
+      <td>...</td>
+      <td>...</td>
+    </tr>
+    <tr>
+      <th>259</th>
+      <td>Sport car</td>
+      <td>no</td>
+    </tr>
+    <tr>
+      <th>260</th>
+      <td>Sport car</td>
+      <td>no</td>
+    </tr>
+    <tr>
+      <th>261</th>
+      <td>Sport car</td>
+      <td>no</td>
+    </tr>
+    <tr>
+      <th>262</th>
+      <td>Sport car</td>
+      <td>no</td>
+    </tr>
+    <tr>
+      <th>263</th>
+      <td>Sport car</td>
+      <td>no</td>
     </tr>
   </tbody>
 </table>
+<p>264 rows × 2 columns</p>
 </div></div></div>
 </div>
 <div class="cell docutils container">
@@ -1839,15 +1802,31 @@ To adjust logging level use sc.setLogLevel(newLevel). For SparkR, use setLogLeve
 <div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[Stage 0:&gt;                                                          (0 + 1) / 1]
 </pre></div>
 </div>
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>+------+----+-----+-----+---+
-|     #|0-20|21-40|41-60|&gt;60|
-+------+----+-----+-----+---+
-|80-100|   0|    4|   16| 20|
-| 60-79|   0|   20|   30| 10|
-| 40-59|   2|    4|   32| 32|
-| 20-39|  10|    2|    8|  0|
-|  0-19|   2|    0|    0|  8|
-+------+----+-----+-----+---+
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>+---+--------+
+|Car|Accident|
++---+--------+
+|SUV|     yes|
+|SUV|     yes|
+|SUV|     yes|
+|SUV|     yes|
+|SUV|     yes|
+|SUV|     yes|
+|SUV|     yes|
+|SUV|     yes|
+|SUV|     yes|
+|SUV|     yes|
+|SUV|     yes|
+|SUV|     yes|
+|SUV|     yes|
+|SUV|     yes|
+|SUV|     yes|
+|SUV|     yes|
+|SUV|     yes|
+|SUV|     yes|
+|SUV|     yes|
+|SUV|     yes|
++---+--------+
+only showing top 20 rows
 </pre></div>
 </div>
 <div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>                                                                                
@@ -1857,463 +1836,272 @@ To adjust logging level use sc.setLogLevel(newLevel). For SparkR, use setLogLeve
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">df</span> <span class="o">=</span> <span class="n">df</span><span class="o">.</span><span class="n">append</span><span class="p">(</span>
-    <span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">(</span>
-        <span class="p">[</span><span class="n">df</span><span class="o">.</span><span class="n">iloc</span><span class="p">[</span><span class="o">-</span><span class="mi">1</span><span class="p">]</span> <span class="o">/</span> <span class="n">df</span><span class="o">.</span><span class="n">iloc</span><span class="p">[</span><span class="o">-</span><span class="mi">1</span><span class="p">]</span><span class="o">.</span><span class="n">sum</span><span class="p">()</span> <span class="o">*</span> <span class="mi">100</span><span class="p">],</span>
-        <span class="n">index</span><span class="o">=</span><span class="p">[</span><span class="s2">&quot;Percentage&quot;</span><span class="p">],</span>
-        <span class="n">columns</span><span class="o">=</span><span class="n">df</span><span class="o">.</span><span class="n">columns</span><span class="p">,</span>
-    <span class="p">)</span>
-<span class="p">)</span>
-<span class="n">df</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">df</span><span class="o">.</span><span class="n">groupby</span><span class="p">([</span><span class="s2">&quot;Accident&quot;</span><span class="p">,</span> <span class="s2">&quot;Car&quot;</span><span class="p">])</span><span class="o">.</span><span class="n">size</span><span class="p">()</span>
 </pre></div>
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>/tmp/ipykernel_3830/4144914823.py:1: FutureWarning: The frame.append method is deprecated and will be removed from pandas in a future version. Use pandas.concat instead.
-  df = df.append(
-</pre></div>
-</div>
-<div class="output text_html"><div>
-<style scoped>
-    .dataframe tbody tr th:only-of-type {
-        vertical-align: middle;
-    }
-
-    .dataframe tbody tr th {
-        vertical-align: top;
-    }
-
-    .dataframe thead th {
-        text-align: right;
-    }
-</style>
-<table border="1" class="dataframe">
-  <thead>
-    <tr style="text-align: right;">
-      <th></th>
-      <th>0-20</th>
-      <th>21-40</th>
-      <th>41-60</th>
-      <th>&gt;60</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <th>80-100</th>
-      <td>0.0</td>
-      <td>4.0</td>
-      <td>16.0</td>
-      <td>20.0</td>
-    </tr>
-    <tr>
-      <th>60-79</th>
-      <td>0.0</td>
-      <td>20.0</td>
-      <td>30.0</td>
-      <td>10.0</td>
-    </tr>
-    <tr>
-      <th>40-59</th>
-      <td>2.0</td>
-      <td>4.0</td>
-      <td>32.0</td>
-      <td>32.0</td>
-    </tr>
-    <tr>
-      <th>20-39</th>
-      <td>10.0</td>
-      <td>2.0</td>
-      <td>8.0</td>
-      <td>0.0</td>
-    </tr>
-    <tr>
-      <th>0-19</th>
-      <td>2.0</td>
-      <td>0.0</td>
-      <td>0.0</td>
-      <td>8.0</td>
-    </tr>
-    <tr>
-      <th>Total</th>
-      <td>14.0</td>
-      <td>30.0</td>
-      <td>86.0</td>
-      <td>70.0</td>
-    </tr>
-    <tr>
-      <th>Percentage</th>
-      <td>7.0</td>
-      <td>15.0</td>
-      <td>43.0</td>
-      <td>35.0</td>
-    </tr>
-  </tbody>
-</table>
-</div></div></div>
-</div>
-<div class="cell docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">df</span><span class="p">[</span><span class="s2">&quot;Total&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="n">df</span><span class="o">.</span><span class="n">sum</span><span class="p">(</span><span class="n">axis</span><span class="o">=</span><span class="mi">1</span><span class="p">)</span>
-<span class="n">df</span><span class="p">[</span><span class="s2">&quot;Percentage&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="n">df</span><span class="p">[</span><span class="s2">&quot;Total&quot;</span><span class="p">]</span> <span class="o">/</span> <span class="n">df</span><span class="p">[</span><span class="s2">&quot;Total&quot;</span><span class="p">]</span><span class="o">.</span><span class="n">sum</span><span class="p">()</span> <span class="o">*</span> <span class="mi">100</span>
-<span class="n">df</span><span class="o">.</span><span class="n">loc</span><span class="p">[</span><span class="s2">&quot;Total&quot;</span><span class="p">][</span><span class="s2">&quot;Percentage&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">nan</span>
-<span class="n">df</span><span class="o">.</span><span class="n">loc</span><span class="p">[</span><span class="s2">&quot;Percentage&quot;</span><span class="p">][</span><span class="s2">&quot;Percentage&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">nan</span>
-<span class="n">df</span>
-</pre></div>
-</div>
-</div>
-<div class="cell_output docutils container">
-<div class="output text_html"><div>
-<style scoped>
-    .dataframe tbody tr th:only-of-type {
-        vertical-align: middle;
-    }
-
-    .dataframe tbody tr th {
-        vertical-align: top;
-    }
-
-    .dataframe thead th {
-        text-align: right;
-    }
-</style>
-<table border="1" class="dataframe">
-  <thead>
-    <tr style="text-align: right;">
-      <th></th>
-      <th>0-20</th>
-      <th>21-40</th>
-      <th>41-60</th>
-      <th>&gt;60</th>
-      <th>Total</th>
-      <th>Percentage</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <th>80-100</th>
-      <td>0.0</td>
-      <td>4.0</td>
-      <td>16.0</td>
-      <td>20.0</td>
-      <td>40.0</td>
-      <td>8.0</td>
-    </tr>
-    <tr>
-      <th>60-79</th>
-      <td>0.0</td>
-      <td>20.0</td>
-      <td>30.0</td>
-      <td>10.0</td>
-      <td>60.0</td>
-      <td>12.0</td>
-    </tr>
-    <tr>
-      <th>40-59</th>
-      <td>2.0</td>
-      <td>4.0</td>
-      <td>32.0</td>
-      <td>32.0</td>
-      <td>70.0</td>
-      <td>14.0</td>
-    </tr>
-    <tr>
-      <th>20-39</th>
-      <td>10.0</td>
-      <td>2.0</td>
-      <td>8.0</td>
-      <td>0.0</td>
-      <td>20.0</td>
-      <td>4.0</td>
-    </tr>
-    <tr>
-      <th>0-19</th>
-      <td>2.0</td>
-      <td>0.0</td>
-      <td>0.0</td>
-      <td>8.0</td>
-      <td>10.0</td>
-      <td>2.0</td>
-    </tr>
-    <tr>
-      <th>Total</th>
-      <td>14.0</td>
-      <td>30.0</td>
-      <td>86.0</td>
-      <td>70.0</td>
-      <td>200.0</td>
-      <td>NaN</td>
-    </tr>
-    <tr>
-      <th>Percentage</th>
-      <td>7.0</td>
-      <td>15.0</td>
-      <td>43.0</td>
-      <td>35.0</td>
-      <td>100.0</td>
-      <td>NaN</td>
-    </tr>
-  </tbody>
-</table>
-</div></div></div>
-</div>
-<div class="cell docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">sdf</span> <span class="o">=</span> <span class="n">sdf</span><span class="o">.</span><span class="n">withColumn</span><span class="p">(</span>
-    <span class="s2">&quot;Total&quot;</span><span class="p">,</span> <span class="n">F</span><span class="o">.</span><span class="n">col</span><span class="p">(</span><span class="s2">&quot;0-20&quot;</span><span class="p">)</span> <span class="o">+</span> <span class="n">F</span><span class="o">.</span><span class="n">col</span><span class="p">(</span><span class="s2">&quot;21-40&quot;</span><span class="p">)</span> <span class="o">+</span> <span class="n">F</span><span class="o">.</span><span class="n">col</span><span class="p">(</span><span class="s2">&quot;41-60&quot;</span><span class="p">)</span> <span class="o">+</span> <span class="n">F</span><span class="o">.</span><span class="n">col</span><span class="p">(</span><span class="s2">&quot;&gt;60&quot;</span><span class="p">)</span>
-<span class="p">)</span>
-<span class="n">sdf</span> <span class="o">=</span> <span class="n">sdf</span><span class="o">.</span><span class="n">withColumn</span><span class="p">(</span>
-    <span class="s2">&quot;Percentage&quot;</span><span class="p">,</span> <span class="n">F</span><span class="o">.</span><span class="n">col</span><span class="p">(</span><span class="s2">&quot;Total&quot;</span><span class="p">)</span> <span class="o">/</span> <span class="n">sdf</span><span class="o">.</span><span class="n">select</span><span class="p">(</span><span class="n">F</span><span class="o">.</span><span class="n">sum</span><span class="p">(</span><span class="s2">&quot;Total&quot;</span><span class="p">))</span><span class="o">.</span><span class="n">collect</span><span class="p">()[</span><span class="mi">0</span><span class="p">][</span><span class="mi">0</span><span class="p">]</span> <span class="o">*</span> <span class="mi">100</span>
-<span class="p">)</span>
-<span class="n">sdf</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
-</pre></div>
-</div>
-</div>
-<div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>+------+----+-----+-----+---+-----+----------+
-|     #|0-20|21-40|41-60|&gt;60|Total|Percentage|
-+------+----+-----+-----+---+-----+----------+
-|80-100|   0|    4|   16| 20|   40|      20.0|
-| 60-79|   0|   20|   30| 10|   60|      30.0|
-| 40-59|   2|    4|   32| 32|   70|      35.0|
-| 20-39|  10|    2|    8|  0|   20|      10.0|
-|  0-19|   2|    0|    0|  8|   10|       5.0|
-+------+----+-----+-----+---+-----+----------+
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Accident  Car      
+no        SUV           97
+          Sport car    104
+yes       SUV           28
+          Sport car     35
+dtype: int64
 </pre></div>
 </div>
 </div>
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">marginal_dist_v_df</span> <span class="o">=</span> <span class="n">df</span><span class="o">.</span><span class="n">iloc</span><span class="p">[</span><span class="o">-</span><span class="mi">2</span><span class="p">:]</span>
-<span class="n">marginal_dist_v_df</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">sdf</span><span class="o">.</span><span class="n">groupby</span><span class="p">(</span><span class="s2">&quot;Accident&quot;</span><span class="p">,</span> <span class="s2">&quot;Car&quot;</span><span class="p">)</span><span class="o">.</span><span class="n">count</span><span class="p">()</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
 </pre></div>
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output text_html"><div>
-<style scoped>
-    .dataframe tbody tr th:only-of-type {
-        vertical-align: middle;
-    }
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[Stage 8:===================================&gt;                    (63 + 1) / 100]
 
-    .dataframe tbody tr th {
-        vertical-align: top;
-    }
-
-    .dataframe thead th {
-        text-align: right;
-    }
-</style>
-<table border="1" class="dataframe">
-  <thead>
-    <tr style="text-align: right;">
-      <th></th>
-      <th>0-20</th>
-      <th>21-40</th>
-      <th>41-60</th>
-      <th>&gt;60</th>
-      <th>Total</th>
-      <th>Percentage</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <th>Total</th>
-      <td>14.0</td>
-      <td>30.0</td>
-      <td>86.0</td>
-      <td>70.0</td>
-      <td>200.0</td>
-      <td>NaN</td>
-    </tr>
-    <tr>
-      <th>Percentage</th>
-      <td>7.0</td>
-      <td>15.0</td>
-      <td>43.0</td>
-      <td>35.0</td>
-      <td>100.0</td>
-      <td>NaN</td>
-    </tr>
-  </tbody>
-</table>
-</div></div></div>
-</div>
-<div class="cell docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">marginal_dist_h_df</span> <span class="o">=</span> <span class="n">df</span><span class="o">.</span><span class="n">loc</span><span class="p">[:,</span> <span class="s2">&quot;Total&quot;</span><span class="p">:]</span>
-<span class="n">marginal_dist_h_df</span>
+[Stage 8:=================================================&gt;      (88 + 1) / 100]
 </pre></div>
 </div>
-</div>
-<div class="cell_output docutils container">
-<div class="output text_html"><div>
-<style scoped>
-    .dataframe tbody tr th:only-of-type {
-        vertical-align: middle;
-    }
-
-    .dataframe tbody tr th {
-        vertical-align: top;
-    }
-
-    .dataframe thead th {
-        text-align: right;
-    }
-</style>
-<table border="1" class="dataframe">
-  <thead>
-    <tr style="text-align: right;">
-      <th></th>
-      <th>Total</th>
-      <th>Percentage</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <th>80-100</th>
-      <td>40.0</td>
-      <td>8.0</td>
-    </tr>
-    <tr>
-      <th>60-79</th>
-      <td>60.0</td>
-      <td>12.0</td>
-    </tr>
-    <tr>
-      <th>40-59</th>
-      <td>70.0</td>
-      <td>14.0</td>
-    </tr>
-    <tr>
-      <th>20-39</th>
-      <td>20.0</td>
-      <td>4.0</td>
-    </tr>
-    <tr>
-      <th>0-19</th>
-      <td>10.0</td>
-      <td>2.0</td>
-    </tr>
-    <tr>
-      <th>Total</th>
-      <td>200.0</td>
-      <td>NaN</td>
-    </tr>
-    <tr>
-      <th>Percentage</th>
-      <td>100.0</td>
-      <td>NaN</td>
-    </tr>
-  </tbody>
-</table>
-</div></div></div>
-</div>
-<div class="cell docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">sdf</span><span class="o">.</span><span class="n">select</span><span class="p">(</span><span class="s2">&quot;#&quot;</span><span class="p">,</span> <span class="s2">&quot;Total&quot;</span><span class="p">,</span> <span class="s2">&quot;Percentage&quot;</span><span class="p">)</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>                                                                                
 </pre></div>
 </div>
-</div>
-<div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>+------+-----+----------+
-|     #|Total|Percentage|
-+------+-----+----------+
-|80-100|   40|      20.0|
-| 60-79|   60|      30.0|
-| 40-59|   70|      35.0|
-| 20-39|   20|      10.0|
-|  0-19|   10|       5.0|
-+------+-----+----------+
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>+--------+---------+-----+
+|Accident|      Car|count|
++--------+---------+-----+
+|      no|      SUV|   97|
+|     yes|Sport car|   35|
+|      no|Sport car|  104|
+|     yes|      SUV|   28|
++--------+---------+-----+
 </pre></div>
 </div>
 </div>
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">conditional_dist_df</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">(</span><span class="n">df</span><span class="o">.</span><span class="n">loc</span><span class="p">[:,</span> <span class="s2">&quot;41-60&quot;</span><span class="p">])</span>
-<span class="n">conditional_dist_df</span> <span class="o">=</span> <span class="n">conditional_dist_df</span><span class="o">.</span><span class="n">iloc</span><span class="p">[:</span><span class="o">-</span><span class="mi">2</span><span class="p">]</span>
-<span class="n">conditional_dist_df</span><span class="p">[</span><span class="s2">&quot;Percentage&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="p">(</span>
-    <span class="n">conditional_dist_df</span><span class="p">[</span><span class="s2">&quot;41-60&quot;</span><span class="p">]</span> <span class="o">/</span> <span class="n">conditional_dist_df</span><span class="p">[</span><span class="s2">&quot;41-60&quot;</span><span class="p">]</span><span class="o">.</span><span class="n">sum</span><span class="p">()</span> <span class="o">*</span> <span class="mi">100</span>
-<span class="p">)</span>
-<span class="n">conditional_dist_df</span>
-</pre></div>
-</div>
-</div>
-<div class="cell_output docutils container">
-<div class="output text_html"><div>
-<style scoped>
-    .dataframe tbody tr th:only-of-type {
-        vertical-align: middle;
-    }
-
-    .dataframe tbody tr th {
-        vertical-align: top;
-    }
-
-    .dataframe thead th {
-        text-align: right;
-    }
-</style>
-<table border="1" class="dataframe">
-  <thead>
-    <tr style="text-align: right;">
-      <th></th>
-      <th>41-60</th>
-      <th>Percentage</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <th>80-100</th>
-      <td>16.0</td>
-      <td>18.604651</td>
-    </tr>
-    <tr>
-      <th>60-79</th>
-      <td>30.0</td>
-      <td>34.883721</td>
-    </tr>
-    <tr>
-      <th>40-59</th>
-      <td>32.0</td>
-      <td>37.209302</td>
-    </tr>
-    <tr>
-      <th>20-39</th>
-      <td>8.0</td>
-      <td>9.302326</td>
-    </tr>
-    <tr>
-      <th>0-19</th>
-      <td>0.0</td>
-      <td>0.000000</td>
-    </tr>
-  </tbody>
-</table>
-</div></div></div>
-</div>
-<div class="cell docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">sdf</span><span class="o">.</span><span class="n">select</span><span class="p">(</span><span class="s2">&quot;#&quot;</span><span class="p">,</span> <span class="s2">&quot;41-60&quot;</span><span class="p">)</span><span class="o">.</span><span class="n">withColumn</span><span class="p">(</span>
-    <span class="s2">&quot;Percentage&quot;</span><span class="p">,</span> <span class="n">F</span><span class="o">.</span><span class="n">col</span><span class="p">(</span><span class="s2">&quot;41-60&quot;</span><span class="p">)</span> <span class="o">/</span> <span class="n">sdf</span><span class="o">.</span><span class="n">select</span><span class="p">(</span><span class="n">F</span><span class="o">.</span><span class="n">sum</span><span class="p">(</span><span class="s2">&quot;41-60&quot;</span><span class="p">))</span><span class="o">.</span><span class="n">collect</span><span class="p">()[</span><span class="mi">0</span><span class="p">][</span><span class="mi">0</span><span class="p">]</span> <span class="o">*</span> <span class="mi">100</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">spark</span><span class="o">.</span><span class="n">sql</span><span class="p">(</span>
+    <span class="s2">&quot;select Accident, Car, count(*) as count from sdf_table group by Accident, Car&quot;</span>
 <span class="p">)</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
 </pre></div>
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>+------+-----+------------------+
-|     #|41-60|        Percentage|
-+------+-----+------------------+
-|80-100|   16|  18.6046511627907|
-| 60-79|   30|34.883720930232556|
-| 40-59|   32|  37.2093023255814|
-| 20-39|    8|  9.30232558139535|
-|  0-19|    0|               0.0|
-+------+-----+------------------+
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>+--------+---------+-----+
+|Accident|      Car|count|
++--------+---------+-----+
+|      no|      SUV|   97|
+|     yes|Sport car|   35|
+|      no|Sport car|  104|
+|     yes|      SUV|   28|
++--------+---------+-----+
 </pre></div>
 </div>
 </div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">two_way_table</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">crosstab</span><span class="p">(</span><span class="n">df</span><span class="p">[</span><span class="s2">&quot;Accident&quot;</span><span class="p">],</span> <span class="n">df</span><span class="p">[</span><span class="s2">&quot;Car&quot;</span><span class="p">])</span>
+<span class="n">two_way_table</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_html"><div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th>Car</th>
+      <th>SUV</th>
+      <th>Sport car</th>
+    </tr>
+    <tr>
+      <th>Accident</th>
+      <th></th>
+      <th></th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>no</th>
+      <td>97</td>
+      <td>104</td>
+    </tr>
+    <tr>
+      <th>yes</th>
+      <td>28</td>
+      <td>35</td>
+    </tr>
+  </tbody>
+</table>
+</div></div></div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">s_two_way_table</span> <span class="o">=</span> <span class="n">sdf</span><span class="o">.</span><span class="n">crosstab</span><span class="p">(</span><span class="s2">&quot;Accident&quot;</span><span class="p">,</span> <span class="s2">&quot;Car&quot;</span><span class="p">)</span>
+<span class="n">s_two_way_table</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>+------------+---+---------+
+|Accident_Car|SUV|Sport car|
++------------+---+---------+
+|         yes| 28|       35|
+|          no| 97|      104|
++------------+---+---------+
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">freq_table</span> <span class="o">=</span> <span class="n">two_way_table</span><span class="o">.</span><span class="n">copy</span><span class="p">()</span>
+<span class="n">freq_table</span><span class="p">[</span><span class="s2">&quot;SUV&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="n">two_way_table</span><span class="p">[</span><span class="s2">&quot;SUV&quot;</span><span class="p">]</span> <span class="o">/</span> <span class="n">two_way_table</span><span class="p">[</span><span class="s2">&quot;SUV&quot;</span><span class="p">]</span><span class="o">.</span><span class="n">sum</span><span class="p">()</span>
+<span class="n">freq_table</span><span class="p">[</span><span class="s2">&quot;Sport car&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="n">two_way_table</span><span class="p">[</span><span class="s2">&quot;Sport car&quot;</span><span class="p">]</span> <span class="o">/</span> <span class="n">two_way_table</span><span class="p">[</span><span class="s2">&quot;Sport car&quot;</span><span class="p">]</span><span class="o">.</span><span class="n">sum</span><span class="p">()</span>
+<span class="n">freq_table</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_html"><div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th>Car</th>
+      <th>SUV</th>
+      <th>Sport car</th>
+    </tr>
+    <tr>
+      <th>Accident</th>
+      <th></th>
+      <th></th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>no</th>
+      <td>0.776</td>
+      <td>0.748201</td>
+    </tr>
+    <tr>
+      <th>yes</th>
+      <td>0.224</td>
+      <td>0.251799</td>
+    </tr>
+  </tbody>
+</table>
+</div></div></div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">s_freq_table</span> <span class="o">=</span> <span class="n">s_two_way_table</span>
+<span class="n">s_freq_table</span> <span class="o">=</span> <span class="n">s_freq_table</span><span class="o">.</span><span class="n">withColumn</span><span class="p">(</span>
+    <span class="s2">&quot;SUV&quot;</span><span class="p">,</span> <span class="n">F</span><span class="o">.</span><span class="n">col</span><span class="p">(</span><span class="s2">&quot;SUV&quot;</span><span class="p">)</span> <span class="o">/</span> <span class="n">s_freq_table</span><span class="o">.</span><span class="n">select</span><span class="p">(</span><span class="n">F</span><span class="o">.</span><span class="n">sum</span><span class="p">(</span><span class="s2">&quot;SUV&quot;</span><span class="p">))</span><span class="o">.</span><span class="n">collect</span><span class="p">()[</span><span class="mi">0</span><span class="p">][</span><span class="mi">0</span><span class="p">]</span>
+<span class="p">)</span>
+<span class="n">s_freq_table</span> <span class="o">=</span> <span class="n">s_freq_table</span><span class="o">.</span><span class="n">withColumn</span><span class="p">(</span>
+    <span class="s2">&quot;Sport car&quot;</span><span class="p">,</span>
+    <span class="n">F</span><span class="o">.</span><span class="n">col</span><span class="p">(</span><span class="s2">&quot;Sport car&quot;</span><span class="p">)</span> <span class="o">/</span> <span class="n">s_freq_table</span><span class="o">.</span><span class="n">select</span><span class="p">(</span><span class="n">F</span><span class="o">.</span><span class="n">sum</span><span class="p">(</span><span class="s2">&quot;Sport car&quot;</span><span class="p">))</span><span class="o">.</span><span class="n">collect</span><span class="p">()[</span><span class="mi">0</span><span class="p">][</span><span class="mi">0</span><span class="p">],</span>
+<span class="p">)</span>
+<span class="n">s_freq_table</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>+------------+-----+------------------+
+|Accident_Car|  SUV|         Sport car|
++------------+-----+------------------+
+|         yes|0.224|0.2517985611510791|
+|          no|0.776|0.7482014388489209|
++------------+-----+------------------+
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">freq_table</span> <span class="o">=</span> <span class="n">freq_table</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">freq_table</span><span class="o">.</span><span class="n">sum</span><span class="p">()</span><span class="o">.</span><span class="n">rename</span><span class="p">(</span><span class="s2">&quot;Total&quot;</span><span class="p">))</span>
+<span class="n">freq_table</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>/tmp/ipykernel_3738/3552347670.py:1: FutureWarning: The frame.append method is deprecated and will be removed from pandas in a future version. Use pandas.concat instead.
+  freq_table = freq_table.append(freq_table.sum().rename(&quot;Total&quot;))
+</pre></div>
+</div>
+<div class="output text_html"><div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th>Car</th>
+      <th>SUV</th>
+      <th>Sport car</th>
+    </tr>
+    <tr>
+      <th>Accident</th>
+      <th></th>
+      <th></th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>no</th>
+      <td>0.776</td>
+      <td>0.748201</td>
+    </tr>
+    <tr>
+      <th>yes</th>
+      <td>0.224</td>
+      <td>0.251799</td>
+    </tr>
+    <tr>
+      <th>Total</th>
+      <td>1.000</td>
+      <td>1.000000</td>
+    </tr>
+  </tbody>
+</table>
+</div></div></div>
 </div>
 </div>
 
@@ -2341,21 +2129,7 @@ To adjust logging level use sc.setLogLevel(newLevel). For SparkR, use setLogLeve
               
             
                 <!-- Previous / next buttons -->
-<div class='prev-next-area'> 
-    <a class='left-prev' id="prev-link" href="06%20Interpreting%20two-way%20tables.html" title="previous page">
-        <i class="fas fa-angle-left"></i>
-        <div class="prev-next-info">
-            <p class="prev-next-subtitle">previous</p>
-            <p class="prev-next-title">06 Interpreting two-way tables</p>
-        </div>
-    </a>
-    <a class='right-next' id="next-link" href="08%20Mosaic%20plots%20and%20segmented%20bar%20charts.html" title="next page">
-    <div class="prev-next-info">
-        <p class="prev-next-subtitle">next</p>
-        <p class="prev-next-title">08 Mosaic plots and segmented bar charts</p>
-    </div>
-    <i class="fas fa-angle-right"></i>
-    </a>
+<div class='prev-next-area'>
 </div>
             
         </div>

@@ -53,8 +53,6 @@ const thebe_selector_output = ".output, .cell_output"
     <script async="async" src="../_static/sphinx-thebe.js"></script>
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
-    <link rel="next" title="Categorical Data" href="Categorical%20Data.html" />
-    <link rel="prev" title="08 Mosaic plots and segmented bar charts" href="08%20Mosaic%20plots%20and%20segmented%20bar%20charts.html" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="docsearch:language" content="None">
     
@@ -103,7 +101,7 @@ const thebe_selector_output = ".output, .cell_output"
   01. Categorical Data
  </span>
 </p>
-<ul class="current nav bd-sidenav">
+<ul class="nav bd-sidenav">
  <li class="toctree-l1">
   <a class="reference internal" href="01%20Identifying%20individuals%2C%20variables%20and%20categorical%20variables%20in%20a%20data%20set.html">
    01 Identifying individuals, variables and categorical variables in a data set
@@ -117,36 +115,6 @@ const thebe_selector_output = ".output, .cell_output"
  <li class="toctree-l1">
   <a class="reference internal" href="03%20Reading%20bar%20charts%20-%20comparing%20two%20sets%20of%20data.html">
    03 Reading bar charts - comparing two sets of data
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="04%20Two-way%20frequency%20tables%20and%20Venn%20diagrams.html">
-   04 Two-way frequency tables and Venn diagrams
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="05%20Two-way%20%28column%20or%20row%29%20relative%20frequency%20tables.html">
-   05 Two-way (column or row) relative frequency tables
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="06%20Interpreting%20two-way%20tables.html">
-   06 Interpreting two-way tables
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="07%20Marginal%20and%20conditional%20distributions.html">
-   07 Marginal and conditional distributions
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="08%20Mosaic%20plots%20and%20segmented%20bar%20charts.html">
-   08 Mosaic plots and segmented bar charts
-  </a>
- </li>
- <li class="toctree-l1 current active">
-  <a class="current reference internal" href="#">
-   09 Analyzing mosaic plots
   </a>
  </li>
  <li class="toctree-l1">
@@ -1617,7 +1585,7 @@ const thebe_selector_output = ".output, .cell_output"
         <!-- ipynb file if we had a myst markdown file -->
         
         <!-- Download raw file -->
-        <a class="dropdown-buttons" href="../_sources/01. Categorical Data/09 Analyzing mosaic plots.ipynb"><button type="button"
+        <a class="dropdown-buttons" href="../_sources/01. Categorical Data/10 Analyzing mosaic plots.ipynb"><button type="button"
                 class="btn btn-secondary topbarbtn" title="Download source file" data-toggle="tooltip"
                 data-placement="left">.ipynb</button></a>
         <!-- Download PDF via print -->
@@ -1642,7 +1610,7 @@ const thebe_selector_output = ".output, .cell_output"
         aria-label="Launch interactive content"><i class="fas fa-rocket"></i></button>
     <div class="dropdown-buttons">
         
-        <a class="binder-button" href="https://mybinder.org/v2/gh/executablebooks/jupyter-book/master?urlpath=tree/01. Categorical Data/09 Analyzing mosaic plots.ipynb"><button type="button"
+        <a class="binder-button" href="https://mybinder.org/v2/gh/executablebooks/jupyter-book/master?urlpath=tree/01. Categorical Data/10 Analyzing mosaic plots.ipynb"><button type="button"
                 class="btn btn-secondary topbarbtn" title="Launch Binder" data-toggle="tooltip"
                 data-placement="left"><img class="binder-button-logo"
                     src="../_static/images/logo_binder.svg"
@@ -1706,13 +1674,13 @@ const thebe_selector_output = ".output, .cell_output"
 </div>
 <div class="cell_output docutils container">
 <div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>WARNING: An illegal reflective access operation has occurred
-WARNING: Illegal reflective access by org.apache.spark.unsafe.Platform (file:/opt/spark/jars/spark-unsafe_2.12-3.0.1.jar) to constructor java.nio.DirectByteBuffer(long,int)
+WARNING: Illegal reflective access by org.apache.spark.unsafe.Platform (file:/home/runner/work/statistics/spark-3.1.3-bin-hadoop3.2/jars/spark-unsafe_2.12-3.1.3.jar) to constructor java.nio.DirectByteBuffer(long,int)
 WARNING: Please consider reporting this to the maintainers of org.apache.spark.unsafe.Platform
 WARNING: Use --illegal-access=warn to enable warnings of further illegal reflective access operations
 WARNING: All illegal access operations will be denied in a future release
 </pre></div>
 </div>
-<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>22/05/21 19:52:23 WARN NativeCodeLoader: Unable to load native-hadoop library for your platform... using builtin-java classes where applicable
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>22/05/22 03:46:19 WARN NativeCodeLoader: Unable to load native-hadoop library for your platform... using builtin-java classes where applicable
 Using Spark&#39;s default log4j profile: org/apache/spark/log4j-defaults.properties
 Setting default log level to &quot;WARN&quot;.
 To adjust logging level use sc.setLogLevel(newLevel). For SparkR, use setLogLevel(newLevel).
@@ -1844,7 +1812,7 @@ To adjust logging level use sc.setLogLevel(newLevel). For SparkR, use setLogLeve
    0.4983388704318937)})
 </pre></div>
 </div>
-<img alt="../_images/09 Analyzing mosaic plots_8_1.png" src="../_images/09 Analyzing mosaic plots_8_1.png" />
+<img alt="../_images/10 Analyzing mosaic plots_8_1.png" src="../_images/10 Analyzing mosaic plots_8_1.png" />
 </div>
 </div>
 </div>
@@ -1873,21 +1841,7 @@ To adjust logging level use sc.setLogLevel(newLevel). For SparkR, use setLogLeve
               
             
                 <!-- Previous / next buttons -->
-<div class='prev-next-area'> 
-    <a class='left-prev' id="prev-link" href="08%20Mosaic%20plots%20and%20segmented%20bar%20charts.html" title="previous page">
-        <i class="fas fa-angle-left"></i>
-        <div class="prev-next-info">
-            <p class="prev-next-subtitle">previous</p>
-            <p class="prev-next-title">08 Mosaic plots and segmented bar charts</p>
-        </div>
-    </a>
-    <a class='right-next' id="next-link" href="Categorical%20Data.html" title="next page">
-    <div class="prev-next-info">
-        <p class="prev-next-subtitle">next</p>
-        <p class="prev-next-title">Categorical Data</p>
-    </div>
-    <i class="fas fa-angle-right"></i>
-    </a>
+<div class='prev-next-area'>
 </div>
             
         </div>

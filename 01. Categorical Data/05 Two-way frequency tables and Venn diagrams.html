@@ -5,7 +5,7 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>05 Two-way (column or row) relative frequency tables &#8212; Statstics with Python</title>
+    <title>04 Two-way frequency tables and Venn diagrams &#8212; Statstics with Python</title>
     
   <link href="../_static/css/theme.css" rel="stylesheet">
   <link href="../_static/css/index.ff1ffe594081f20da1ef19478df9384b.css" rel="stylesheet">
@@ -53,8 +53,6 @@ const thebe_selector_output = ".output, .cell_output"
     <script async="async" src="../_static/sphinx-thebe.js"></script>
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
-    <link rel="next" title="06 Interpreting two-way tables" href="06%20Interpreting%20two-way%20tables.html" />
-    <link rel="prev" title="04 Two-way frequency tables and Venn diagrams" href="04%20Two-way%20frequency%20tables%20and%20Venn%20diagrams.html" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="docsearch:language" content="None">
     
@@ -103,7 +101,7 @@ const thebe_selector_output = ".output, .cell_output"
   01. Categorical Data
  </span>
 </p>
-<ul class="current nav bd-sidenav">
+<ul class="nav bd-sidenav">
  <li class="toctree-l1">
   <a class="reference internal" href="01%20Identifying%20individuals%2C%20variables%20and%20categorical%20variables%20in%20a%20data%20set.html">
    01 Identifying individuals, variables and categorical variables in a data set
@@ -117,36 +115,6 @@ const thebe_selector_output = ".output, .cell_output"
  <li class="toctree-l1">
   <a class="reference internal" href="03%20Reading%20bar%20charts%20-%20comparing%20two%20sets%20of%20data.html">
    03 Reading bar charts - comparing two sets of data
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="04%20Two-way%20frequency%20tables%20and%20Venn%20diagrams.html">
-   04 Two-way frequency tables and Venn diagrams
-  </a>
- </li>
- <li class="toctree-l1 current active">
-  <a class="current reference internal" href="#">
-   05 Two-way (column or row) relative frequency tables
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="06%20Interpreting%20two-way%20tables.html">
-   06 Interpreting two-way tables
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="07%20Marginal%20and%20conditional%20distributions.html">
-   07 Marginal and conditional distributions
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="08%20Mosaic%20plots%20and%20segmented%20bar%20charts.html">
-   08 Mosaic plots and segmented bar charts
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="09%20Analyzing%20mosaic%20plots.html">
-   09 Analyzing mosaic plots
   </a>
  </li>
  <li class="toctree-l1">
@@ -1617,7 +1585,7 @@ const thebe_selector_output = ".output, .cell_output"
         <!-- ipynb file if we had a myst markdown file -->
         
         <!-- Download raw file -->
-        <a class="dropdown-buttons" href="../_sources/01. Categorical Data/05 Two-way (column or row) relative frequency tables.ipynb"><button type="button"
+        <a class="dropdown-buttons" href="../_sources/01. Categorical Data/05 Two-way frequency tables and Venn diagrams.ipynb"><button type="button"
                 class="btn btn-secondary topbarbtn" title="Download source file" data-toggle="tooltip"
                 data-placement="left">.ipynb</button></a>
         <!-- Download PDF via print -->
@@ -1642,7 +1610,7 @@ const thebe_selector_output = ".output, .cell_output"
         aria-label="Launch interactive content"><i class="fas fa-rocket"></i></button>
     <div class="dropdown-buttons">
         
-        <a class="binder-button" href="https://mybinder.org/v2/gh/executablebooks/jupyter-book/master?urlpath=tree/01. Categorical Data/05 Two-way (column or row) relative frequency tables.ipynb"><button type="button"
+        <a class="binder-button" href="https://mybinder.org/v2/gh/executablebooks/jupyter-book/master?urlpath=tree/01. Categorical Data/05 Two-way frequency tables and Venn diagrams.ipynb"><button type="button"
                 class="btn btn-secondary topbarbtn" title="Launch Binder" data-toggle="tooltip"
                 data-placement="left"><img class="binder-button-logo"
                     src="../_static/images/logo_binder.svg"
@@ -1666,7 +1634,7 @@ const thebe_selector_output = ".output, .cell_output"
         <div class="col-12 col-md-9 pl-md-3 pr-md-0">
             <!-- Table of contents that is only displayed when printing the page -->
             <div id="jb-print-docs-body" class="onlyprint">
-                <h1>05 Two-way (column or row) relative frequency tables</h1>
+                <h1>04 Two-way frequency tables and Venn diagrams</h1>
                 <!-- Table of contents -->
                 <div id="print-main-content">
                     <div id="jb-print-toc">
@@ -1677,8 +1645,8 @@ const thebe_selector_output = ".output, .cell_output"
             
               <div>
                 
-  <div class="tex2jax_ignore mathjax_ignore section" id="two-way-column-or-row-relative-frequency-tables">
-<h1>05 Two-way (column or row) relative frequency tables<a class="headerlink" href="#two-way-column-or-row-relative-frequency-tables" title="Permalink to this headline">¶</a></h1>
+  <div class="tex2jax_ignore mathjax_ignore section" id="two-way-frequency-tables-and-venn-diagrams">
+<h1>04 Two-way frequency tables and Venn diagrams<a class="headerlink" href="#two-way-frequency-tables-and-venn-diagrams" title="Permalink to this headline">¶</a></h1>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">matplotlib.pyplot</span> <span class="k">as</span> <span class="nn">plt</span>
@@ -1686,6 +1654,7 @@ const thebe_selector_output = ".output, .cell_output"
 <span class="kn">import</span> <span class="nn">pandas</span> <span class="k">as</span> <span class="nn">pd</span>
 <span class="kn">import</span> <span class="nn">plotly.graph_objects</span> <span class="k">as</span> <span class="nn">go</span>
 <span class="kn">import</span> <span class="nn">seaborn</span> <span class="k">as</span> <span class="nn">sns</span>
+<span class="kn">from</span> <span class="nn">matplotlib_venn</span> <span class="kn">import</span> <span class="n">venn2</span>
 </pre></div>
 </div>
 </div>
@@ -1696,7 +1665,6 @@ const thebe_selector_output = ".output, .cell_output"
 
 <span class="n">findspark</span><span class="o">.</span><span class="n">init</span><span class="p">()</span>
 <span class="kn">from</span> <span class="nn">pyspark.context</span> <span class="kn">import</span> <span class="n">SparkContext</span>
-<span class="kn">from</span> <span class="nn">pyspark.sql</span> <span class="kn">import</span> <span class="n">functions</span> <span class="k">as</span> <span class="n">F</span>
 <span class="kn">from</span> <span class="nn">pyspark.sql.session</span> <span class="kn">import</span> <span class="n">SparkSession</span>
 
 <span class="n">spark</span> <span class="o">=</span> <span class="n">SparkSession</span><span class="o">.</span><span class="n">builder</span><span class="o">.</span><span class="n">appName</span><span class="p">(</span><span class="s2">&quot;statistics&quot;</span><span class="p">)</span><span class="o">.</span><span class="n">master</span><span class="p">(</span><span class="s2">&quot;local&quot;</span><span class="p">)</span><span class="o">.</span><span class="n">getOrCreate</span><span class="p">()</span>
@@ -1705,13 +1673,13 @@ const thebe_selector_output = ".output, .cell_output"
 </div>
 <div class="cell_output docutils container">
 <div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>WARNING: An illegal reflective access operation has occurred
-WARNING: Illegal reflective access by org.apache.spark.unsafe.Platform (file:/opt/spark/jars/spark-unsafe_2.12-3.0.1.jar) to constructor java.nio.DirectByteBuffer(long,int)
+WARNING: Illegal reflective access by org.apache.spark.unsafe.Platform (file:/home/runner/work/statistics/spark-3.1.3-bin-hadoop3.2/jars/spark-unsafe_2.12-3.1.3.jar) to constructor java.nio.DirectByteBuffer(long,int)
 WARNING: Please consider reporting this to the maintainers of org.apache.spark.unsafe.Platform
 WARNING: Use --illegal-access=warn to enable warnings of further illegal reflective access operations
 WARNING: All illegal access operations will be denied in a future release
 </pre></div>
 </div>
-<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>22/05/21 19:51:24 WARN NativeCodeLoader: Unable to load native-hadoop library for your platform... using builtin-java classes where applicable
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>22/05/22 03:44:58 WARN NativeCodeLoader: Unable to load native-hadoop library for your platform... using builtin-java classes where applicable
 Using Spark&#39;s default log4j profile: org/apache/spark/log4j-defaults.properties
 Setting default log level to &quot;WARN&quot;.
 To adjust logging level use sc.setLogLevel(newLevel). For SparkR, use setLogLevel(newLevel).
@@ -1719,13 +1687,39 @@ To adjust logging level use sc.setLogLevel(newLevel). For SparkR, use setLogLeve
 </div>
 </div>
 </div>
-<p><a class="reference external" href="https://www.khanacademy.org/math/ap-statistics/analyzing-categorical-ap/stats-two-way-tables/v/two-way-relative-frequency-tables?modal=1">khanacademy</a></p>
-<p><img alt="Two-way (column or row) relative frequency tables fig 1" src="../_images/01-05-01.png" /></p>
+<p><a class="reference external" href="https://www.khanacademy.org/math/ap-statistics/analyzing-categorical-ap/stats-two-way-tables/v/two-way-frequency-tables-and-venn-diagrams?modal=1">khanacademy</a></p>
+<p><img alt="Two-way frequency tables and Venn diagrams fig 1" src="../_images/01-04-01.png" /></p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">dataset</span> <span class="o">=</span> <span class="p">{</span>
-    <span class="s2">&quot;Car&quot;</span><span class="p">:</span> <span class="mi">28</span> <span class="o">*</span> <span class="p">[</span><span class="s2">&quot;SUV&quot;</span><span class="p">]</span> <span class="o">+</span> <span class="mi">35</span> <span class="o">*</span> <span class="p">[</span><span class="s2">&quot;Sport car&quot;</span><span class="p">]</span> <span class="o">+</span> <span class="mi">97</span> <span class="o">*</span> <span class="p">[</span><span class="s2">&quot;SUV&quot;</span><span class="p">]</span> <span class="o">+</span> <span class="mi">104</span> <span class="o">*</span> <span class="p">[</span><span class="s2">&quot;Sport car&quot;</span><span class="p">],</span>
-    <span class="s2">&quot;Accident&quot;</span><span class="p">:</span> <span class="mi">28</span> <span class="o">*</span> <span class="p">[</span><span class="s2">&quot;yes&quot;</span><span class="p">]</span> <span class="o">+</span> <span class="mi">35</span> <span class="o">*</span> <span class="p">[</span><span class="s2">&quot;yes&quot;</span><span class="p">]</span> <span class="o">+</span> <span class="mi">97</span> <span class="o">*</span> <span class="p">[</span><span class="s2">&quot;no&quot;</span><span class="p">]</span> <span class="o">+</span> <span class="mi">104</span> <span class="o">*</span> <span class="p">[</span><span class="s2">&quot;no&quot;</span><span class="p">],</span>
+    <span class="s2">&quot;chocolate&quot;</span><span class="p">:</span> <span class="p">[</span>
+        <span class="s2">&quot;yes&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;yes&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;yes&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;yes&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;yes&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;yes&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;yes&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;yes&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;yes&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;no&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;no&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;no&quot;</span><span class="p">,</span>
+    <span class="p">],</span>
+    <span class="s2">&quot;coconut&quot;</span><span class="p">:</span> <span class="p">[</span>
+        <span class="s2">&quot;yes&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;yes&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;yes&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;no&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;no&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;no&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;no&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;no&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;no&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;yes&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;no&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;no&quot;</span><span class="p">,</span>
+    <span class="p">],</span>
 <span class="p">}</span>
 </pre></div>
 </div>
@@ -1757,69 +1751,73 @@ To adjust logging level use sc.setLogLevel(newLevel). For SparkR, use setLogLeve
   <thead>
     <tr style="text-align: right;">
       <th></th>
-      <th>Car</th>
-      <th>Accident</th>
+      <th>chocolate</th>
+      <th>coconut</th>
     </tr>
   </thead>
   <tbody>
     <tr>
       <th>0</th>
-      <td>SUV</td>
+      <td>yes</td>
       <td>yes</td>
     </tr>
     <tr>
       <th>1</th>
-      <td>SUV</td>
+      <td>yes</td>
       <td>yes</td>
     </tr>
     <tr>
       <th>2</th>
-      <td>SUV</td>
+      <td>yes</td>
       <td>yes</td>
     </tr>
     <tr>
       <th>3</th>
-      <td>SUV</td>
       <td>yes</td>
+      <td>no</td>
     </tr>
     <tr>
       <th>4</th>
-      <td>SUV</td>
+      <td>yes</td>
+      <td>no</td>
+    </tr>
+    <tr>
+      <th>5</th>
+      <td>yes</td>
+      <td>no</td>
+    </tr>
+    <tr>
+      <th>6</th>
+      <td>yes</td>
+      <td>no</td>
+    </tr>
+    <tr>
+      <th>7</th>
+      <td>yes</td>
+      <td>no</td>
+    </tr>
+    <tr>
+      <th>8</th>
+      <td>yes</td>
+      <td>no</td>
+    </tr>
+    <tr>
+      <th>9</th>
+      <td>no</td>
       <td>yes</td>
     </tr>
     <tr>
-      <th>...</th>
-      <td>...</td>
-      <td>...</td>
-    </tr>
-    <tr>
-      <th>259</th>
-      <td>Sport car</td>
+      <th>10</th>
+      <td>no</td>
       <td>no</td>
     </tr>
     <tr>
-      <th>260</th>
-      <td>Sport car</td>
+      <th>11</th>
       <td>no</td>
-    </tr>
-    <tr>
-      <th>261</th>
-      <td>Sport car</td>
-      <td>no</td>
-    </tr>
-    <tr>
-      <th>262</th>
-      <td>Sport car</td>
-      <td>no</td>
-    </tr>
-    <tr>
-      <th>263</th>
-      <td>Sport car</td>
       <td>no</td>
     </tr>
   </tbody>
 </table>
-<p>264 rows × 2 columns</p>
 </div></div></div>
 </div>
 <div class="cell docutils container">
@@ -1834,31 +1832,22 @@ To adjust logging level use sc.setLogLevel(newLevel). For SparkR, use setLogLeve
 <div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[Stage 0:&gt;                                                          (0 + 1) / 1]
 </pre></div>
 </div>
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>+---+--------+
-|Car|Accident|
-+---+--------+
-|SUV|     yes|
-|SUV|     yes|
-|SUV|     yes|
-|SUV|     yes|
-|SUV|     yes|
-|SUV|     yes|
-|SUV|     yes|
-|SUV|     yes|
-|SUV|     yes|
-|SUV|     yes|
-|SUV|     yes|
-|SUV|     yes|
-|SUV|     yes|
-|SUV|     yes|
-|SUV|     yes|
-|SUV|     yes|
-|SUV|     yes|
-|SUV|     yes|
-|SUV|     yes|
-|SUV|     yes|
-+---+--------+
-only showing top 20 rows
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>+---------+-------+
+|chocolate|coconut|
++---------+-------+
+|      yes|    yes|
+|      yes|    yes|
+|      yes|    yes|
+|      yes|     no|
+|      yes|     no|
+|      yes|     no|
+|      yes|     no|
+|      yes|     no|
+|      yes|     no|
+|       no|    yes|
+|       no|     no|
+|       no|     no|
++---------+-------+
 </pre></div>
 </div>
 <div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>                                                                                
@@ -1868,16 +1857,14 @@ only showing top 20 rows
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">df</span><span class="o">.</span><span class="n">groupby</span><span class="p">([</span><span class="s2">&quot;Accident&quot;</span><span class="p">,</span> <span class="s2">&quot;Car&quot;</span><span class="p">])</span><span class="o">.</span><span class="n">size</span><span class="p">()</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">df</span><span class="o">.</span><span class="n">groupby</span><span class="p">([</span><span class="s2">&quot;chocolate&quot;</span><span class="p">])</span><span class="o">.</span><span class="n">size</span><span class="p">()</span>
 </pre></div>
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Accident  Car      
-no        SUV           97
-          Sport car    104
-yes       SUV           28
-          Sport car     35
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>chocolate
+no     3
+yes    9
 dtype: int64
 </pre></div>
 </div>
@@ -1885,27 +1872,28 @@ dtype: int64
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">sdf</span><span class="o">.</span><span class="n">groupby</span><span class="p">(</span><span class="s2">&quot;Accident&quot;</span><span class="p">,</span> <span class="s2">&quot;Car&quot;</span><span class="p">)</span><span class="o">.</span><span class="n">count</span><span class="p">()</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">sdf</span><span class="o">.</span><span class="n">groupby</span><span class="p">(</span><span class="s2">&quot;chocolate&quot;</span><span class="p">)</span><span class="o">.</span><span class="n">count</span><span class="p">()</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
 </pre></div>
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[Stage 8:===============================&gt;                        (57 + 1) / 100]
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[Stage 8:==============================&gt;                         (54 + 1) / 100]
 </pre></div>
 </div>
-<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[Stage 8:===================================================&gt;    (92 + 1) / 100]
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[Stage 8:===========================================&gt;            (78 + 1) / 100]
 
-                                                                                
+[Stage 8:=======================================================&gt;(99 + 1) / 100]
 </pre></div>
 </div>
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>+--------+---------+-----+
-|Accident|      Car|count|
-+--------+---------+-----+
-|      no|      SUV|   97|
-|     yes|Sport car|   35|
-|      no|Sport car|  104|
-|     yes|      SUV|   28|
-+--------+---------+-----+
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>                                                                                
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>+---------+-----+
+|chocolate|count|
++---------+-----+
+|       no|    3|
+|      yes|    9|
++---------+-----+
 </pre></div>
 </div>
 </div>
@@ -1913,28 +1901,131 @@ dtype: int64
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">spark</span><span class="o">.</span><span class="n">sql</span><span class="p">(</span>
-    <span class="s2">&quot;select Accident, Car, count(*) as count from sdf_table group by Accident, Car&quot;</span>
+    <span class="s2">&quot;select chocolate, count(*) as count from sdf_table group by chocolate&quot;</span>
 <span class="p">)</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
 </pre></div>
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>+--------+---------+-----+
-|Accident|      Car|count|
-+--------+---------+-----+
-|      no|      SUV|   97|
-|     yes|Sport car|   35|
-|      no|Sport car|  104|
-|     yes|      SUV|   28|
-+--------+---------+-----+
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>+---------+-----+
+|chocolate|count|
++---------+-----+
+|       no|    3|
+|      yes|    9|
++---------+-----+
 </pre></div>
 </div>
 </div>
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">two_way_table</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">crosstab</span><span class="p">(</span><span class="n">df</span><span class="p">[</span><span class="s2">&quot;Accident&quot;</span><span class="p">],</span> <span class="n">df</span><span class="p">[</span><span class="s2">&quot;Car&quot;</span><span class="p">])</span>
-<span class="n">two_way_table</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">df</span><span class="o">.</span><span class="n">groupby</span><span class="p">([</span><span class="s2">&quot;coconut&quot;</span><span class="p">])</span><span class="o">.</span><span class="n">size</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>coconut
+no     8
+yes    4
+dtype: int64
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">sdf</span><span class="o">.</span><span class="n">groupby</span><span class="p">(</span><span class="s2">&quot;coconut&quot;</span><span class="p">)</span><span class="o">.</span><span class="n">count</span><span class="p">()</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>+-------+-----+
+|coconut|count|
++-------+-----+
+|     no|    8|
+|    yes|    4|
++-------+-----+
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">spark</span><span class="o">.</span><span class="n">sql</span><span class="p">(</span><span class="s2">&quot;select coconut, count(*) as count from sdf_table group by coconut&quot;</span><span class="p">)</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>+-------+-----+
+|coconut|count|
++-------+-----+
+|     no|    8|
+|    yes|    4|
++-------+-----+
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">df</span><span class="o">.</span><span class="n">groupby</span><span class="p">([</span><span class="s2">&quot;chocolate&quot;</span><span class="p">,</span> <span class="s2">&quot;coconut&quot;</span><span class="p">])</span><span class="o">.</span><span class="n">size</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>chocolate  coconut
+no         no         2
+           yes        1
+yes        no         6
+           yes        3
+dtype: int64
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">sdf</span><span class="o">.</span><span class="n">groupby</span><span class="p">(</span><span class="s2">&quot;chocolate&quot;</span><span class="p">,</span> <span class="s2">&quot;coconut&quot;</span><span class="p">)</span><span class="o">.</span><span class="n">count</span><span class="p">()</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>+---------+-------+-----+
+|chocolate|coconut|count|
++---------+-------+-----+
+|       no|     no|    2|
+|       no|    yes|    1|
+|      yes|    yes|    3|
+|      yes|     no|    6|
++---------+-------+-----+
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">spark</span><span class="o">.</span><span class="n">sql</span><span class="p">(</span>
+    <span class="s2">&quot;select chocolate, coconut, count(*) as count from sdf_table group by chocolate, coconut&quot;</span>
+<span class="p">)</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>+---------+-------+-----+
+|chocolate|coconut|count|
++---------+-------+-----+
+|       no|     no|    2|
+|       no|    yes|    1|
+|      yes|    yes|    3|
+|      yes|     no|    6|
++---------+-------+-----+
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">pd</span><span class="o">.</span><span class="n">crosstab</span><span class="p">(</span><span class="n">df</span><span class="p">[</span><span class="s2">&quot;chocolate&quot;</span><span class="p">],</span> <span class="n">df</span><span class="p">[</span><span class="s2">&quot;coconut&quot;</span><span class="p">],</span> <span class="n">margins</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
 </pre></div>
 </div>
 </div>
@@ -1956,12 +2047,14 @@ dtype: int64
 <table border="1" class="dataframe">
   <thead>
     <tr style="text-align: right;">
-      <th>Car</th>
-      <th>SUV</th>
-      <th>Sport car</th>
+      <th>coconut</th>
+      <th>no</th>
+      <th>yes</th>
+      <th>All</th>
     </tr>
     <tr>
-      <th>Accident</th>
+      <th>chocolate</th>
+      <th></th>
       <th></th>
       <th></th>
     </tr>
@@ -1969,13 +2062,21 @@ dtype: int64
   <tbody>
     <tr>
       <th>no</th>
-      <td>97</td>
-      <td>104</td>
+      <td>2</td>
+      <td>1</td>
+      <td>3</td>
     </tr>
     <tr>
       <th>yes</th>
-      <td>28</td>
-      <td>35</td>
+      <td>6</td>
+      <td>3</td>
+      <td>9</td>
+    </tr>
+    <tr>
+      <th>All</th>
+      <td>8</td>
+      <td>4</td>
+      <td>12</td>
     </tr>
   </tbody>
 </table>
@@ -1983,157 +2084,35 @@ dtype: int64
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">s_two_way_table</span> <span class="o">=</span> <span class="n">sdf</span><span class="o">.</span><span class="n">crosstab</span><span class="p">(</span><span class="s2">&quot;Accident&quot;</span><span class="p">,</span> <span class="s2">&quot;Car&quot;</span><span class="p">)</span>
-<span class="n">s_two_way_table</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">sdf</span><span class="o">.</span><span class="n">crosstab</span><span class="p">(</span><span class="s2">&quot;chocolate&quot;</span><span class="p">,</span> <span class="s2">&quot;coconut&quot;</span><span class="p">)</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
 </pre></div>
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>+------------+---+---------+
-|Accident_Car|SUV|Sport car|
-+------------+---+---------+
-|         yes| 28|       35|
-|          no| 97|      104|
-+------------+---+---------+
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>+-----------------+---+---+
+|chocolate_coconut| no|yes|
++-----------------+---+---+
+|              yes|  6|  3|
+|               no|  2|  1|
++-----------------+---+---+
 </pre></div>
 </div>
 </div>
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">freq_table</span> <span class="o">=</span> <span class="n">two_way_table</span><span class="o">.</span><span class="n">copy</span><span class="p">()</span>
-<span class="n">freq_table</span><span class="p">[</span><span class="s2">&quot;SUV&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="n">two_way_table</span><span class="p">[</span><span class="s2">&quot;SUV&quot;</span><span class="p">]</span> <span class="o">/</span> <span class="n">two_way_table</span><span class="p">[</span><span class="s2">&quot;SUV&quot;</span><span class="p">]</span><span class="o">.</span><span class="n">sum</span><span class="p">()</span>
-<span class="n">freq_table</span><span class="p">[</span><span class="s2">&quot;Sport car&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="n">two_way_table</span><span class="p">[</span><span class="s2">&quot;Sport car&quot;</span><span class="p">]</span> <span class="o">/</span> <span class="n">two_way_table</span><span class="p">[</span><span class="s2">&quot;Sport car&quot;</span><span class="p">]</span><span class="o">.</span><span class="n">sum</span><span class="p">()</span>
-<span class="n">freq_table</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">venn2</span><span class="p">(</span>
+    <span class="n">subsets</span><span class="o">=</span><span class="p">[</span><span class="n">i</span> <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="n">df</span><span class="o">.</span><span class="n">groupby</span><span class="p">([</span><span class="s2">&quot;chocolate&quot;</span><span class="p">,</span> <span class="s2">&quot;coconut&quot;</span><span class="p">])</span><span class="o">.</span><span class="n">size</span><span class="p">()[</span><span class="mi">1</span><span class="p">:]],</span>
+    <span class="n">set_labels</span><span class="o">=</span><span class="p">(</span><span class="s2">&quot;coconut&quot;</span><span class="p">,</span> <span class="s2">&quot;chocolate&quot;</span><span class="p">,</span> <span class="s2">&quot;both&quot;</span><span class="p">),</span>
+    <span class="n">set_colors</span><span class="o">=</span><span class="p">(</span><span class="s2">&quot;purple&quot;</span><span class="p">,</span> <span class="s2">&quot;skyblue&quot;</span><span class="p">),</span>
+    <span class="n">alpha</span><span class="o">=</span><span class="mf">0.7</span><span class="p">,</span>
+<span class="p">);</span>
 </pre></div>
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output text_html"><div>
-<style scoped>
-    .dataframe tbody tr th:only-of-type {
-        vertical-align: middle;
-    }
-
-    .dataframe tbody tr th {
-        vertical-align: top;
-    }
-
-    .dataframe thead th {
-        text-align: right;
-    }
-</style>
-<table border="1" class="dataframe">
-  <thead>
-    <tr style="text-align: right;">
-      <th>Car</th>
-      <th>SUV</th>
-      <th>Sport car</th>
-    </tr>
-    <tr>
-      <th>Accident</th>
-      <th></th>
-      <th></th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <th>no</th>
-      <td>0.776</td>
-      <td>0.748201</td>
-    </tr>
-    <tr>
-      <th>yes</th>
-      <td>0.224</td>
-      <td>0.251799</td>
-    </tr>
-  </tbody>
-</table>
-</div></div></div>
+<img alt="../_images/05 Two-way frequency tables and Venn diagrams_19_0.png" src="../_images/05 Two-way frequency tables and Venn diagrams_19_0.png" />
 </div>
-<div class="cell docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">s_freq_table</span> <span class="o">=</span> <span class="n">s_two_way_table</span>
-<span class="n">s_freq_table</span> <span class="o">=</span> <span class="n">s_freq_table</span><span class="o">.</span><span class="n">withColumn</span><span class="p">(</span>
-    <span class="s2">&quot;SUV&quot;</span><span class="p">,</span> <span class="n">F</span><span class="o">.</span><span class="n">col</span><span class="p">(</span><span class="s2">&quot;SUV&quot;</span><span class="p">)</span> <span class="o">/</span> <span class="n">s_freq_table</span><span class="o">.</span><span class="n">select</span><span class="p">(</span><span class="n">F</span><span class="o">.</span><span class="n">sum</span><span class="p">(</span><span class="s2">&quot;SUV&quot;</span><span class="p">))</span><span class="o">.</span><span class="n">collect</span><span class="p">()[</span><span class="mi">0</span><span class="p">][</span><span class="mi">0</span><span class="p">]</span>
-<span class="p">)</span>
-<span class="n">s_freq_table</span> <span class="o">=</span> <span class="n">s_freq_table</span><span class="o">.</span><span class="n">withColumn</span><span class="p">(</span>
-    <span class="s2">&quot;Sport car&quot;</span><span class="p">,</span>
-    <span class="n">F</span><span class="o">.</span><span class="n">col</span><span class="p">(</span><span class="s2">&quot;Sport car&quot;</span><span class="p">)</span> <span class="o">/</span> <span class="n">s_freq_table</span><span class="o">.</span><span class="n">select</span><span class="p">(</span><span class="n">F</span><span class="o">.</span><span class="n">sum</span><span class="p">(</span><span class="s2">&quot;Sport car&quot;</span><span class="p">))</span><span class="o">.</span><span class="n">collect</span><span class="p">()[</span><span class="mi">0</span><span class="p">][</span><span class="mi">0</span><span class="p">],</span>
-<span class="p">)</span>
-<span class="n">s_freq_table</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
-</pre></div>
-</div>
-</div>
-<div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>+------------+-----+------------------+
-|Accident_Car|  SUV|         Sport car|
-+------------+-----+------------------+
-|         yes|0.224|0.2517985611510791|
-|          no|0.776|0.7482014388489209|
-+------------+-----+------------------+
-</pre></div>
-</div>
-</div>
-</div>
-<div class="cell docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">freq_table</span> <span class="o">=</span> <span class="n">freq_table</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">freq_table</span><span class="o">.</span><span class="n">sum</span><span class="p">()</span><span class="o">.</span><span class="n">rename</span><span class="p">(</span><span class="s2">&quot;Total&quot;</span><span class="p">))</span>
-<span class="n">freq_table</span>
-</pre></div>
-</div>
-</div>
-<div class="cell_output docutils container">
-<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>/tmp/ipykernel_3422/3552347670.py:1: FutureWarning: The frame.append method is deprecated and will be removed from pandas in a future version. Use pandas.concat instead.
-  freq_table = freq_table.append(freq_table.sum().rename(&quot;Total&quot;))
-</pre></div>
-</div>
-<div class="output text_html"><div>
-<style scoped>
-    .dataframe tbody tr th:only-of-type {
-        vertical-align: middle;
-    }
-
-    .dataframe tbody tr th {
-        vertical-align: top;
-    }
-
-    .dataframe thead th {
-        text-align: right;
-    }
-</style>
-<table border="1" class="dataframe">
-  <thead>
-    <tr style="text-align: right;">
-      <th>Car</th>
-      <th>SUV</th>
-      <th>Sport car</th>
-    </tr>
-    <tr>
-      <th>Accident</th>
-      <th></th>
-      <th></th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <th>no</th>
-      <td>0.776</td>
-      <td>0.748201</td>
-    </tr>
-    <tr>
-      <th>yes</th>
-      <td>0.224</td>
-      <td>0.251799</td>
-    </tr>
-    <tr>
-      <th>Total</th>
-      <td>1.000</td>
-      <td>1.000000</td>
-    </tr>
-  </tbody>
-</table>
-</div></div></div>
 </div>
 </div>
 
@@ -2161,21 +2140,7 @@ dtype: int64
               
             
                 <!-- Previous / next buttons -->
-<div class='prev-next-area'> 
-    <a class='left-prev' id="prev-link" href="04%20Two-way%20frequency%20tables%20and%20Venn%20diagrams.html" title="previous page">
-        <i class="fas fa-angle-left"></i>
-        <div class="prev-next-info">
-            <p class="prev-next-subtitle">previous</p>
-            <p class="prev-next-title">04 Two-way frequency tables and Venn diagrams</p>
-        </div>
-    </a>
-    <a class='right-next' id="next-link" href="06%20Interpreting%20two-way%20tables.html" title="next page">
-    <div class="prev-next-info">
-        <p class="prev-next-subtitle">next</p>
-        <p class="prev-next-title">06 Interpreting two-way tables</p>
-    </div>
-    <i class="fas fa-angle-right"></i>
-    </a>
+<div class='prev-next-area'>
 </div>
             
         </div>
