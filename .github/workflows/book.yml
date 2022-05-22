@@ -34,7 +34,7 @@ jobs:
 
     - name: Test KSQL connection
       run: |
-        curl -v [::1]:9092
+        curl -v localhost:9092
 
     - name: Set up Python 3.9
       uses: actions/setup-python@v1
