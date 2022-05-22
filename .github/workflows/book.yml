@@ -36,6 +36,13 @@ jobs:
       with:
         python-version: 3.9
 
+    - name: Run the build process with Docker
+      uses: addnab/docker-run-action@v3
+      with:
+          image: confluentinc/cp-ksql-server:5.4.2
+          options: | -v ${{ github.workspace }}:~/mksql \
+                  -e KSQL_BOOTSTRAP_SERVERS=localhost:9092 
+                  
     - name: Install dependencies
       run: |
         pip install -r requirements.txt
