@@ -32,9 +32,9 @@ jobs:
         image: confluentinc/cp-ksql-server:5.4.2
         options: -v ${{ github.workspace }}:/home/mksql -p 127.0.0.1:8088:8088 -e KSQL_BOOTSTRAP_SERVERS=[::1]:9092 -e KSQL_LISTENERS=http://localhost:8088/
 
-    - name: Test KSQL connection
-      run: |
-        curl -v localhost:9092
+  #  - name: Test KSQL connection
+  #    run: |
+  #      curl -v localhost:9092
 
     - name: Set up Python 3.9
       uses: actions/setup-python@v1
