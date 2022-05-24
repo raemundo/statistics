@@ -1668,6 +1668,18 @@ const thebe_selector_output = ".output, .cell_output"
     <a class="reference internal nav-link" href="#spark-stream">
      Spark stream
     </a>
+    <ul class="nav section-nav flex-column">
+     <li class="toc-h4 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#read-stream">
+       read stream
+      </a>
+     </li>
+     <li class="toc-h4 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#write-stream">
+       write stream
+      </a>
+     </li>
+    </ul>
    </li>
   </ul>
  </li>
@@ -1786,6 +1798,18 @@ const thebe_selector_output = ".output, .cell_output"
     <a class="reference internal nav-link" href="#spark-stream">
      Spark stream
     </a>
+    <ul class="nav section-nav flex-column">
+     <li class="toc-h4 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#read-stream">
+       read stream
+      </a>
+     </li>
+     <li class="toc-h4 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#write-stream">
+       write stream
+      </a>
+     </li>
+    </ul>
    </li>
   </ul>
  </li>
@@ -1906,7 +1930,7 @@ WARNING: All illegal access operations will be denied in a future release
 The jars for the packages stored in: /home/runner/.ivy2/jars
 org.apache.spark#spark-streaming-kafka-0-10_2.12 added as a dependency
 org.apache.spark#spark-sql-kafka-0-10_2.12 added as a dependency
-:: resolving dependencies :: org.apache.spark#spark-submit-parent-a8d19ef2-d38f-43bf-8f2e-93fe2d7e5c82;1.0
+:: resolving dependencies :: org.apache.spark#spark-submit-parent-0814fbbe-38be-476d-b1de-4bdf6549d2e4;1.0
 	confs: [default]
 </pre></div>
 </div>
@@ -1921,36 +1945,38 @@ org.apache.spark#spark-sql-kafka-0-10_2.12 added as a dependency
 </pre></div>
 </div>
 <div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>	found org.slf4j#slf4j-api;1.7.30 in central
-	found org.spark-project.spark#unused;1.0.0 in central
+</pre></div>
+</div>
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>	found org.spark-project.spark#unused;1.0.0 in central
 	found org.apache.spark#spark-sql-kafka-0-10_2.12;3.1.3 in central
 </pre></div>
 </div>
 <div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>	found org.apache.commons#commons-pool2;2.6.2 in central
 downloading https://repo1.maven.org/maven2/org/apache/spark/spark-streaming-kafka-0-10_2.12/3.1.3/spark-streaming-kafka-0-10_2.12-3.1.3.jar ...
-	[SUCCESSFUL ] org.apache.spark#spark-streaming-kafka-0-10_2.12;3.1.3!spark-streaming-kafka-0-10_2.12.jar (9ms)
+	[SUCCESSFUL ] org.apache.spark#spark-streaming-kafka-0-10_2.12;3.1.3!spark-streaming-kafka-0-10_2.12.jar (11ms)
 downloading https://repo1.maven.org/maven2/org/apache/spark/spark-sql-kafka-0-10_2.12/3.1.3/spark-sql-kafka-0-10_2.12-3.1.3.jar ...
-	[SUCCESSFUL ] org.apache.spark#spark-sql-kafka-0-10_2.12;3.1.3!spark-sql-kafka-0-10_2.12.jar (36ms)
+	[SUCCESSFUL ] org.apache.spark#spark-sql-kafka-0-10_2.12;3.1.3!spark-sql-kafka-0-10_2.12.jar (28ms)
 downloading https://repo1.maven.org/maven2/org/apache/spark/spark-token-provider-kafka-0-10_2.12/3.1.3/spark-token-provider-kafka-0-10_2.12-3.1.3.jar ...
 	[SUCCESSFUL ] org.apache.spark#spark-token-provider-kafka-0-10_2.12;3.1.3!spark-token-provider-kafka-0-10_2.12.jar (6ms)
 downloading https://repo1.maven.org/maven2/org/apache/kafka/kafka-clients/2.6.0/kafka-clients-2.6.0.jar ...
-	[SUCCESSFUL ] org.apache.kafka#kafka-clients;2.6.0!kafka-clients.jar (118ms)
+</pre></div>
+</div>
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>	[SUCCESSFUL ] org.apache.kafka#kafka-clients;2.6.0!kafka-clients.jar (173ms)
 downloading https://repo1.maven.org/maven2/org/spark-project/spark/unused/1.0.0/unused-1.0.0.jar ...
-	[SUCCESSFUL ] org.spark-project.spark#unused;1.0.0!unused.jar (6ms)
+	[SUCCESSFUL ] org.spark-project.spark#unused;1.0.0!unused.jar (21ms)
+downloading https://repo1.maven.org/maven2/com/github/luben/zstd-jni/1.4.8-1/zstd-jni-1.4.8-1.jar ...
 </pre></div>
 </div>
-<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>downloading https://repo1.maven.org/maven2/com/github/luben/zstd-jni/1.4.8-1/zstd-jni-1.4.8-1.jar ...
-	[SUCCESSFUL ] com.github.luben#zstd-jni;1.4.8-1!zstd-jni.jar (159ms)
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>	[SUCCESSFUL ] com.github.luben#zstd-jni;1.4.8-1!zstd-jni.jar (197ms)
 downloading https://repo1.maven.org/maven2/org/lz4/lz4-java/1.7.1/lz4-java-1.7.1.jar ...
-	[SUCCESSFUL ] org.lz4#lz4-java;1.7.1!lz4-java.jar (24ms)
+	[SUCCESSFUL ] org.lz4#lz4-java;1.7.1!lz4-java.jar (21ms)
 downloading https://repo1.maven.org/maven2/org/xerial/snappy/snappy-java/1.1.8.2/snappy-java-1.1.8.2.jar ...
-</pre></div>
-</div>
-<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>	[SUCCESSFUL ] org.xerial.snappy#snappy-java;1.1.8.2!snappy-java.jar(bundle) (49ms)
+	[SUCCESSFUL ] org.xerial.snappy#snappy-java;1.1.8.2!snappy-java.jar(bundle) (60ms)
 downloading https://repo1.maven.org/maven2/org/slf4j/slf4j-api/1.7.30/slf4j-api-1.7.30.jar ...
 	[SUCCESSFUL ] org.slf4j#slf4j-api;1.7.30!slf4j-api.jar (4ms)
 downloading https://repo1.maven.org/maven2/org/apache/commons/commons-pool2/2.6.2/commons-pool2-2.6.2.jar ...
-	[SUCCESSFUL ] org.apache.commons#commons-pool2;2.6.2!commons-pool2.jar (5ms)
-:: resolution report :: resolve 2567ms :: artifacts dl 429ms
+	[SUCCESSFUL ] org.apache.commons#commons-pool2;2.6.2!commons-pool2.jar (7ms)
+:: resolution report :: resolve 2820ms :: artifacts dl 538ms
 	:: modules in use:
 	com.github.luben#zstd-jni;1.4.8-1 from central in [default]
 	org.apache.commons#commons-pool2;2.6.2 from central in [default]
@@ -1968,12 +1994,12 @@ downloading https://repo1.maven.org/maven2/org/apache/commons/commons-pool2/2.6.
 	---------------------------------------------------------------------
 	|      default     |   10  |   10  |   10  |   0   ||   10  |   10  |
 	---------------------------------------------------------------------
-:: retrieving :: org.apache.spark#spark-submit-parent-a8d19ef2-d38f-43bf-8f2e-93fe2d7e5c82
+:: retrieving :: org.apache.spark#spark-submit-parent-0814fbbe-38be-476d-b1de-4bdf6549d2e4
 	confs: [default]
-	10 artifacts copied, 0 already retrieved (13222kB/21ms)
+	10 artifacts copied, 0 already retrieved (13222kB/36ms)
 </pre></div>
 </div>
-<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>22/05/24 06:12:11 WARN NativeCodeLoader: Unable to load native-hadoop library for your platform... using builtin-java classes where applicable
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>22/05/24 06:45:04 WARN NativeCodeLoader: Unable to load native-hadoop library for your platform... using builtin-java classes where applicable
 </pre></div>
 </div>
 <div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Using Spark&#39;s default log4j profile: org/apache/spark/log4j-defaults.properties
@@ -1990,7 +2016,7 @@ To adjust logging level use sc.setLogLevel(newLevel). For SparkR, use setLogLeve
 <span class="kn">from</span> <span class="nn">confluent_kafka</span> <span class="kn">import</span> <span class="n">Producer</span>
 <span class="kn">from</span> <span class="nn">ksql</span> <span class="kn">import</span> <span class="n">KSQLAPI</span>
 <span class="n">bootstrap_servers</span><span class="o">=</span><span class="s1">&#39;[::1]:9092&#39;</span>
-<span class="n">topic</span><span class="o">=</span><span class="s1">&#39;stats0101&#39;</span>
+<span class="n">topic</span><span class="o">=</span><span class="sa">f</span><span class="s1">&#39;stats0101</span><span class="si">{</span><span class="nb">str</span><span class="p">(</span><span class="n">uuid</span><span class="o">.</span><span class="n">uuid4</span><span class="p">())[:</span><span class="mi">7</span><span class="p">]</span><span class="si">}</span><span class="s1">&#39;</span>
 <span class="n">msg_count</span><span class="o">=</span><span class="mi">5</span>
 <span class="n">client</span> <span class="o">=</span> <span class="n">KSQLAPI</span><span class="p">(</span><span class="n">url</span><span class="o">=</span><span class="s1">&#39;http://localhost:8088&#39;</span><span class="p">,</span> <span class="n">timeout</span><span class="o">=</span><span class="mi">60000</span><span class="p">)</span>
 </pre></div>
@@ -2084,7 +2110,7 @@ To adjust logging level use sc.setLogLevel(newLevel). For SparkR, use setLogLeve
 <span class="g g-Whitespace">    </span><span class="mi">188</span>     <span class="p">)</span>
 <span class="g g-Whitespace">    </span><span class="mi">190</span> <span class="k">return</span> <span class="n">conn</span>
 
-<span class="ne">NewConnectionError</span>: &lt;urllib3.connection.HTTPConnection object at 0x7fb714de3400&gt;: Failed to establish a new connection: [Errno 111] Connection refused
+<span class="ne">NewConnectionError</span>: &lt;urllib3.connection.HTTPConnection object at 0x7fc88e36b130&gt;: Failed to establish a new connection: [Errno 111] Connection refused
 
 <span class="n">During</span> <span class="n">handling</span> <span class="n">of</span> <span class="n">the</span> <span class="n">above</span> <span class="n">exception</span><span class="p">,</span> <span class="n">another</span> <span class="n">exception</span> <span class="n">occurred</span><span class="p">:</span>
 
@@ -2118,13 +2144,13 @@ To adjust logging level use sc.setLogLevel(newLevel). For SparkR, use setLogLeve
 <span class="ne">--&gt; </span><span class="mi">592</span>     <span class="k">raise</span> <span class="n">MaxRetryError</span><span class="p">(</span><span class="n">_pool</span><span class="p">,</span> <span class="n">url</span><span class="p">,</span> <span class="n">error</span> <span class="ow">or</span> <span class="n">ResponseError</span><span class="p">(</span><span class="n">cause</span><span class="p">))</span>
 <span class="g g-Whitespace">    </span><span class="mi">594</span> <span class="n">log</span><span class="o">.</span><span class="n">debug</span><span class="p">(</span><span class="s2">&quot;Incremented Retry for (url=&#39;</span><span class="si">%s</span><span class="s2">&#39;): </span><span class="si">%r</span><span class="s2">&quot;</span><span class="p">,</span> <span class="n">url</span><span class="p">,</span> <span class="n">new_retry</span><span class="p">)</span>
 
-<span class="ne">MaxRetryError</span>: HTTPConnectionPool(host=&#39;localhost&#39;, port=8088): Max retries exceeded with url: /info (Caused by NewConnectionError(&#39;&lt;urllib3.connection.HTTPConnection object at 0x7fb714de3400&gt;: Failed to establish a new connection: [Errno 111] Connection refused&#39;))
+<span class="ne">MaxRetryError</span>: HTTPConnectionPool(host=&#39;localhost&#39;, port=8088): Max retries exceeded with url: /info (Caused by NewConnectionError(&#39;&lt;urllib3.connection.HTTPConnection object at 0x7fc88e36b130&gt;: Failed to establish a new connection: [Errno 111] Connection refused&#39;))
 
 <span class="n">During</span> <span class="n">handling</span> <span class="n">of</span> <span class="n">the</span> <span class="n">above</span> <span class="n">exception</span><span class="p">,</span> <span class="n">another</span> <span class="n">exception</span> <span class="n">occurred</span><span class="p">:</span>
 
 <span class="ne">ConnectionError</span><span class="g g-Whitespace">                           </span>Traceback (most recent call last)
 <span class="nn">Input In [3],</span> in <span class="ni">&lt;cell line: 8&gt;</span><span class="nt">()</span>
-<span class="g g-Whitespace">      </span><span class="mi">6</span> <span class="n">topic</span><span class="o">=</span><span class="s1">&#39;stats0101&#39;</span>
+<span class="g g-Whitespace">      </span><span class="mi">6</span> <span class="n">topic</span><span class="o">=</span><span class="sa">f</span><span class="s1">&#39;stats0101</span><span class="si">{</span><span class="nb">str</span><span class="p">(</span><span class="n">uuid</span><span class="o">.</span><span class="n">uuid4</span><span class="p">())[:</span><span class="mi">7</span><span class="p">]</span><span class="si">}</span><span class="s1">&#39;</span>
 <span class="g g-Whitespace">      </span><span class="mi">7</span> <span class="n">msg_count</span><span class="o">=</span><span class="mi">5</span>
 <span class="ne">----&gt; </span><span class="mi">8</span> <span class="n">client</span> <span class="o">=</span> <span class="n">KSQLAPI</span><span class="p">(</span><span class="n">url</span><span class="o">=</span><span class="s1">&#39;http://localhost:8088&#39;</span><span class="p">,</span> <span class="n">timeout</span><span class="o">=</span><span class="mi">60000</span><span class="p">)</span>
 
@@ -2185,7 +2211,7 @@ To adjust logging level use sc.setLogLevel(newLevel). For SparkR, use setLogLeve
 <span class="g g-Whitespace">    </span><span class="mi">521</span> <span class="k">except</span> <span class="n">ClosedPoolError</span> <span class="k">as</span> <span class="n">e</span><span class="p">:</span>
 <span class="g g-Whitespace">    </span><span class="mi">522</span>     <span class="k">raise</span> <span class="ne">ConnectionError</span><span class="p">(</span><span class="n">e</span><span class="p">,</span> <span class="n">request</span><span class="o">=</span><span class="n">request</span><span class="p">)</span>
 
-<span class="ne">ConnectionError</span>: HTTPConnectionPool(host=&#39;localhost&#39;, port=8088): Max retries exceeded with url: /info (Caused by NewConnectionError(&#39;&lt;urllib3.connection.HTTPConnection object at 0x7fb714de3400&gt;: Failed to establish a new connection: [Errno 111] Connection refused&#39;))
+<span class="ne">ConnectionError</span>: HTTPConnectionPool(host=&#39;localhost&#39;, port=8088): Max retries exceeded with url: /info (Caused by NewConnectionError(&#39;&lt;urllib3.connection.HTTPConnection object at 0x7fc88e36b130&gt;: Failed to establish a new connection: [Errno 111] Connection refused&#39;))
 </pre></div>
 </div>
 </div>
@@ -2375,91 +2401,21 @@ To adjust logging level use sc.setLogLevel(newLevel). For SparkR, use setLogLeve
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">---------------------------------------------------------------------------</span>
-<span class="ne">HTTPError</span><span class="g g-Whitespace">                                 </span>Traceback (most recent call last)
-<span class="nn">~\anaconda3\lib\site-packages\ksql\api.py</span> in <span class="ni">_request</span><span class="nt">(self, endpoint, method, sql_string, stream_properties, encoding)</span>
-<span class="g g-Whitespace">    </span><span class="mi">169</span>         <span class="k">try</span><span class="p">:</span>
-<span class="ne">--&gt; </span><span class="mi">170</span>             <span class="n">r</span> <span class="o">=</span> <span class="n">urllib</span><span class="o">.</span><span class="n">request</span><span class="o">.</span><span class="n">urlopen</span><span class="p">(</span><span class="n">req</span><span class="p">,</span> <span class="n">timeout</span><span class="o">=</span><span class="bp">self</span><span class="o">.</span><span class="n">timeout</span><span class="p">)</span>
-<span class="g g-Whitespace">    </span><span class="mi">171</span>         <span class="k">except</span> <span class="n">urllib</span><span class="o">.</span><span class="n">error</span><span class="o">.</span><span class="n">HTTPError</span> <span class="k">as</span> <span class="n">http_error</span><span class="p">:</span>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[{&quot;header&quot;:{&quot;queryId&quot;:&quot;transient_STATS0101E908401_8697743092071727740&quot;,&quot;schema&quot;:&quot;`Drink` STRING, `Type` STRING, `Calories` BIGINT, `Sugars (g)` BIGINT, `Caffein (mg)` BIGINT&quot;}},
 
-<span class="nn">~\anaconda3\lib\urllib\request.py</span> in <span class="ni">urlopen</span><span class="nt">(url, data, timeout, cafile, capath, cadefault, context)</span>
-<span class="g g-Whitespace">    </span><span class="mi">213</span>         <span class="n">opener</span> <span class="o">=</span> <span class="n">_opener</span>
-<span class="ne">--&gt; </span><span class="mi">214</span>     <span class="k">return</span> <span class="n">opener</span><span class="o">.</span><span class="n">open</span><span class="p">(</span><span class="n">url</span><span class="p">,</span> <span class="n">data</span><span class="p">,</span> <span class="n">timeout</span><span class="p">)</span>
-<span class="g g-Whitespace">    </span><span class="mi">215</span> 
+{&quot;row&quot;:{&quot;columns&quot;:[&quot;Brewed coffee&quot;,&quot;Hot&quot;,4,0,260]}},
 
-<span class="nn">~\anaconda3\lib\urllib\request.py</span> in <span class="ni">open</span><span class="nt">(self, fullurl, data, timeout)</span>
-<span class="g g-Whitespace">    </span><span class="mi">522</span>             <span class="n">meth</span> <span class="o">=</span> <span class="nb">getattr</span><span class="p">(</span><span class="n">processor</span><span class="p">,</span> <span class="n">meth_name</span><span class="p">)</span>
-<span class="ne">--&gt; </span><span class="mi">523</span>             <span class="n">response</span> <span class="o">=</span> <span class="n">meth</span><span class="p">(</span><span class="n">req</span><span class="p">,</span> <span class="n">response</span><span class="p">)</span>
-<span class="g g-Whitespace">    </span><span class="mi">524</span> 
+{&quot;row&quot;:{&quot;columns&quot;:[&quot;Caffe latte&quot;,&quot;Hot&quot;,100,14,75]}},
 
-<span class="nn">~\anaconda3\lib\urllib\request.py</span> in <span class="ni">http_response</span><span class="nt">(self, request, response)</span>
-<span class="g g-Whitespace">    </span><span class="mi">631</span>         <span class="k">if</span> <span class="ow">not</span> <span class="p">(</span><span class="mi">200</span> <span class="o">&lt;=</span> <span class="n">code</span> <span class="o">&lt;</span> <span class="mi">300</span><span class="p">):</span>
-<span class="ne">--&gt; </span><span class="mi">632</span>             <span class="n">response</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">parent</span><span class="o">.</span><span class="n">error</span><span class="p">(</span>
-<span class="g g-Whitespace">    </span><span class="mi">633</span>                 <span class="s1">&#39;http&#39;</span><span class="p">,</span> <span class="n">request</span><span class="p">,</span> <span class="n">response</span><span class="p">,</span> <span class="n">code</span><span class="p">,</span> <span class="n">msg</span><span class="p">,</span> <span class="n">hdrs</span><span class="p">)</span>
+{&quot;row&quot;:{&quot;columns&quot;:[&quot;Caffe mocha&quot;,&quot;Hot&quot;,170,27,95]}},
 
-<span class="nn">~\anaconda3\lib\urllib\request.py</span> in <span class="ni">error</span><span class="nt">(self, proto, *args)</span>
-<span class="g g-Whitespace">    </span><span class="mi">560</span>             <span class="n">args</span> <span class="o">=</span> <span class="p">(</span><span class="nb">dict</span><span class="p">,</span> <span class="s1">&#39;default&#39;</span><span class="p">,</span> <span class="s1">&#39;http_error_default&#39;</span><span class="p">)</span> <span class="o">+</span> <span class="n">orig_args</span>
-<span class="ne">--&gt; </span><span class="mi">561</span>             <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">_call_chain</span><span class="p">(</span><span class="o">*</span><span class="n">args</span><span class="p">)</span>
-<span class="g g-Whitespace">    </span><span class="mi">562</span> 
+{&quot;row&quot;:{&quot;columns&quot;:[&quot;Cappuccino&quot;,&quot;Hot&quot;,60,8,75]}},
 
-<span class="nn">~\anaconda3\lib\urllib\request.py</span> in <span class="ni">_call_chain</span><span class="nt">(self, chain, kind, meth_name, *args)</span>
-<span class="g g-Whitespace">    </span><span class="mi">493</span>             <span class="n">func</span> <span class="o">=</span> <span class="nb">getattr</span><span class="p">(</span><span class="n">handler</span><span class="p">,</span> <span class="n">meth_name</span><span class="p">)</span>
-<span class="ne">--&gt; </span><span class="mi">494</span>             <span class="n">result</span> <span class="o">=</span> <span class="n">func</span><span class="p">(</span><span class="o">*</span><span class="n">args</span><span class="p">)</span>
-<span class="g g-Whitespace">    </span><span class="mi">495</span>             <span class="k">if</span> <span class="n">result</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">:</span>
+{&quot;row&quot;:{&quot;columns&quot;:[&quot;Iced brewed coffee&quot;,&quot;Cold&quot;,60,15,120]}},
 
-<span class="nn">~\anaconda3\lib\urllib\request.py</span> in <span class="ni">http_error_default</span><span class="nt">(self, req, fp, code, msg, hdrs)</span>
-<span class="g g-Whitespace">    </span><span class="mi">640</span>     <span class="k">def</span> <span class="nf">http_error_default</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">req</span><span class="p">,</span> <span class="n">fp</span><span class="p">,</span> <span class="n">code</span><span class="p">,</span> <span class="n">msg</span><span class="p">,</span> <span class="n">hdrs</span><span class="p">):</span>
-<span class="ne">--&gt; </span><span class="mi">641</span>         <span class="k">raise</span> <span class="n">HTTPError</span><span class="p">(</span><span class="n">req</span><span class="o">.</span><span class="n">full_url</span><span class="p">,</span> <span class="n">code</span><span class="p">,</span> <span class="n">msg</span><span class="p">,</span> <span class="n">hdrs</span><span class="p">,</span> <span class="n">fp</span><span class="p">)</span>
-<span class="g g-Whitespace">    </span><span class="mi">642</span> 
+{&quot;row&quot;:{&quot;columns&quot;:[&quot;Chai latte&quot;,&quot;Hot&quot;,120,25,60]}},
 
-<span class="ne">HTTPError</span>: HTTP Error 400: Bad Request
-
-<span class="n">During</span> <span class="n">handling</span> <span class="n">of</span> <span class="n">the</span> <span class="n">above</span> <span class="n">exception</span><span class="p">,</span> <span class="n">another</span> <span class="n">exception</span> <span class="n">occurred</span><span class="p">:</span>
-
-<span class="ne">KSQLError</span><span class="g g-Whitespace">                                 </span>Traceback (most recent call last)
-<span class="o">~</span>\<span class="n">AppData</span>\<span class="n">Local</span>\<span class="n">Temp</span><span class="o">/</span><span class="n">ipykernel_15888</span><span class="o">/</span><span class="mf">3155192568.</span><span class="n">py</span> <span class="ow">in</span> <span class="o">&lt;</span><span class="n">module</span><span class="o">&gt;</span>
-<span class="ne">----&gt; </span><span class="mi">1</span> <span class="n">client</span><span class="o">.</span><span class="n">create_stream</span><span class="p">(</span><span class="n">table_name</span><span class="o">=</span><span class="n">topic</span><span class="p">,</span>
-<span class="g g-Whitespace">      </span><span class="mi">2</span>                      <span class="n">columns_type</span><span class="o">=</span><span class="p">[</span><span class="s1">&#39;`Drink` string&#39;</span><span class="p">,</span><span class="s1">&#39;`Type` string&#39;</span><span class="p">,</span> <span class="s1">&#39;`Calories` bigint&#39;</span><span class="p">,</span><span class="s1">&#39;`Sugars (g)` bigint&#39;</span><span class="p">,</span> <span class="s1">&#39;`Caffein (mg)` bigint&#39;</span><span class="p">],</span>
-<span class="g g-Whitespace">      </span><span class="mi">3</span>                      <span class="n">topic</span><span class="o">=</span><span class="n">topic</span><span class="p">,</span>
-<span class="g g-Whitespace">      </span><span class="mi">4</span>                      <span class="n">value_format</span><span class="o">=</span><span class="s1">&#39;JSON&#39;</span>
-<span class="g g-Whitespace">      </span><span class="mi">5</span>                     <span class="p">)</span>
-
-<span class="nn">~\anaconda3\lib\site-packages\ksql\client.py</span> in <span class="ni">create_stream</span><span class="nt">(self, table_name, columns_type, topic, value_format)</span>
-<span class="g g-Whitespace">     </span><span class="mi">70</span> 
-<span class="g g-Whitespace">     </span><span class="mi">71</span>     <span class="k">def</span> <span class="nf">create_stream</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">table_name</span><span class="p">,</span> <span class="n">columns_type</span><span class="p">,</span> <span class="n">topic</span><span class="p">,</span> <span class="n">value_format</span><span class="o">=</span><span class="s2">&quot;JSON&quot;</span><span class="p">):</span>
-<span class="ne">---&gt; </span><span class="mi">72</span>         <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">sa</span><span class="o">.</span><span class="n">create_stream</span><span class="p">(</span>
-<span class="g g-Whitespace">     </span><span class="mi">73</span>             <span class="n">table_name</span><span class="o">=</span><span class="n">table_name</span><span class="p">,</span> <span class="n">columns_type</span><span class="o">=</span><span class="n">columns_type</span><span class="p">,</span> <span class="n">topic</span><span class="o">=</span><span class="n">topic</span><span class="p">,</span> <span class="n">value_format</span><span class="o">=</span><span class="n">value_format</span>
-<span class="g g-Whitespace">     </span><span class="mi">74</span>         <span class="p">)</span>
-
-<span class="nn">~\anaconda3\lib\site-packages\ksql\api.py</span> in <span class="ni">create_stream</span><span class="nt">(self, table_name, columns_type, topic, value_format)</span>
-<span class="g g-Whitespace">    </span><span class="mi">263</span> 
-<span class="g g-Whitespace">    </span><span class="mi">264</span>     <span class="k">def</span> <span class="nf">create_stream</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">table_name</span><span class="p">,</span> <span class="n">columns_type</span><span class="p">,</span> <span class="n">topic</span><span class="p">,</span> <span class="n">value_format</span><span class="o">=</span><span class="s2">&quot;JSON&quot;</span><span class="p">):</span>
-<span class="ne">--&gt; </span><span class="mi">265</span>         <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">_create</span><span class="p">(</span>
-<span class="g g-Whitespace">    </span><span class="mi">266</span>             <span class="n">table_type</span><span class="o">=</span><span class="s2">&quot;stream&quot;</span><span class="p">,</span>
-<span class="g g-Whitespace">    </span><span class="mi">267</span>             <span class="n">table_name</span><span class="o">=</span><span class="n">table_name</span><span class="p">,</span>
-
-<span class="nn">~\anaconda3\lib\site-packages\ksql\api.py</span> in <span class="ni">_create</span><span class="nt">(self, table_type, table_name, columns_type, topic, value_format, key)</span>
-<span class="g g-Whitespace">    </span><span class="mi">316</span>             <span class="n">key</span><span class="o">=</span><span class="n">key</span><span class="p">,</span>
-<span class="g g-Whitespace">    </span><span class="mi">317</span>         <span class="p">)</span>
-<span class="ne">--&gt; </span><span class="mi">318</span>         <span class="bp">self</span><span class="o">.</span><span class="n">ksql</span><span class="p">(</span><span class="n">ksql_string</span><span class="p">)</span>
-<span class="g g-Whitespace">    </span><span class="mi">319</span>         <span class="k">return</span> <span class="kc">True</span>
-<span class="g g-Whitespace">    </span><span class="mi">320</span> 
-
-<span class="nn">~\anaconda3\lib\site-packages\ksql\api.py</span> in <span class="ni">ksql</span><span class="nt">(self, ksql_string, stream_properties)</span>
-<span class="g g-Whitespace">     </span><span class="mi">63</span> 
-<span class="g g-Whitespace">     </span><span class="mi">64</span>     <span class="k">def</span> <span class="nf">ksql</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">ksql_string</span><span class="p">,</span> <span class="n">stream_properties</span><span class="o">=</span><span class="kc">None</span><span class="p">):</span>
-<span class="ne">---&gt; </span><span class="mi">65</span>         <span class="n">r</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">_request</span><span class="p">(</span><span class="n">endpoint</span><span class="o">=</span><span class="s2">&quot;ksql&quot;</span><span class="p">,</span> <span class="n">sql_string</span><span class="o">=</span><span class="n">ksql_string</span><span class="p">,</span> <span class="n">stream_properties</span><span class="o">=</span><span class="n">stream_properties</span><span class="p">)</span>
-<span class="g g-Whitespace">     </span><span class="mi">66</span>         <span class="n">response</span> <span class="o">=</span> <span class="n">r</span><span class="o">.</span><span class="n">read</span><span class="p">()</span><span class="o">.</span><span class="n">decode</span><span class="p">(</span><span class="s2">&quot;utf-8&quot;</span><span class="p">)</span>
-<span class="g g-Whitespace">     </span><span class="mi">67</span>         <span class="bp">self</span><span class="o">.</span><span class="n">_raise_for_status</span><span class="p">(</span><span class="n">r</span><span class="p">,</span> <span class="n">response</span><span class="p">)</span>
-
-<span class="nn">~\anaconda3\lib\site-packages\ksql\api.py</span> in <span class="ni">_request</span><span class="nt">(self, endpoint, method, sql_string, stream_properties, encoding)</span>
-<span class="g g-Whitespace">    </span><span class="mi">176</span>             <span class="k">else</span><span class="p">:</span>
-<span class="g g-Whitespace">    </span><span class="mi">177</span>                 <span class="n">logging</span><span class="o">.</span><span class="n">debug</span><span class="p">(</span><span class="s2">&quot;content: </span><span class="si">{}</span><span class="s2">&quot;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">content</span><span class="p">))</span>
-<span class="ne">--&gt; </span><span class="mi">178</span>                 <span class="k">raise</span> <span class="n">KSQLError</span><span class="p">(</span><span class="n">content</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s2">&quot;message&quot;</span><span class="p">),</span> <span class="n">content</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s2">&quot;error_code&quot;</span><span class="p">),</span> <span class="n">content</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s2">&quot;stackTrace&quot;</span><span class="p">))</span>
-<span class="g g-Whitespace">    </span><span class="mi">179</span>         <span class="k">else</span><span class="p">:</span>
-<span class="g g-Whitespace">    </span><span class="mi">180</span>             <span class="k">return</span> <span class="n">r</span>
-
-<span class="ne">KSQLError</span>: (&quot;Cannot add stream &#39;STATS0101&#39;: A stream with the same name already exists&quot;, 40001, None)
+]
 </pre></div>
 </div>
 </div>
@@ -2467,6 +2423,8 @@ To adjust logging level use sc.setLogLevel(newLevel). For SparkR, use setLogLeve
 </div>
 <div class="section" id="spark-stream">
 <h3>Spark stream<a class="headerlink" href="#spark-stream" title="Permalink to this headline">¶</a></h3>
+<div class="section" id="read-stream">
+<h4>read stream<a class="headerlink" href="#read-stream" title="Permalink to this headline">¶</a></h4>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">df_raw</span> <span class="o">=</span> <span class="n">spark</span> \
@@ -2477,13 +2435,6 @@ To adjust logging level use sc.setLogLevel(newLevel). For SparkR, use setLogLeve
   <span class="o">.</span><span class="n">option</span><span class="p">(</span><span class="s1">&#39;subscribe&#39;</span><span class="p">,</span> <span class="n">topic</span><span class="p">)</span> \
   <span class="o">.</span><span class="n">load</span><span class="p">()</span>
 <span class="n">df_raw</span><span class="o">.</span><span class="n">printSchema</span><span class="p">()</span>
-<span class="n">df_json</span> <span class="o">=</span> <span class="n">df_raw</span><span class="o">.</span><span class="n">selectExpr</span><span class="p">(</span><span class="s1">&#39;CAST(value AS STRING) as json&#39;</span><span class="p">)</span>
-<span class="n">df_json</span><span class="o">.</span><span class="n">select</span><span class="p">(</span><span class="n">F</span><span class="o">.</span><span class="n">from_json</span><span class="p">(</span><span class="n">df_json</span><span class="o">.</span><span class="n">json</span><span class="p">,</span> <span class="n">sdf</span><span class="o">.</span><span class="n">schema</span><span class="p">)</span><span class="o">.</span><span class="n">alias</span><span class="p">(</span><span class="s1">&#39;fic&#39;</span><span class="p">))</span> \
-  <span class="o">.</span><span class="n">writeStream</span> \
-  <span class="o">.</span><span class="n">trigger</span><span class="p">(</span><span class="n">once</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span> \
-  <span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="s2">&quot;console&quot;</span><span class="p">)</span> \
-  <span class="o">.</span><span class="n">start</span><span class="p">()</span> \
-  <span class="o">.</span><span class="n">awaitTermination</span><span class="p">()</span>
 </pre></div>
 </div>
 </div>
@@ -2497,6 +2448,45 @@ To adjust logging level use sc.setLogLevel(newLevel). For SparkR, use setLogLeve
  |-- timestamp: timestamp (nullable = true)
  |-- timestampType: integer (nullable = true)
 </pre></div>
+</div>
+</div>
+</div>
+</div>
+<div class="section" id="write-stream">
+<h4>write stream<a class="headerlink" href="#write-stream" title="Permalink to this headline">¶</a></h4>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">df_json</span> <span class="o">=</span> <span class="n">df_raw</span><span class="o">.</span><span class="n">selectExpr</span><span class="p">(</span><span class="s1">&#39;CAST(value AS STRING) as json&#39;</span><span class="p">)</span>
+<span class="n">df_json</span><span class="o">.</span><span class="n">select</span><span class="p">(</span><span class="n">F</span><span class="o">.</span><span class="n">from_json</span><span class="p">(</span><span class="n">df_json</span><span class="o">.</span><span class="n">json</span><span class="p">,</span> <span class="n">sdf</span><span class="o">.</span><span class="n">schema</span><span class="p">)</span><span class="o">.</span><span class="n">alias</span><span class="p">(</span><span class="s1">&#39;stream_data&#39;</span><span class="p">))</span> \
+  <span class="o">.</span><span class="n">writeStream</span> \
+  <span class="o">.</span><span class="n">queryName</span><span class="p">(</span><span class="n">topic</span><span class="p">)</span> \
+  <span class="o">.</span><span class="n">trigger</span><span class="p">(</span><span class="n">once</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span> \
+  <span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="s2">&quot;memory&quot;</span><span class="p">)</span> \
+  <span class="o">.</span><span class="n">start</span><span class="p">()</span> \
+  <span class="o">.</span><span class="n">awaitTermination</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">spark</span><span class="o">.</span><span class="n">sql</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;select * from </span><span class="si">{</span><span class="n">topic</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span><span class="o">.</span><span class="n">show</span><span class="p">(</span><span class="n">truncate</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>+---------------------------------------+
+|stream_data                            |
++---------------------------------------+
+|{Brewed coffee, Hot, 4, 0, 260}        |
+|{Caffe latte, Hot, 100, 14, 75}        |
+|{Caffe mocha, Hot, 170, 27, 95}        |
+|{Cappuccino, Hot, 60, 8, 75}           |
+|{Iced brewed coffee, Cold, 60, 15, 120}|
+|{Chai latte, Hot, 120, 25, 60}         |
++---------------------------------------+
+</pre></div>
+</div>
 </div>
 </div>
 </div>
