@@ -114,7 +114,7 @@ File [0;32m/opt/hostedtoolcache/Python/3.9.12/x64/lib/python3.9/site-packages/u
 [1;32m    188[0m     )
 [1;32m    190[0m [38;5;28;01mreturn[39;00m conn
 
-[0;31mNewConnectionError[0m: <urllib3.connection.HTTPConnection object at 0x7f9e312a9400>: Failed to establish a new connection: [Errno 111] Connection refused
+[0;31mNewConnectionError[0m: <urllib3.connection.HTTPConnection object at 0x7fb714de3400>: Failed to establish a new connection: [Errno 111] Connection refused
 
 During handling of the above exception, another exception occurred:
 
@@ -148,7 +148,7 @@ File [0;32m/opt/hostedtoolcache/Python/3.9.12/x64/lib/python3.9/site-packages/u
 [0;32m--> 592[0m     [38;5;28;01mraise[39;00m MaxRetryError(_pool, url, error [38;5;129;01mor[39;00m ResponseError(cause))
 [1;32m    594[0m log[38;5;241m.[39mdebug([38;5;124m"[39m[38;5;124mIncremented Retry for (url=[39m[38;5;124m'[39m[38;5;132;01m%s[39;00m[38;5;124m'[39m[38;5;124m): [39m[38;5;132;01m%r[39;00m[38;5;124m"[39m, url, new_retry)
 
-[0;31mMaxRetryError[0m: HTTPConnectionPool(host='localhost', port=8088): Max retries exceeded with url: /info (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x7f9e312a9400>: Failed to establish a new connection: [Errno 111] Connection refused'))
+[0;31mMaxRetryError[0m: HTTPConnectionPool(host='localhost', port=8088): Max retries exceeded with url: /info (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x7fb714de3400>: Failed to establish a new connection: [Errno 111] Connection refused'))
 
 During handling of the above exception, another exception occurred:
 
@@ -215,6 +215,6 @@ File [0;32m/opt/hostedtoolcache/Python/3.9.12/x64/lib/python3.9/site-packages/r
 [1;32m    521[0m [38;5;28;01mexcept[39;00m ClosedPoolError [38;5;28;01mas[39;00m e:
 [1;32m    522[0m     [38;5;28;01mraise[39;00m [38;5;167;01mConnectionError[39;00m(e, request[38;5;241m=[39mrequest)
 
-[0;31mConnectionError[0m: HTTPConnectionPool(host='localhost', port=8088): Max retries exceeded with url: /info (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x7f9e312a9400>: Failed to establish a new connection: [Errno 111] Connection refused'))
-ConnectionError: HTTPConnectionPool(host='localhost', port=8088): Max retries exceeded with url: /info (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x7f9e312a9400>: Failed to establish a new connection: [Errno 111] Connection refused'))
+[0;31mConnectionError[0m: HTTPConnectionPool(host='localhost', port=8088): Max retries exceeded with url: /info (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x7fb714de3400>: Failed to establish a new connection: [Errno 111] Connection refused'))
+ConnectionError: HTTPConnectionPool(host='localhost', port=8088): Max retries exceeded with url: /info (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x7fb714de3400>: Failed to establish a new connection: [Errno 111] Connection refused'))
 
