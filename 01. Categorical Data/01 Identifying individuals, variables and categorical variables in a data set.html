@@ -120,6 +120,36 @@ const thebe_selector_output = ".output, .cell_output"
   </a>
  </li>
  <li class="toctree-l1">
+  <a class="reference internal" href="05%20Two-way%20frequency%20tables%20and%20Venn%20diagrams.html">
+   04 Two-way frequency tables and Venn diagrams
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="06%20Two-way%20%28column%20or%20row%29%20relative%20frequency%20tables.html">
+   05 Two-way (column or row) relative frequency tables
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="07%20Interpreting%20two-way%20tables.html">
+   06 Interpreting two-way tables
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="08%20Marginal%20and%20conditional%20distributions.html">
+   07 Marginal and conditional distributions
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="09%20Mosaic%20plots%20and%20segmented%20bar%20charts.html">
+   08 Mosaic plots and segmented bar charts
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="10%20Analyzing%20mosaic%20plots.html">
+   09 Analyzing mosaic plots
+  </a>
+ </li>
+ <li class="toctree-l1">
   <a class="reference internal" href="Categorical%20Data.html">
    Categorical Data
   </a>
@@ -1930,53 +1960,53 @@ WARNING: All illegal access operations will be denied in a future release
 The jars for the packages stored in: /home/runner/.ivy2/jars
 org.apache.spark#spark-streaming-kafka-0-10_2.12 added as a dependency
 org.apache.spark#spark-sql-kafka-0-10_2.12 added as a dependency
-:: resolving dependencies :: org.apache.spark#spark-submit-parent-0814fbbe-38be-476d-b1de-4bdf6549d2e4;1.0
+:: resolving dependencies :: org.apache.spark#spark-submit-parent-a990df70-1a91-4cbe-853d-bf3f6cea9354;1.0
 	confs: [default]
 </pre></div>
 </div>
 <div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>	found org.apache.spark#spark-streaming-kafka-0-10_2.12;3.1.3 in central
 	found org.apache.spark#spark-token-provider-kafka-0-10_2.12;3.1.3 in central
-	found org.apache.kafka#kafka-clients;2.6.0 in central
 </pre></div>
 </div>
-<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>	found com.github.luben#zstd-jni;1.4.8-1 in central
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>	found org.apache.kafka#kafka-clients;2.6.0 in central
+	found com.github.luben#zstd-jni;1.4.8-1 in central
 	found org.lz4#lz4-java;1.7.1 in central
 	found org.xerial.snappy#snappy-java;1.1.8.2 in central
 </pre></div>
 </div>
 <div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>	found org.slf4j#slf4j-api;1.7.30 in central
+	found org.spark-project.spark#unused;1.0.0 in central
 </pre></div>
 </div>
-<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>	found org.spark-project.spark#unused;1.0.0 in central
-	found org.apache.spark#spark-sql-kafka-0-10_2.12;3.1.3 in central
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>	found org.apache.spark#spark-sql-kafka-0-10_2.12;3.1.3 in central
 </pre></div>
 </div>
 <div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>	found org.apache.commons#commons-pool2;2.6.2 in central
 downloading https://repo1.maven.org/maven2/org/apache/spark/spark-streaming-kafka-0-10_2.12/3.1.3/spark-streaming-kafka-0-10_2.12-3.1.3.jar ...
-	[SUCCESSFUL ] org.apache.spark#spark-streaming-kafka-0-10_2.12;3.1.3!spark-streaming-kafka-0-10_2.12.jar (11ms)
+	[SUCCESSFUL ] org.apache.spark#spark-streaming-kafka-0-10_2.12;3.1.3!spark-streaming-kafka-0-10_2.12.jar (21ms)
 downloading https://repo1.maven.org/maven2/org/apache/spark/spark-sql-kafka-0-10_2.12/3.1.3/spark-sql-kafka-0-10_2.12-3.1.3.jar ...
-	[SUCCESSFUL ] org.apache.spark#spark-sql-kafka-0-10_2.12;3.1.3!spark-sql-kafka-0-10_2.12.jar (28ms)
+	[SUCCESSFUL ] org.apache.spark#spark-sql-kafka-0-10_2.12;3.1.3!spark-sql-kafka-0-10_2.12.jar (39ms)
 downloading https://repo1.maven.org/maven2/org/apache/spark/spark-token-provider-kafka-0-10_2.12/3.1.3/spark-token-provider-kafka-0-10_2.12-3.1.3.jar ...
-	[SUCCESSFUL ] org.apache.spark#spark-token-provider-kafka-0-10_2.12;3.1.3!spark-token-provider-kafka-0-10_2.12.jar (6ms)
+	[SUCCESSFUL ] org.apache.spark#spark-token-provider-kafka-0-10_2.12;3.1.3!spark-token-provider-kafka-0-10_2.12.jar (10ms)
 downloading https://repo1.maven.org/maven2/org/apache/kafka/kafka-clients/2.6.0/kafka-clients-2.6.0.jar ...
 </pre></div>
 </div>
-<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>	[SUCCESSFUL ] org.apache.kafka#kafka-clients;2.6.0!kafka-clients.jar (173ms)
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>	[SUCCESSFUL ] org.apache.kafka#kafka-clients;2.6.0!kafka-clients.jar (182ms)
 downloading https://repo1.maven.org/maven2/org/spark-project/spark/unused/1.0.0/unused-1.0.0.jar ...
-	[SUCCESSFUL ] org.spark-project.spark#unused;1.0.0!unused.jar (21ms)
+	[SUCCESSFUL ] org.spark-project.spark#unused;1.0.0!unused.jar (8ms)
 downloading https://repo1.maven.org/maven2/com/github/luben/zstd-jni/1.4.8-1/zstd-jni-1.4.8-1.jar ...
+	[SUCCESSFUL ] com.github.luben#zstd-jni;1.4.8-1!zstd-jni.jar (173ms)
+downloading https://repo1.maven.org/maven2/org/lz4/lz4-java/1.7.1/lz4-java-1.7.1.jar ...
 </pre></div>
 </div>
-<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>	[SUCCESSFUL ] com.github.luben#zstd-jni;1.4.8-1!zstd-jni.jar (197ms)
-downloading https://repo1.maven.org/maven2/org/lz4/lz4-java/1.7.1/lz4-java-1.7.1.jar ...
-	[SUCCESSFUL ] org.lz4#lz4-java;1.7.1!lz4-java.jar (21ms)
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>	[SUCCESSFUL ] org.lz4#lz4-java;1.7.1!lz4-java.jar (24ms)
 downloading https://repo1.maven.org/maven2/org/xerial/snappy/snappy-java/1.1.8.2/snappy-java-1.1.8.2.jar ...
-	[SUCCESSFUL ] org.xerial.snappy#snappy-java;1.1.8.2!snappy-java.jar(bundle) (60ms)
+	[SUCCESSFUL ] org.xerial.snappy#snappy-java;1.1.8.2!snappy-java.jar(bundle) (63ms)
 downloading https://repo1.maven.org/maven2/org/slf4j/slf4j-api/1.7.30/slf4j-api-1.7.30.jar ...
-	[SUCCESSFUL ] org.slf4j#slf4j-api;1.7.30!slf4j-api.jar (4ms)
+	[SUCCESSFUL ] org.slf4j#slf4j-api;1.7.30!slf4j-api.jar (8ms)
 downloading https://repo1.maven.org/maven2/org/apache/commons/commons-pool2/2.6.2/commons-pool2-2.6.2.jar ...
-	[SUCCESSFUL ] org.apache.commons#commons-pool2;2.6.2!commons-pool2.jar (7ms)
-:: resolution report :: resolve 2820ms :: artifacts dl 538ms
+	[SUCCESSFUL ] org.apache.commons#commons-pool2;2.6.2!commons-pool2.jar (10ms)
+:: resolution report :: resolve 3004ms :: artifacts dl 554ms
 	:: modules in use:
 	com.github.luben#zstd-jni;1.4.8-1 from central in [default]
 	org.apache.commons#commons-pool2;2.6.2 from central in [default]
@@ -1994,12 +2024,12 @@ downloading https://repo1.maven.org/maven2/org/apache/commons/commons-pool2/2.6.
 	---------------------------------------------------------------------
 	|      default     |   10  |   10  |   10  |   0   ||   10  |   10  |
 	---------------------------------------------------------------------
-:: retrieving :: org.apache.spark#spark-submit-parent-0814fbbe-38be-476d-b1de-4bdf6549d2e4
+:: retrieving :: org.apache.spark#spark-submit-parent-a990df70-1a91-4cbe-853d-bf3f6cea9354
 	confs: [default]
-	10 artifacts copied, 0 already retrieved (13222kB/36ms)
+	10 artifacts copied, 0 already retrieved (13222kB/23ms)
 </pre></div>
 </div>
-<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>22/05/24 06:45:04 WARN NativeCodeLoader: Unable to load native-hadoop library for your platform... using builtin-java classes where applicable
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>22/05/25 03:00:54 WARN NativeCodeLoader: Unable to load native-hadoop library for your platform... using builtin-java classes where applicable
 </pre></div>
 </div>
 <div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Using Spark&#39;s default log4j profile: org/apache/spark/log4j-defaults.properties
@@ -2018,7 +2048,7 @@ To adjust logging level use sc.setLogLevel(newLevel). For SparkR, use setLogLeve
 <span class="n">bootstrap_servers</span><span class="o">=</span><span class="s1">&#39;[::1]:9092&#39;</span>
 <span class="n">topic</span><span class="o">=</span><span class="sa">f</span><span class="s1">&#39;stats0101</span><span class="si">{</span><span class="nb">str</span><span class="p">(</span><span class="n">uuid</span><span class="o">.</span><span class="n">uuid4</span><span class="p">())[:</span><span class="mi">7</span><span class="p">]</span><span class="si">}</span><span class="s1">&#39;</span>
 <span class="n">msg_count</span><span class="o">=</span><span class="mi">5</span>
-<span class="n">client</span> <span class="o">=</span> <span class="n">KSQLAPI</span><span class="p">(</span><span class="n">url</span><span class="o">=</span><span class="s1">&#39;http://localhost:8088&#39;</span><span class="p">,</span> <span class="n">timeout</span><span class="o">=</span><span class="mi">60000</span><span class="p">)</span>
+<span class="n">client</span> <span class="o">=</span> <span class="n">KSQLAPI</span><span class="p">(</span><span class="n">url</span><span class="o">=</span><span class="s1">&#39;http://localhost:8088&#39;</span><span class="p">)</span>
 </pre></div>
 </div>
 </div>
@@ -2110,7 +2140,7 @@ To adjust logging level use sc.setLogLevel(newLevel). For SparkR, use setLogLeve
 <span class="g g-Whitespace">    </span><span class="mi">188</span>     <span class="p">)</span>
 <span class="g g-Whitespace">    </span><span class="mi">190</span> <span class="k">return</span> <span class="n">conn</span>
 
-<span class="ne">NewConnectionError</span>: &lt;urllib3.connection.HTTPConnection object at 0x7fc88e36b130&gt;: Failed to establish a new connection: [Errno 111] Connection refused
+<span class="ne">NewConnectionError</span>: &lt;urllib3.connection.HTTPConnection object at 0x7fb6d1342160&gt;: Failed to establish a new connection: [Errno 111] Connection refused
 
 <span class="n">During</span> <span class="n">handling</span> <span class="n">of</span> <span class="n">the</span> <span class="n">above</span> <span class="n">exception</span><span class="p">,</span> <span class="n">another</span> <span class="n">exception</span> <span class="n">occurred</span><span class="p">:</span>
 
@@ -2144,7 +2174,7 @@ To adjust logging level use sc.setLogLevel(newLevel). For SparkR, use setLogLeve
 <span class="ne">--&gt; </span><span class="mi">592</span>     <span class="k">raise</span> <span class="n">MaxRetryError</span><span class="p">(</span><span class="n">_pool</span><span class="p">,</span> <span class="n">url</span><span class="p">,</span> <span class="n">error</span> <span class="ow">or</span> <span class="n">ResponseError</span><span class="p">(</span><span class="n">cause</span><span class="p">))</span>
 <span class="g g-Whitespace">    </span><span class="mi">594</span> <span class="n">log</span><span class="o">.</span><span class="n">debug</span><span class="p">(</span><span class="s2">&quot;Incremented Retry for (url=&#39;</span><span class="si">%s</span><span class="s2">&#39;): </span><span class="si">%r</span><span class="s2">&quot;</span><span class="p">,</span> <span class="n">url</span><span class="p">,</span> <span class="n">new_retry</span><span class="p">)</span>
 
-<span class="ne">MaxRetryError</span>: HTTPConnectionPool(host=&#39;localhost&#39;, port=8088): Max retries exceeded with url: /info (Caused by NewConnectionError(&#39;&lt;urllib3.connection.HTTPConnection object at 0x7fc88e36b130&gt;: Failed to establish a new connection: [Errno 111] Connection refused&#39;))
+<span class="ne">MaxRetryError</span>: HTTPConnectionPool(host=&#39;localhost&#39;, port=8088): Max retries exceeded with url: /info (Caused by NewConnectionError(&#39;&lt;urllib3.connection.HTTPConnection object at 0x7fb6d1342160&gt;: Failed to establish a new connection: [Errno 111] Connection refused&#39;))
 
 <span class="n">During</span> <span class="n">handling</span> <span class="n">of</span> <span class="n">the</span> <span class="n">above</span> <span class="n">exception</span><span class="p">,</span> <span class="n">another</span> <span class="n">exception</span> <span class="n">occurred</span><span class="p">:</span>
 
@@ -2152,7 +2182,7 @@ To adjust logging level use sc.setLogLevel(newLevel). For SparkR, use setLogLeve
 <span class="nn">Input In [3],</span> in <span class="ni">&lt;cell line: 8&gt;</span><span class="nt">()</span>
 <span class="g g-Whitespace">      </span><span class="mi">6</span> <span class="n">topic</span><span class="o">=</span><span class="sa">f</span><span class="s1">&#39;stats0101</span><span class="si">{</span><span class="nb">str</span><span class="p">(</span><span class="n">uuid</span><span class="o">.</span><span class="n">uuid4</span><span class="p">())[:</span><span class="mi">7</span><span class="p">]</span><span class="si">}</span><span class="s1">&#39;</span>
 <span class="g g-Whitespace">      </span><span class="mi">7</span> <span class="n">msg_count</span><span class="o">=</span><span class="mi">5</span>
-<span class="ne">----&gt; </span><span class="mi">8</span> <span class="n">client</span> <span class="o">=</span> <span class="n">KSQLAPI</span><span class="p">(</span><span class="n">url</span><span class="o">=</span><span class="s1">&#39;http://localhost:8088&#39;</span><span class="p">,</span> <span class="n">timeout</span><span class="o">=</span><span class="mi">60000</span><span class="p">)</span>
+<span class="ne">----&gt; </span><span class="mi">8</span> <span class="n">client</span> <span class="o">=</span> <span class="n">KSQLAPI</span><span class="p">(</span><span class="n">url</span><span class="o">=</span><span class="s1">&#39;http://localhost:8088&#39;</span><span class="p">)</span>
 
 <span class="nn">File /opt/hostedtoolcache/Python/3.9.12/x64/lib/python3.9/site-packages/ksql/client.py:19,</span> in <span class="ni">KSQLAPI.__init__</span><span class="nt">(self, url, max_retries, check_version, **kwargs)</span>
 <span class="g g-Whitespace">     </span><span class="mi">17</span> <span class="bp">self</span><span class="o">.</span><span class="n">sa</span> <span class="o">=</span> <span class="n">SimplifiedAPI</span><span class="p">(</span><span class="n">url</span><span class="p">,</span> <span class="n">max_retries</span><span class="o">=</span><span class="n">max_retries</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">)</span>
@@ -2211,7 +2241,7 @@ To adjust logging level use sc.setLogLevel(newLevel). For SparkR, use setLogLeve
 <span class="g g-Whitespace">    </span><span class="mi">521</span> <span class="k">except</span> <span class="n">ClosedPoolError</span> <span class="k">as</span> <span class="n">e</span><span class="p">:</span>
 <span class="g g-Whitespace">    </span><span class="mi">522</span>     <span class="k">raise</span> <span class="ne">ConnectionError</span><span class="p">(</span><span class="n">e</span><span class="p">,</span> <span class="n">request</span><span class="o">=</span><span class="n">request</span><span class="p">)</span>
 
-<span class="ne">ConnectionError</span>: HTTPConnectionPool(host=&#39;localhost&#39;, port=8088): Max retries exceeded with url: /info (Caused by NewConnectionError(&#39;&lt;urllib3.connection.HTTPConnection object at 0x7fc88e36b130&gt;: Failed to establish a new connection: [Errno 111] Connection refused&#39;))
+<span class="ne">ConnectionError</span>: HTTPConnectionPool(host=&#39;localhost&#39;, port=8088): Max retries exceeded with url: /info (Caused by NewConnectionError(&#39;&lt;urllib3.connection.HTTPConnection object at 0x7fb6d1342160&gt;: Failed to establish a new connection: [Errno 111] Connection refused&#39;))
 </pre></div>
 </div>
 </div>

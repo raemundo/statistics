@@ -24,7 +24,7 @@ from ksql import KSQLAPI
 bootstrap_servers='[::1]:9092'
 topic=f'stats0101{str(uuid.uuid4())[:7]}'
 msg_count=5
-client = KSQLAPI(url='http://localhost:8088', timeout=60000)
+client = KSQLAPI(url='http://localhost:8088')
 ------------------
 
 [0;31m---------------------------------------------------------------------------[0m
@@ -114,7 +114,7 @@ File [0;32m/opt/hostedtoolcache/Python/3.9.12/x64/lib/python3.9/site-packages/u
 [1;32m    188[0m     )
 [1;32m    190[0m [38;5;28;01mreturn[39;00m conn
 
-[0;31mNewConnectionError[0m: <urllib3.connection.HTTPConnection object at 0x7fc88e36b130>: Failed to establish a new connection: [Errno 111] Connection refused
+[0;31mNewConnectionError[0m: <urllib3.connection.HTTPConnection object at 0x7fb6d1342160>: Failed to establish a new connection: [Errno 111] Connection refused
 
 During handling of the above exception, another exception occurred:
 
@@ -148,7 +148,7 @@ File [0;32m/opt/hostedtoolcache/Python/3.9.12/x64/lib/python3.9/site-packages/u
 [0;32m--> 592[0m     [38;5;28;01mraise[39;00m MaxRetryError(_pool, url, error [38;5;129;01mor[39;00m ResponseError(cause))
 [1;32m    594[0m log[38;5;241m.[39mdebug([38;5;124m"[39m[38;5;124mIncremented Retry for (url=[39m[38;5;124m'[39m[38;5;132;01m%s[39;00m[38;5;124m'[39m[38;5;124m): [39m[38;5;132;01m%r[39;00m[38;5;124m"[39m, url, new_retry)
 
-[0;31mMaxRetryError[0m: HTTPConnectionPool(host='localhost', port=8088): Max retries exceeded with url: /info (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x7fc88e36b130>: Failed to establish a new connection: [Errno 111] Connection refused'))
+[0;31mMaxRetryError[0m: HTTPConnectionPool(host='localhost', port=8088): Max retries exceeded with url: /info (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x7fb6d1342160>: Failed to establish a new connection: [Errno 111] Connection refused'))
 
 During handling of the above exception, another exception occurred:
 
@@ -156,7 +156,7 @@ During handling of the above exception, another exception occurred:
 Input [0;32mIn [3][0m, in [0;36m<cell line: 8>[0;34m()[0m
 [1;32m      6[0m topic[38;5;241m=[39m[38;5;124mf[39m[38;5;124m'[39m[38;5;124mstats0101[39m[38;5;132;01m{[39;00m[38;5;28mstr[39m(uuid[38;5;241m.[39muuid4())[:[38;5;241m7[39m][38;5;132;01m}[39;00m[38;5;124m'[39m
 [1;32m      7[0m msg_count[38;5;241m=[39m[38;5;241m5[39m
-[0;32m----> 8[0m client [38;5;241m=[39m [43mKSQLAPI[49m[43m([49m[43murl[49m[38;5;241;43m=[39;49m[38;5;124;43m'[39;49m[38;5;124;43mhttp://localhost:8088[39;49m[38;5;124;43m'[39;49m[43m,[49m[43m [49m[43mtimeout[49m[38;5;241;43m=[39;49m[38;5;241;43m60000[39;49m[43m)[49m
+[0;32m----> 8[0m client [38;5;241m=[39m [43mKSQLAPI[49m[43m([49m[43murl[49m[38;5;241;43m=[39;49m[38;5;124;43m'[39;49m[38;5;124;43mhttp://localhost:8088[39;49m[38;5;124;43m'[39;49m[43m)[49m
 
 File [0;32m/opt/hostedtoolcache/Python/3.9.12/x64/lib/python3.9/site-packages/ksql/client.py:19[0m, in [0;36mKSQLAPI.__init__[0;34m(self, url, max_retries, check_version, **kwargs)[0m
 [1;32m     17[0m [38;5;28mself[39m[38;5;241m.[39msa [38;5;241m=[39m SimplifiedAPI(url, max_retries[38;5;241m=[39mmax_retries, [38;5;241m*[39m[38;5;241m*[39mkwargs)
@@ -215,6 +215,6 @@ File [0;32m/opt/hostedtoolcache/Python/3.9.12/x64/lib/python3.9/site-packages/r
 [1;32m    521[0m [38;5;28;01mexcept[39;00m ClosedPoolError [38;5;28;01mas[39;00m e:
 [1;32m    522[0m     [38;5;28;01mraise[39;00m [38;5;167;01mConnectionError[39;00m(e, request[38;5;241m=[39mrequest)
 
-[0;31mConnectionError[0m: HTTPConnectionPool(host='localhost', port=8088): Max retries exceeded with url: /info (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x7fc88e36b130>: Failed to establish a new connection: [Errno 111] Connection refused'))
-ConnectionError: HTTPConnectionPool(host='localhost', port=8088): Max retries exceeded with url: /info (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x7fc88e36b130>: Failed to establish a new connection: [Errno 111] Connection refused'))
+[0;31mConnectionError[0m: HTTPConnectionPool(host='localhost', port=8088): Max retries exceeded with url: /info (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x7fb6d1342160>: Failed to establish a new connection: [Errno 111] Connection refused'))
+ConnectionError: HTTPConnectionPool(host='localhost', port=8088): Max retries exceeded with url: /info (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x7fb6d1342160>: Failed to establish a new connection: [Errno 111] Connection refused'))
 

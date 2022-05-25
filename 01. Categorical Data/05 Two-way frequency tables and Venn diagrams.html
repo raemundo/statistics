@@ -53,6 +53,8 @@ const thebe_selector_output = ".output, .cell_output"
     <script async="async" src="../_static/sphinx-thebe.js"></script>
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="05 Two-way (column or row) relative frequency tables" href="06%20Two-way%20%28column%20or%20row%29%20relative%20frequency%20tables.html" />
+    <link rel="prev" title="&lt;no title&gt;" href="04%20Reading%20bar%20graphs%20movies.html" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="docsearch:language" content="None">
     
@@ -101,7 +103,7 @@ const thebe_selector_output = ".output, .cell_output"
   01. Categorical Data
  </span>
 </p>
-<ul class="nav bd-sidenav">
+<ul class="current nav bd-sidenav">
  <li class="toctree-l1">
   <a class="reference internal" href="01%20Identifying%20individuals%2C%20variables%20and%20categorical%20variables%20in%20a%20data%20set.html">
    01 Identifying individuals, variables and categorical variables in a data set
@@ -115,6 +117,36 @@ const thebe_selector_output = ".output, .cell_output"
  <li class="toctree-l1">
   <a class="reference internal" href="03%20Reading%20bar%20charts%20-%20comparing%20two%20sets%20of%20data.html">
    03 Reading bar charts - comparing two sets of data
+  </a>
+ </li>
+ <li class="toctree-l1 current active">
+  <a class="current reference internal" href="#">
+   04 Two-way frequency tables and Venn diagrams
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="06%20Two-way%20%28column%20or%20row%29%20relative%20frequency%20tables.html">
+   05 Two-way (column or row) relative frequency tables
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="07%20Interpreting%20two-way%20tables.html">
+   06 Interpreting two-way tables
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="08%20Marginal%20and%20conditional%20distributions.html">
+   07 Marginal and conditional distributions
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="09%20Mosaic%20plots%20and%20segmented%20bar%20charts.html">
+   08 Mosaic plots and segmented bar charts
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="10%20Analyzing%20mosaic%20plots.html">
+   09 Analyzing mosaic plots
   </a>
  </li>
  <li class="toctree-l1">
@@ -1679,7 +1711,7 @@ WARNING: Use --illegal-access=warn to enable warnings of further illegal reflect
 WARNING: All illegal access operations will be denied in a future release
 </pre></div>
 </div>
-<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>22/05/24 06:46:10 WARN NativeCodeLoader: Unable to load native-hadoop library for your platform... using builtin-java classes where applicable
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>22/05/25 03:01:59 WARN NativeCodeLoader: Unable to load native-hadoop library for your platform... using builtin-java classes where applicable
 Using Spark&#39;s default log4j profile: org/apache/spark/log4j-defaults.properties
 Setting default log level to &quot;WARN&quot;.
 To adjust logging level use sc.setLogLevel(newLevel). For SparkR, use setLogLevel(newLevel).
@@ -1877,12 +1909,12 @@ dtype: int64
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[Stage 8:=====================&gt;                                  (39 + 1) / 100]
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[Stage 8:=========================&gt;                              (45 + 1) / 100]
 
-[Stage 8:================================&gt;                       (58 + 1) / 100]
+[Stage 8:====================================&gt;                   (66 + 1) / 100]
 </pre></div>
 </div>
-<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[Stage 8:============================================&gt;           (79 + 1) / 100]
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[Stage 8:================================================&gt;       (87 + 1) / 100]
 
                                                                                 
 </pre></div>
@@ -1893,6 +1925,11 @@ dtype: int64
 |       no|    3|
 |      yes|    9|
 +---------+-----+
+</pre></div>
+</div>
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[Stage 10:======================================================&gt; (73 + 1) / 75]
+
+                                                                                
 </pre></div>
 </div>
 </div>
@@ -1906,11 +1943,6 @@ dtype: int64
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[Stage 18:============================================&gt;          (81 + 1) / 100]
-
-                                                                                
-</pre></div>
-</div>
 <div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>+---------+-----+
 |chocolate|count|
 +---------+-----+
@@ -2144,7 +2176,21 @@ dtype: int64
               
             
                 <!-- Previous / next buttons -->
-<div class='prev-next-area'>
+<div class='prev-next-area'> 
+    <a class='left-prev' id="prev-link" href="04%20Reading%20bar%20graphs%20movies.html" title="previous page">
+        <i class="fas fa-angle-left"></i>
+        <div class="prev-next-info">
+            <p class="prev-next-subtitle">previous</p>
+            <p class="prev-next-title">&lt;no title&gt;</p>
+        </div>
+    </a>
+    <a class='right-next' id="next-link" href="06%20Two-way%20%28column%20or%20row%29%20relative%20frequency%20tables.html" title="next page">
+    <div class="prev-next-info">
+        <p class="prev-next-subtitle">next</p>
+        <p class="prev-next-title">05 Two-way (column or row) relative frequency tables</p>
+    </div>
+    <i class="fas fa-angle-right"></i>
+    </a>
 </div>
             
         </div>
