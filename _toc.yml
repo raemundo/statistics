@@ -7,12 +7,13 @@ parts:
       variables in a data set
   - file: 01. Categorical Data/02. Creating a bar graph
   - file: 01. Categorical Data/03 Reading bar charts - comparing two sets of data
-  - file: 01. Categorical Data/04 Two-way frequency tables and Venn diagrams
-  - file: 01. Categorical Data/05 Two-way (column or row) relative frequency tables
-  - file: 01. Categorical Data/06 Interpreting two-way tables
-  - file: 01. Categorical Data/07 Marginal and conditional distributions
-  - file: 01. Categorical Data/08 Mosaic plots and segmented bar charts
-  - file: 01. Categorical Data/09 Analyzing mosaic plots
+  - file: 01. Categorical Data/04 Reading bar graphs movies
+  - file: 01. Categorical Data/05 Two-way frequency tables and Venn diagrams
+  - file: 01. Categorical Data/06 Two-way (column or row) relative frequency tables
+  - file: 01. Categorical Data/07 Interpreting two-way tables
+  - file: 01. Categorical Data/08 Marginal and conditional distributions
+  - file: 01. Categorical Data/09 Mosaic plots and segmented bar charts
+  - file: 01. Categorical Data/10 Analyzing mosaic plots
   - file: 01. Categorical Data/Categorical Data
 - caption: 02. Displaying and comparing quantitative data
   chapters:
