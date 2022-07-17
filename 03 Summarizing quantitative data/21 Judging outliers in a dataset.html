@@ -4,11 +4,13 @@
 <html>
   <head>
     <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+
     <title>21 Judging outliers in a dataset &#8212; Statstics with Python</title>
     
-  <link href="../_static/css/theme.css" rel="stylesheet">
-  <link href="../_static/css/index.ff1ffe594081f20da1ef19478df9384b.css" rel="stylesheet">
+  <!-- Loaded before other Sphinx assets -->
+  <link href="../_static/styles/theme.css?digest=1999514e3f237ded88cf" rel="stylesheet">
+<link href="../_static/styles/pydata-sphinx-theme.css?digest=1999514e3f237ded88cf" rel="stylesheet">
 
     
   <link rel="stylesheet"
@@ -18,20 +20,16 @@
   <link rel="preload" as="font" type="font/woff2" crossorigin
     href="../_static/vendor/fontawesome/5.13.0/webfonts/fa-brands-400.woff2">
 
-    
-      
-
-    
     <link rel="stylesheet" type="text/css" href="../_static/pygments.css" />
-    <link rel="stylesheet" type="text/css" href="../_static/sphinx-book-theme.css?digest=c3fdc42140077d1ad13ad2f1588a4309" />
+    <link rel="stylesheet" href="../_static/styles/sphinx-book-theme.css?digest=5115cc725059bd94278eecd172e13a965bf8f5a9" type="text/css" />
     <link rel="stylesheet" type="text/css" href="../_static/togglebutton.css" />
     <link rel="stylesheet" type="text/css" href="../_static/copybutton.css" />
     <link rel="stylesheet" type="text/css" href="../_static/mystnb.css" />
     <link rel="stylesheet" type="text/css" href="../_static/sphinx-thebe.css" />
-    <link rel="stylesheet" type="text/css" href="../_static/panels-main.c949a650a448cc0ae9fd3441c0e17fb0.css" />
-    <link rel="stylesheet" type="text/css" href="../_static/panels-variables.06eb56fa6e07937060861dad626602ad.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/design-style.b7bb847fb20b106c3d81b95245e65545.min.css" />
     
-  <link rel="preload" as="script" href="../_static/js/index.be7d3bbb2ef33a8344ce.js">
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="../_static/scripts/pydata-sphinx-theme.js?digest=1999514e3f237ded88cf">
 
     <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
     <script src="../_static/jquery.js"></script>
@@ -39,12 +37,13 @@
     <script src="../_static/doctools.js"></script>
     <script src="../_static/clipboard.min.js"></script>
     <script src="../_static/copybutton.js"></script>
+    <script src="../_static/scripts/sphinx-book-theme.js?digest=9c920249402e914e316237a7dbc6769907cce411"></script>
     <script>let toggleHintShow = 'Click to show';</script>
     <script>let toggleHintHide = 'Click to hide';</script>
     <script>let toggleOpenOnPrint = 'true';</script>
     <script src="../_static/togglebutton.js"></script>
     <script>var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
-    <script src="../_static/sphinx-book-theme.d59cb220de22ca1c485ebbdc042f0030.js"></script>
+    <script src="../_static/design-tabs.js"></script>
     <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"
 const thebe_selector = ".thebe,.cell"
 const thebe_selector_input = "pre"
@@ -62,7 +61,21 @@ const thebe_selector_output = ".output, .cell_output"
     <!-- Google Analytics -->
     
   </head>
-  <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="80">
+  <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="60">
+<!-- Checkboxes to toggle the left sidebar -->
+<input type="checkbox" class="sidebar-toggle" name="__navigation" id="__navigation" aria-label="Toggle navigation sidebar">
+<label class="overlay overlay-navbar" for="__navigation">
+    <div class="visually-hidden">Toggle navigation sidebar</div>
+</label>
+<!-- Checkboxes to toggle the in-page toc -->
+<input type="checkbox" class="sidebar-toggle" name="__page-toc" id="__page-toc" aria-label="Toggle in-page Table of Contents">
+<label class="overlay overlay-pagetoc" for="__page-toc">
+    <div class="visually-hidden">Toggle in-page Table of Contents</div>
+</label>
+<!-- Headers at the top -->
+<div class="announcement header-item noprint"></div>
+<div class="header header-item noprint"></div>
+
     
     <div class="container-fluid" id="banner"></div>
 
@@ -71,9 +84,10 @@ const thebe_selector_output = ".output, .cell_output"
     <div class="container-xl">
       <div class="row">
           
-<div class="col-12 col-md-3 bd-sidebar site-navigation show" id="site-navigation">
-    
-        <div class="navbar-brand-box">
+<!-- Sidebar -->
+<div class="bd-sidebar noprint" id="site-navigation">
+    <div class="bd-sidebar__content">
+        <div class="bd-sidebar__top"><div class="navbar-brand-box">
     <a class="navbar-brand text-wrap" href="../index.html">
       
         <!-- `logo` is deprecated in Sphinx 4.0, so remove this when we stop supporting 3 -->
@@ -91,14 +105,15 @@ const thebe_selector_output = ".output, .cell_output"
   <input type="search" class="form-control" name="q" id="search-input" placeholder="Search this book..." aria-label="Search this book..." autocomplete="off" >
 </form><nav class="bd-links" id="bd-docs-nav" aria-label="Main">
     <div class="bd-toc-item active">
-        <ul class="nav bd-sidenav">
- <li class="toctree-l1">
-  <a class="reference internal" href="../intro.html">
-   Welcome to your Jupyter Book
-  </a>
- </li>
-</ul>
-<p aria-level="2" class="caption" role="heading">
+        
+        <ul class="nav bd-sidenav bd-sidenav__home-link">
+            <li class="toctree-l1">
+                <a class="reference internal" href="../intro.html">
+                    Welcome to your Jupyter Book
+                </a>
+            </li>
+        </ul>
+        <p aria-level="2" class="caption" role="heading">
  <span class="caption-text">
   01. Categorical Data
  </span>
@@ -1579,12 +1594,17 @@ const thebe_selector_output = ".output, .cell_output"
 </ul>
 
     </div>
-</nav> <!-- To handle the deprecated key -->
-
-<div class="navbar_extra_footer">
-  Powered by <a href="https://jupyterbook.org">Jupyter Book</a>
-</div>
-
+</nav></div>
+        <div class="bd-sidebar__bottom">
+             <!-- To handle the deprecated key -->
+            
+            <div class="navbar_extra_footer">
+            Powered by <a href="https://jupyterbook.org">Jupyter Book</a>
+            </div>
+            
+        </div>
+    </div>
+    <div id="rtd-footer-container"></div>
 </div>
 
 
@@ -1592,78 +1612,134 @@ const thebe_selector_output = ".output, .cell_output"
 
 
           
-<main class="col py-md-3 pl-md-4 bd-content overflow-auto" role="main">
+<!-- A tiny helper pixel to detect if we've scrolled -->
+<div class="sbt-scroll-pixel-helper"></div>
+<!-- Main content -->
+<div class="col py-0 content-container">
     
-    <div class="topbar container-xl fixed-top">
-    <div class="topbar-contents row">
-        <div class="col-12 col-md-3 bd-topbar-whitespace site-navigation show"></div>
-        <div class="col pl-md-4 topbar-main">
-            
-            <button id="navbar-toggler" class="navbar-toggler ml-0" type="button" data-toggle="collapse"
-                data-toggle="tooltip" data-placement="bottom" data-target=".site-navigation" aria-controls="navbar-menu"
-                aria-expanded="true" aria-label="Toggle navigation" aria-controls="site-navigation"
-                title="Toggle navigation" data-toggle="tooltip" data-placement="left">
-                <i class="fas fa-bars"></i>
-                <i class="fas fa-arrow-left"></i>
-                <i class="fas fa-arrow-up"></i>
-            </button>
-            
-            
-<div class="dropdown-buttons-trigger">
-    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn" aria-label="Download this page"><i
-            class="fas fa-download"></i></button>
-
-    <div class="dropdown-buttons">
-        <!-- ipynb file if we had a myst markdown file -->
+    <div class="header-article row sticky-top noprint">
         
-        <!-- Download raw file -->
-        <a class="dropdown-buttons" href="../_sources/03 Summarizing quantitative data/21 Judging outliers in a dataset.ipynb"><button type="button"
-                class="btn btn-secondary topbarbtn" title="Download source file" data-toggle="tooltip"
-                data-placement="left">.ipynb</button></a>
-        <!-- Download PDF via print -->
-        <button type="button" id="download-print" class="btn btn-secondary topbarbtn" title="Print to PDF"
-                onclick="printPdf(this)" data-toggle="tooltip" data-placement="left">.pdf</button>
+
+
+
+<div class="col py-1 d-flex header-article-main">
+    <div class="header-article__left">
+        
+        <label for="__navigation"
+  class="headerbtn"
+  data-toggle="tooltip"
+data-placement="right"
+title="Toggle navigation"
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-bars"></i>
+  </span>
+
+</label>
+
+        
+    </div>
+    <div class="header-article__right">
+<div class="menu-dropdown menu-dropdown-launch-buttons">
+  <button class="headerbtn menu-dropdown__trigger"
+      aria-label="Launch interactive content">
+      <i class="fas fa-rocket"></i>
+  </button>
+  <div class="menu-dropdown__content">
+    <ul>
+      <li>
+        <a href="https://mybinder.org/v2/gh/executablebooks/jupyter-book/master?urlpath=tree/03 Summarizing quantitative data/21 Judging outliers in a dataset.ipynb"
+   class="headerbtn"
+   data-toggle="tooltip"
+data-placement="left"
+title="Launch on Binder"
+>
+  
+
+<span class="headerbtn__icon-container">
+  
+    <img src="../_static/images/logo_binder.svg">
+  </span>
+<span class="headerbtn__text-container">Binder</span>
+</a>
+
+      </li>
+      
+    </ul>
+  </div>
+</div>
+
+<button onclick="toggleFullScreen()"
+  class="headerbtn"
+  data-toggle="tooltip"
+data-placement="bottom"
+title="Fullscreen mode"
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-expand"></i>
+  </span>
+
+</button>
+
+<div class="menu-dropdown menu-dropdown-download-buttons">
+  <button class="headerbtn menu-dropdown__trigger"
+      aria-label="Download this page">
+      <i class="fas fa-download"></i>
+  </button>
+  <div class="menu-dropdown__content">
+    <ul>
+      <li>
+        <a href="../_sources/03 Summarizing quantitative data/21 Judging outliers in a dataset.ipynb"
+   class="headerbtn"
+   data-toggle="tooltip"
+data-placement="left"
+title="Download source file"
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-file"></i>
+  </span>
+<span class="headerbtn__text-container">.ipynb</span>
+</a>
+
+      </li>
+      
+      <li>
+        
+<button onclick="printPdf(this)"
+  class="headerbtn"
+  data-toggle="tooltip"
+data-placement="left"
+title="Print to PDF"
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-file-pdf"></i>
+  </span>
+<span class="headerbtn__text-container">.pdf</span>
+</button>
+
+      </li>
+      
+    </ul>
+  </div>
+</div>
+
     </div>
 </div>
 
-            <!-- Source interaction buttons -->
-
-            <!-- Full screen (wrap in <a> to have style consistency -->
-
-<a class="full-screen-button"><button type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip"
-        data-placement="bottom" onclick="toggleFullScreen()" aria-label="Fullscreen mode"
-        title="Fullscreen mode"><i
-            class="fas fa-expand"></i></button></a>
-
-            <!-- Launch buttons -->
-
-<div class="dropdown-buttons-trigger">
-    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn"
-        aria-label="Launch interactive content"><i class="fas fa-rocket"></i></button>
-    <div class="dropdown-buttons">
-        
-        <a class="binder-button" href="https://mybinder.org/v2/gh/executablebooks/jupyter-book/master?urlpath=tree/03 Summarizing quantitative data/21 Judging outliers in a dataset.ipynb"><button type="button"
-                class="btn btn-secondary topbarbtn" title="Launch Binder" data-toggle="tooltip"
-                data-placement="left"><img class="binder-button-logo"
-                    src="../_static/images/logo_binder.svg"
-                    alt="Interact on binder">Binder</button></a>
-        
-        
-        
-        
-    </div>
+<!-- Table of contents -->
+<div class="col-md-3 bd-toc show noprint">
 </div>
-
-        </div>
-
-        <!-- Table of contents -->
-        <div class="d-none d-md-block col-md-2 bd-toc show noprint">
-            
-        </div>
     </div>
-</div>
-    <div id="main-content" class="row">
-        <div class="col-12 col-md-9 pl-md-3 pr-md-0">
+    <div class="article row">
+        <div class="col pl-md-3 pl-lg-5 content-container">
             <!-- Table of contents that is only displayed when printing the page -->
             <div id="jb-print-docs-body" class="onlyprint">
                 <h1>21 Judging outliers in a dataset</h1>
@@ -1674,11 +1750,12 @@ const thebe_selector_output = ".output, .cell_output"
                     </div>
                 </div>
             </div>
-            
+            <main id="main-content" role="main">
+                
               <div>
                 
-  <div class="tex2jax_ignore mathjax_ignore section" id="judging-outliers-in-a-dataset">
-<h1>21 Judging outliers in a dataset<a class="headerlink" href="#judging-outliers-in-a-dataset" title="Permalink to this headline">¶</a></h1>
+  <section class="tex2jax_ignore mathjax_ignore" id="judging-outliers-in-a-dataset">
+<h1>21 Judging outliers in a dataset<a class="headerlink" href="#judging-outliers-in-a-dataset" title="Permalink to this headline">#</a></h1>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
@@ -1757,24 +1834,24 @@ const thebe_selector_output = ".output, .cell_output"
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[&lt;matplotlib.axis.XTick at 0x7f5729b85370&gt;,
- &lt;matplotlib.axis.XTick at 0x7f5729b85340&gt;,
- &lt;matplotlib.axis.XTick at 0x7f5729b5ca30&gt;,
- &lt;matplotlib.axis.XTick at 0x7f5729b31ac0&gt;,
- &lt;matplotlib.axis.XTick at 0x7f5729b3b250&gt;,
- &lt;matplotlib.axis.XTick at 0x7f5729b3b9a0&gt;,
- &lt;matplotlib.axis.XTick at 0x7f5729b3f130&gt;,
- &lt;matplotlib.axis.XTick at 0x7f5729b3f880&gt;,
- &lt;matplotlib.axis.XTick at 0x7f5729b3b760&gt;,
- &lt;matplotlib.axis.XTick at 0x7f5729b3f940&gt;,
- &lt;matplotlib.axis.XTick at 0x7f5729b490a0&gt;,
- &lt;matplotlib.axis.XTick at 0x7f5729b497f0&gt;,
- &lt;matplotlib.axis.XTick at 0x7f5729b4d0a0&gt;,
- &lt;matplotlib.axis.XTick at 0x7f5729b4d6d0&gt;,
- &lt;matplotlib.axis.XTick at 0x7f5729b49cd0&gt;,
- &lt;matplotlib.axis.XTick at 0x7f5729b3f190&gt;,
- &lt;matplotlib.axis.XTick at 0x7f5729b4d940&gt;,
- &lt;matplotlib.axis.XTick at 0x7f5729b56370&gt;]
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[&lt;matplotlib.axis.XTick at 0x7f45393afeb0&gt;,
+ &lt;matplotlib.axis.XTick at 0x7f45393afe80&gt;,
+ &lt;matplotlib.axis.XTick at 0x7f45393afd60&gt;,
+ &lt;matplotlib.axis.XTick at 0x7f4539364670&gt;,
+ &lt;matplotlib.axis.XTick at 0x7f4539364dc0&gt;,
+ &lt;matplotlib.axis.XTick at 0x7f453936b550&gt;,
+ &lt;matplotlib.axis.XTick at 0x7f453936bca0&gt;,
+ &lt;matplotlib.axis.XTick at 0x7f453936bd90&gt;,
+ &lt;matplotlib.axis.XTick at 0x7f4539364df0&gt;,
+ &lt;matplotlib.axis.XTick at 0x7f4539371670&gt;,
+ &lt;matplotlib.axis.XTick at 0x7f4539371dc0&gt;,
+ &lt;matplotlib.axis.XTick at 0x7f4539379550&gt;,
+ &lt;matplotlib.axis.XTick at 0x7f4539379ca0&gt;,
+ &lt;matplotlib.axis.XTick at 0x7f453937e430&gt;,
+ &lt;matplotlib.axis.XTick at 0x7f4539379a30&gt;,
+ &lt;matplotlib.axis.XTick at 0x7f45393641f0&gt;,
+ &lt;matplotlib.axis.XTick at 0x7f453937e1c0&gt;,
+ &lt;matplotlib.axis.XTick at 0x7f45393070d0&gt;]
 </pre></div>
 </div>
 <img alt="../_images/21 Judging outliers in a dataset_9_1.png" src="../_images/21 Judging outliers in a dataset_9_1.png" />
@@ -1788,24 +1865,24 @@ const thebe_selector_output = ".output, .cell_output"
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[&lt;matplotlib.axis.YTick at 0x7f5729a70910&gt;,
- &lt;matplotlib.axis.YTick at 0x7f5729a702b0&gt;,
- &lt;matplotlib.axis.YTick at 0x7f5729a669d0&gt;,
- &lt;matplotlib.axis.YTick at 0x7f5729a1c3d0&gt;,
- &lt;matplotlib.axis.YTick at 0x7f5729a1cb20&gt;,
- &lt;matplotlib.axis.YTick at 0x7f5729a242b0&gt;,
- &lt;matplotlib.axis.YTick at 0x7f5729a24a00&gt;,
- &lt;matplotlib.axis.YTick at 0x7f5729a29190&gt;,
- &lt;matplotlib.axis.YTick at 0x7f5729a24df0&gt;,
- &lt;matplotlib.axis.YTick at 0x7f5729a1cdc0&gt;,
- &lt;matplotlib.axis.YTick at 0x7f5729a29580&gt;,
- &lt;matplotlib.axis.YTick at 0x7f5729a33070&gt;,
- &lt;matplotlib.axis.YTick at 0x7f5729a33730&gt;,
- &lt;matplotlib.axis.YTick at 0x7f5729a33e80&gt;,
- &lt;matplotlib.axis.YTick at 0x7f5729a38610&gt;,
- &lt;matplotlib.axis.YTick at 0x7f5729a33af0&gt;,
- &lt;matplotlib.axis.YTick at 0x7f5729a1c040&gt;,
- &lt;matplotlib.axis.YTick at 0x7f5729a38280&gt;]
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[&lt;matplotlib.axis.YTick at 0x7f45392a0670&gt;,
+ &lt;matplotlib.axis.YTick at 0x7f4539298fd0&gt;,
+ &lt;matplotlib.axis.YTick at 0x7f4539298730&gt;,
+ &lt;matplotlib.axis.YTick at 0x7f453924c130&gt;,
+ &lt;matplotlib.axis.YTick at 0x7f453924c880&gt;,
+ &lt;matplotlib.axis.YTick at 0x7f45392510a0&gt;,
+ &lt;matplotlib.axis.YTick at 0x7f4539251760&gt;,
+ &lt;matplotlib.axis.YTick at 0x7f4539259040&gt;,
+ &lt;matplotlib.axis.YTick at 0x7f4539251f10&gt;,
+ &lt;matplotlib.axis.YTick at 0x7f453924cd60&gt;,
+ &lt;matplotlib.axis.YTick at 0x7f4539259520&gt;,
+ &lt;matplotlib.axis.YTick at 0x7f4539259d00&gt;,
+ &lt;matplotlib.axis.YTick at 0x7f4539260490&gt;,
+ &lt;matplotlib.axis.YTick at 0x7f4539260be0&gt;,
+ &lt;matplotlib.axis.YTick at 0x7f4539265370&gt;,
+ &lt;matplotlib.axis.YTick at 0x7f4539260c10&gt;,
+ &lt;matplotlib.axis.YTick at 0x7f4539259820&gt;,
+ &lt;matplotlib.axis.YTick at 0x7f45392653a0&gt;]
 </pre></div>
 </div>
 <img alt="../_images/21 Judging outliers in a dataset_10_1.png" src="../_images/21 Judging outliers in a dataset_10_1.png" />
@@ -1821,7 +1898,7 @@ const thebe_selector_output = ".output, .cell_output"
 </div>
 </div>
 <p>additional resources: <a class="reference external" href="https://towardsdatascience.com/ways-to-detect-and-remove-the-outliers-404d16608dba">towardsdatascience</a></p>
-</div>
+</section>
 
     <script type="text/x-thebe-config">
     {
@@ -1845,9 +1922,11 @@ const thebe_selector_output = ".output, .cell_output"
 
               </div>
               
-            
-                <!-- Previous / next buttons -->
-<div class='prev-next-area'> 
+            </main>
+            <footer class="footer-article noprint">
+                
+    <!-- Previous / next buttons -->
+<div class='prev-next-area'>
     <a class='left-prev' id="prev-link" href="20%20Interpreting%20box%20plots.html" title="previous page">
         <i class="fas fa-angle-left"></i>
         <div class="prev-next-info">
@@ -1863,24 +1942,28 @@ const thebe_selector_output = ".output, .cell_output"
     <i class="fas fa-angle-right"></i>
     </a>
 </div>
-            
+            </footer>
         </div>
     </div>
-    <footer class="footer">
-  <p>
+    <div class="footer-content row">
+        <footer class="col footer"><p>
+  
+    By Raemundo eimooamai@outlook.com<br/>
+  
+      &copy; Copyright 2022.<br/>
+</p>
+        </footer>
+    </div>
     
-      By Raemundo eimooamai@outlook.com<br/>
-    
-        &copy; Copyright 2021.<br/>
-  </p>
-</footer>
-</main>
+</div>
 
 
       </div>
     </div>
   
-  <script src="../_static/js/index.be7d3bbb2ef33a8344ce.js"></script>
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script src="../_static/scripts/pydata-sphinx-theme.js?digest=1999514e3f237ded88cf"></script>
+
 
   </body>
 </html>
