@@ -6,7 +6,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
 
-    <title>05 Two-way (column or row) relative frequency tables &#8212; Statstics with Python</title>
+    <title>06 Two-way (column or row) relative frequency tables &#8212; Statstics with Python</title>
     
   <!-- Loaded before other Sphinx assets -->
   <link href="../_static/styles/theme.css?digest=1999514e3f237ded88cf" rel="stylesheet">
@@ -52,8 +52,8 @@ const thebe_selector_output = ".output, .cell_output"
     <script async="async" src="../_static/sphinx-thebe.js"></script>
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
-    <link rel="next" title="06 Interpreting two-way tables" href="07%20Interpreting%20two-way%20tables.html" />
-    <link rel="prev" title="04 Two-way frequency tables and Venn diagrams" href="05%20Two-way%20frequency%20tables%20and%20Venn%20diagrams.html" />
+    <link rel="next" title="07 Interpreting two-way tables" href="07%20Interpreting%20two-way%20tables.html" />
+    <link rel="prev" title="05 Two-way frequency tables and Venn diagrams" href="05%20Two-way%20frequency%20tables%20and%20Venn%20diagrams.html" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="docsearch:language" content="None">
     
@@ -135,33 +135,38 @@ const thebe_selector_output = ".output, .cell_output"
   </a>
  </li>
  <li class="toctree-l1">
+  <a class="reference internal" href="04%20Reading%20bar%20graphs%20movies.html">
+   04 Reading bar graphs movies
+  </a>
+ </li>
+ <li class="toctree-l1">
   <a class="reference internal" href="05%20Two-way%20frequency%20tables%20and%20Venn%20diagrams.html">
-   04 Two-way frequency tables and Venn diagrams
+   05 Two-way frequency tables and Venn diagrams
   </a>
  </li>
  <li class="toctree-l1 current active">
   <a class="current reference internal" href="#">
-   05 Two-way (column or row) relative frequency tables
+   06 Two-way (column or row) relative frequency tables
   </a>
  </li>
  <li class="toctree-l1">
   <a class="reference internal" href="07%20Interpreting%20two-way%20tables.html">
-   06 Interpreting two-way tables
+   07 Interpreting two-way tables
   </a>
  </li>
  <li class="toctree-l1">
   <a class="reference internal" href="08%20Marginal%20and%20conditional%20distributions.html">
-   07 Marginal and conditional distributions
+   08 Marginal and conditional distributions
   </a>
  </li>
  <li class="toctree-l1">
   <a class="reference internal" href="09%20Mosaic%20plots%20and%20segmented%20bar%20charts.html">
-   08 Mosaic plots and segmented bar charts
+   09 Mosaic plots and segmented bar charts
   </a>
  </li>
  <li class="toctree-l1">
   <a class="reference internal" href="10%20Analyzing%20mosaic%20plots.html">
-   09 Analyzing mosaic plots
+   10 Analyzing mosaic plots
   </a>
  </li>
  <li class="toctree-l1">
@@ -1742,7 +1747,7 @@ title="Print to PDF"
         <div class="col pl-md-3 pl-lg-5 content-container">
             <!-- Table of contents that is only displayed when printing the page -->
             <div id="jb-print-docs-body" class="onlyprint">
-                <h1>05 Two-way (column or row) relative frequency tables</h1>
+                <h1>06 Two-way (column or row) relative frequency tables</h1>
                 <!-- Table of contents -->
                 <div id="print-main-content">
                     <div id="jb-print-toc">
@@ -1755,7 +1760,18 @@ title="Print to PDF"
               <div>
                 
   <section class="tex2jax_ignore mathjax_ignore" id="two-way-column-or-row-relative-frequency-tables">
-<h1>05 Two-way (column or row) relative frequency tables<a class="headerlink" href="#two-way-column-or-row-relative-frequency-tables" title="Permalink to this headline">#</a></h1>
+<h1>06 Two-way (column or row) relative frequency tables<a class="headerlink" href="#two-way-column-or-row-relative-frequency-tables" title="Permalink to this headline">#</a></h1>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="o">%%html</span>
+<span class="p">&lt;</span><span class="nt">iframe</span> <span class="na">width</span><span class="o">=</span><span class="s">&quot;700&quot;</span> <span class="na">height</span><span class="o">=</span><span class="s">&quot;400&quot;</span> <span class="na">src</span><span class="o">=</span><span class="s">&quot;https://www.youtube.com/embed/_ETPMszULXc/&quot;</span> <span class="na">frameborder</span><span class="o">=</span><span class="s">&quot;0&quot;</span> <span class="na">allowfullscreen</span><span class="p">&gt;&lt;/</span><span class="nt">iframe</span><span class="p">&gt;</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_html"><iframe width="700" height="400" src="https://www.youtube.com/embed/_ETPMszULXc/" frameborder="0" allowfullscreen></iframe>
+</div></div>
+</div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">matplotlib.pyplot</span> <span class="k">as</span> <span class="nn">plt</span>
@@ -1788,7 +1804,7 @@ WARNING: Use --illegal-access=warn to enable warnings of further illegal reflect
 WARNING: All illegal access operations will be denied in a future release
 </pre></div>
 </div>
-<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>22/07/19 22:28:27 WARN NativeCodeLoader: Unable to load native-hadoop library for your platform... using builtin-java classes where applicable
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>22/07/19 23:23:21 WARN NativeCodeLoader: Unable to load native-hadoop library for your platform... using builtin-java classes where applicable
 Using Spark&#39;s default log4j profile: org/apache/spark/log4j-defaults.properties
 Setting default log level to &quot;WARN&quot;.
 To adjust logging level use sc.setLogLevel(newLevel). For SparkR, use setLogLevel(newLevel).
@@ -1967,14 +1983,12 @@ dtype: int64
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[Stage 8:==========================&gt;                             (48 + 1) / 100]
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[Stage 8:=================================&gt;                      (59 + 1) / 100]
 
-[Stage 8:=======================================&gt;                (71 + 1) / 100]
+[Stage 8:=================================================&gt;      (89 + 1) / 100]
 </pre></div>
 </div>
-<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[Stage 8:======================================================&gt; (98 + 1) / 100]
-
-                                                                                
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>                                                                                
 </pre></div>
 </div>
 <div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>+--------+---------+-----+
@@ -1998,11 +2012,6 @@ dtype: int64
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[Stage 18:====================================================&gt;  (95 + 1) / 100]
-
-                                                                                
-</pre></div>
-</div>
 <div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>+--------+---------+-----+
 |Accident|      Car|count|
 +--------+---------+-----+
@@ -2168,7 +2177,7 @@ dtype: int64
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>/tmp/ipykernel_4102/3552347670.py:1: FutureWarning: The frame.append method is deprecated and will be removed from pandas in a future version. Use pandas.concat instead.
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>/tmp/ipykernel_3955/3552347670.py:1: FutureWarning: The frame.append method is deprecated and will be removed from pandas in a future version. Use pandas.concat instead.
   freq_table = freq_table.append(freq_table.sum().rename(&quot;Total&quot;))
 </pre></div>
 </div>
@@ -2252,13 +2261,13 @@ dtype: int64
         <i class="fas fa-angle-left"></i>
         <div class="prev-next-info">
             <p class="prev-next-subtitle">previous</p>
-            <p class="prev-next-title">04 Two-way frequency tables and Venn diagrams</p>
+            <p class="prev-next-title">05 Two-way frequency tables and Venn diagrams</p>
         </div>
     </a>
     <a class='right-next' id="next-link" href="07%20Interpreting%20two-way%20tables.html" title="next page">
     <div class="prev-next-info">
         <p class="prev-next-subtitle">next</p>
-        <p class="prev-next-title">06 Interpreting two-way tables</p>
+        <p class="prev-next-title">07 Interpreting two-way tables</p>
     </div>
     <i class="fas fa-angle-right"></i>
     </a>
