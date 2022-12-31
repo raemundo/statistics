@@ -21,6 +21,7 @@ category-encoders = "*"
 networkx = "*"
 confluent_kafka = "*"
 ksql = "*"
+qPython3 = "*"
 
 [dev-packages]
 
