@@ -1,6 +1,15 @@
 ---
 version: '2'
 services:
+  # KDB+
+  kdb:
+    image: shuodata/kdb:latest
+    volumes:
+      - ./kc.lic:/root/q/kc.lic
+    ports:
+      - 5000:5000
+    
+  # confluent 
   zookeeper:
     image: confluentinc/cp-zookeeper:7.3.0
     hostname: zookeeper
